@@ -1,0 +1,17 @@
+.venv*/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+outputs/
+**/chrome_profile/
+data/*
+!data/taxonomy.tsv
+!data/taxonomy_chatgpt.tsv
+gpt_api/data/*
+!gpt_api/data/taxonomy.tsv

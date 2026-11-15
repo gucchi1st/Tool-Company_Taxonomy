@@ -1,0 +1,1000 @@
+Hoạt động kinh doanh / Business Activities	Mã lĩnh vực / Industry Code	Lĩnh vực / Parent Industry	Mã loài / Species Code	Loài hoặc đối tượng / Species / Target Group	Mã danh mục / Category Code	Danh mục / Category	Mã danh mục phụ / Subcategory Code	Danh mục phụ / Subcategory	Mã sản phẩm / Product Code	Sản phẩm hoặc giải pháp / Product / Solution	Sản phẩm tiêu biểu / Company Product Highlights														
+Sản xuất / Production / Manufacturing	LV01	Chăn nuôi / Livestock	LO0000	Dùng chung / General Use	LV01-DM01	Giống và sinh sản / Breeding & Reproduction	LV01-DM01-PL03	Chọn lọc di truyền / Genetic selection	LV01-DM01-PL03-SP001	Chọn lọc di truyền / Genetic selection	Nhập tự do / Free text														
+Gia công / Contract Manufacturing	LV01	Chăn nuôi / Livestock	LO0001	Heo / Pigs	LV01-DM01	Giống và sinh sản / Breeding & Reproduction	LV01-DM01-PL04	Xét nghiệm hệ gen / Genomic testing	LV01-DM01-PL04-SP001	Xét nghiệm hệ gen / Genomic testing	Nhập tự do / Free text														
+Sơ chế & chế biến / Primary & Further Processing	LV01	Chăn nuôi / Livestock	LO0002	Gà / Chickens	LV01-DM01	Giống và sinh sản / Breeding & Reproduction	LV01-DM01-PL05	Cấy truyền phôi / Embryo transfer	LV01-DM01-PL05-SP001	Cấy truyền phôi / Embryo transfer	Nhập tự do / Free text														
+Thương mại / Trading	LV01	Chăn nuôi / Livestock	LO0003	Vịt / Ducks	LV01-DM02	Thức ăn & dinh dưỡng / Feed & Nutrition	LV01-DM02-PL01	Thức ăn hoàn chỉnh / Complete Feed	LV01-DM02-PL01-SP001	Thức ăn theo loài và giai đoạn phát triển / Species- and growth-stage-specific feed	Nhập tự do / Free text														
+Phân phối / Distribution	LV01	Chăn nuôi / Livestock	LO0004	Chim cút / Quail	LV01-DM02	Thức ăn & dinh dưỡng / Feed & Nutrition	LV01-DM02-PL02	Thức ăn đậm đặc / Feed Concentrates	LV01-DM02-PL02-SP001	Thức ăn đậm đặc phối trộn tại trại / Feed concentrates for on-farm mixing	Nhập tự do / Free text														
+Xuất khẩu / Export	LV01	Chăn nuôi / Livestock	LO0005	Bò / Cattle	LV01-DM02	Thức ăn & dinh dưỡng / Feed & Nutrition	LV01-DM02-PL03	Nguyên liệu thức ăn / Feed Ingredients	LV01-DM02-PL03-SP001	Ngô, khô đậu tương, cám, nguyên liệu protein / Maize, soybean meal, bran, and protein ingredients	Nhập tự do / Free text														
+Nhập khẩu / Import	LV01	Chăn nuôi / Livestock	LO0006	Trâu / Buffalo	LV01-DM02	Thức ăn & dinh dưỡng / Feed & Nutrition	LV01-DM02-PL04	Premix, vitamin & khoáng / Premixes, Vitamins & Minerals	LV01-DM02-PL04-SP001	Premix vitamin, khoáng vi lượng / Vitamin premixes and trace minerals	Nhập tự do / Free text														
+Cung cấp dịch vụ / Service Provision	LV01	Chăn nuôi / Livestock	LO0007	Dê / Goats	LV01-DM02	Thức ăn & dinh dưỡng / Feed & Nutrition	LV01-DM02-PL05	Phụ gia thức ăn / Feed Additives	LV01-DM02-PL05-SP001	Enzyme, probiotic, axit hữu cơ, chất hấp phụ độc tố / Enzymes, probiotics, organic acids, and mycotoxin binders	Nhập tự do / Free text														
+Tư vấn / Consulting	LV01	Chăn nuôi / Livestock	LO0008	Cừu / Sheep	LV01-DM02	Thức ăn và dinh dưỡng / Feed & Nutrition	LV01-DM02-PL07	Dinh dưỡng chuyên biệt / Specialty nutrition	LV01-DM02-PL07-SP001	Dinh dưỡng chuyên biệt / Specialty nutrition	Nhập tự do / Free text														
+Thiết kế & thi công / Design & Construction	LV01	Chăn nuôi / Livestock	LO0009	Bò sữa / Dairy Cattle	LV01-DM02	Thức ăn và dinh dưỡng / Feed & Nutrition	LV01-DM02-PL08	Thức ăn chức năng / Functional feed	LV01-DM02-PL08-SP001	Thức ăn chức năng / Functional feed	Nhập tự do / Free text														
+Lắp đặt & bảo trì / Installation & Maintenance	LV01	Chăn nuôi / Livestock	LO0010	Dê sữa / Dairy Goats	LV01-DM03	Sức khỏe động vật / Animal Health	LV01-DM03-PL01	Vắc xin / Vaccines	LV01-DM03-PL01-SP001	Vắc xin theo loài và bệnh mục tiêu / Vaccines for specific species and target diseases	Nhập tự do / Free text														
+Nghiên cứu & phát triển / Research & Development	LV01	Chăn nuôi / Livestock	LO0011	Ong mật / Honey Bees	LV01-DM03	Sức khỏe động vật / Animal Health	LV01-DM03-PL02	Thuốc thú y / Veterinary Medicines	LV01-DM03-PL02-SP001	Thuốc kháng khuẩn, thuốc trị ký sinh trùng / Antibacterial medicines and antiparasitic medicines	Nhập tự do / Free text														
+Đào tạo & chuyển giao công nghệ / Training & Technology Transfer	LV01	Chăn nuôi / Livestock	LO0012	Ruồi lính đen / Black Soldier Flies	LV01-DM03	Sức khỏe động vật / Animal Health	LV01-DM03-PL03	Chẩn đoán & kiểm nghiệm / Diagnostics & Testing	LV01-DM03-PL03-SP001	Bộ xét nghiệm, dịch vụ xét nghiệm bệnh / Diagnostic test kits and disease testing services	Nhập tự do / Free text														
+Khác (ghi rõ) / Other (please specify)	LV01	Chăn nuôi / Livestock	LO0013	Dế / Crickets	LV01-DM03	Sức khỏe động vật / Animal Health	LV01-DM03-PL04	Kiểm soát ký sinh trùng / Parasite control	LV01-DM03-PL04-SP001	Kiểm soát ký sinh trùng / Parasite control	Nhập tự do / Free text														
+	LV01	Chăn nuôi / Livestock	LO0014	Sâu bột / Mealworms	LV01-DM03	Sức khỏe động vật / Animal Health	LV01-DM03-PL05	Thiết bị thú y / Veterinary devices	LV01-DM03-PL05-SP001	Thiết bị thú y / Veterinary devices	Nhập tự do / Free text														
+	LV01	Chăn nuôi / Livestock	LO0015	Tôm thẻ chân trắng / Whiteleg Shrimp	LV01-DM03	Sức khỏe động vật / Animal Health	LV01-DM03-PL06	Dịch vụ sức khỏe động vật / Animal health services	LV01-DM03-PL06-SP001	Dịch vụ sức khỏe động vật / Animal health services	Nhập tự do / Free text														
+	LV01	Chăn nuôi / Livestock	LO0016	Tôm sú / Giant Tiger Shrimp	LV01-DM04	An toàn sinh học / Biosecurity	LV01-DM04-PL01	Vệ sinh & sát trùng / Cleaning & Disinfection	LV01-DM04-PL01-SP001	Chất sát trùng, thiết bị khử trùng / Disinfectants and disinfection equipment	Nhập tự do / Free text														
+	LV01	Chăn nuôi / Livestock	LO0017	Tôm càng xanh / Giant Freshwater Prawns	LV01-DM04	An toàn sinh học / Biosecurity	LV01-DM04-PL02	Kiểm soát sinh vật gây hại và vật trung gian truyền bệnh / Pest & vector control	LV01-DM04-PL02-SP001	Kiểm soát sinh vật gây hại và vật trung gian truyền bệnh / Pest & vector control	Nhập tự do / Free text														
+	LV01	Chăn nuôi / Livestock	LO0018	Cá tra / Striped Catfish	LV01-DM04	An toàn sinh học / Biosecurity	LV01-DM04-PL03	Kiểm soát ra vào trang trại / Farm access control	LV01-DM04-PL03-SP001	Kiểm soát ra vào trang trại / Farm access control	Nhập tự do / Free text														
+	LV01	Chăn nuôi / Livestock	LO0019	Cá rô phi / Tilapia	LV01-DM04	An toàn sinh học / Biosecurity	LV01-DM04-PL04	Giám sát dịch bệnh / Disease surveillance	LV01-DM04-PL04-SP001	Giám sát dịch bệnh / Disease surveillance	Nhập tự do / Free text														
+	LV01	Chăn nuôi / Livestock	LO0020	Cá nước ngọt / Freshwater Fish	LV01-DM05	Thiết bị chăn nuôi / Livestock Equipment	LV01-DM05-PL01	Cho ăn & cấp nước / Feeding & Water Supply	LV01-DM05-PL01-SP001	Máng ăn, núm uống, hệ thống cho ăn tự động / Feeders, nipple drinkers, and automatic feeding systems	Nhập tự do / Free text														
+	LV01	Chăn nuôi / Livestock	LO0021	Cá biển / Marine Fish	LV01-DM05	Thiết bị chăn nuôi / Livestock Equipment	LV01-DM05-PL04	Thiết bị thao tác và quản lý vật nuôi / Animal handling	LV01-DM05-PL04-SP001	Thiết bị thao tác và quản lý vật nuôi / Animal handling	Nhập tự do / Free text														
+	LV01	Chăn nuôi / Livestock	LO0022	Cua / Crabs	LV01-DM05	Thiết bị chăn nuôi / Livestock Equipment	LV01-DM05-PL05	Tự động hóa thu gom trứng / Egg collection automation	LV01-DM05-PL05-SP001	Tự động hóa thu gom trứng / Egg collection automation	Nhập tự do / Free text														
+	LV01	Chăn nuôi / Livestock	LO0023	Tôm hùm / Spiny Lobsters	LV01-DM05	Thiết bị chăn nuôi / Livestock Equipment	LV01-DM05-PL06	Robot trang trại / Farm robotics	LV01-DM05-PL06-SP001	Robot trang trại / Farm robotics	Nhập tự do / Free text														
+	LV01	Chăn nuôi / Livestock	LO0024	Nghêu / Clams	LV01-DM06	Hạ tầng & kiểm soát khí hậu / Infrastructure & Climate Control	LV01-DM06-PL01	Chuồng trại / Livestock Housing	LV01-DM06-PL01-SP001	Chuồng kín, quạt thông gió, hệ thống làm mát / Enclosed livestock housing, ventilation fans, and cooling systems	Nhập tự do / Free text														
+	LV01	Chăn nuôi / Livestock	LO0025	Hàu / Oysters	LV01-DM06	Hạ tầng và kiểm soát khí hậu / Infrastructure & Climate Control	LV01-DM06-PL02	Hệ thống sưởi / Heating systems	LV01-DM06-PL02-SP001	Hệ thống sưởi / Heating systems	Nhập tự do / Free text														
+	LV01	Chăn nuôi / Livestock	LO0026	Vẹm / Mussels	LV01-DM06	Hạ tầng và kiểm soát khí hậu / Infrastructure & Climate Control	LV01-DM06-PL03	Kiểm soát độ ẩm / Humidity control	LV01-DM06-PL03-SP001	Kiểm soát độ ẩm / Humidity control	Nhập tự do / Free text														
+	LV01	Chăn nuôi / Livestock	LO0027	Ốc / Snails	LV01-DM06	Hạ tầng và kiểm soát khí hậu / Infrastructure & Climate Control	LV01-DM06-PL04	Cảm biến khí hậu / Climate sensors	LV01-DM06-PL04-SP001	Cảm biến khí hậu / Climate sensors	Nhập tự do / Free text														
+	LV01	Chăn nuôi / Livestock	LO0028	Bào ngư / Abalone	LV01-DM07	Môi trường & chất thải / Environment & Waste	LV01-DM07-PL01	Xử lý chất thải / Waste Treatment	LV01-DM07-PL01-SP001	Máy tách phân, hệ thống biogas, xử lý mùi / Manure separators, biogas systems, and odor treatment	Nhập tự do / Free text														
+	LV01	Chăn nuôi / Livestock	LO0029	Rong biển / Seaweed	LV01-DM07	Môi trường và chất thải / Environment & Waste	LV01-DM07-PL02	Thu hồi dinh dưỡng / Nutrient recovery	LV01-DM07-PL02-SP001	Thu hồi dinh dưỡng / Nutrient recovery	Nhập tự do / Free text														
+	LV01	Chăn nuôi / Livestock	LO0030	Vi tảo / Microalgae	LV01-DM07	Môi trường và chất thải / Environment & Waste	LV01-DM07-PL03	Kiểm soát mùi / Odor control	LV01-DM07-PL03-SP001	Kiểm soát mùi / Odor control	Nhập tự do / Free text														
+	LV01	Chăn nuôi / Livestock	LO0031	Tôm / Shrimp	LV01-DM08	Công nghệ số & tự động hóa / Digital Technology & Automation	LV01-DM08-PL01	Quản lý đàn & trang trại / Herd & Farm Management	LV01-DM08-PL01-SP001	Phần mềm quản lý, thẻ nhận diện, cảm biến / Management software, identification tags, and sensors	Nhập tự do / Free text														
+	LV01	Chăn nuôi / Livestock	LO0032	Cá / Fish	LV01-DM08	Công nghệ số và tự động hóa / Digital Technology & Automation	LV01-DM08-PL02	Thị giác máy tính AI / AI computer vision	LV01-DM08-PL02-SP001	Thị giác máy tính AI / AI computer vision	Nhập tự do / Free text														
+	LV01	Chăn nuôi / Livestock	LO0033	Nhuyễn thể / Molluscs	LV01-DM08	Công nghệ số và tự động hóa / Digital Technology & Automation	LV01-DM08-PL03	Phân tích dự báo / Predictive analytics	LV01-DM08-PL03-SP001	Phân tích dự báo / Predictive analytics	Nhập tự do / Free text														
+	LV01	Chăn nuôi / Livestock	LO0034	Lúa / Rice	LV01-DM08	Công nghệ số và tự động hóa / Digital Technology & Automation	LV01-DM08-PL04	Robot trang trại / Farm robotics	LV01-DM08-PL04-SP001	Robot trang trại / Farm robotics	Nhập tự do / Free text														
+	LV01	Chăn nuôi / Livestock	LO0035	Ngô / Maize	LV01-DM09	Sản xuất thương phẩm / Commercial Production	LV01-DM09-PL01	Trang trại chăn nuôi / Livestock Farming	LV01-DM09-PL01-SP001	Chăn nuôi lấy thịt, sữa, trứng / Livestock production for meat, milk, and eggs	Nhập tự do / Free text														
+	LV01	Chăn nuôi / Livestock	LO0036	Rau / Vegetables	LV01-DM10	Dịch vụ kỹ thuật / Technical Services	LV01-DM10-PL01	Tư vấn & vận hành / Consulting & Operations	LV01-DM10-PL01-SP001	Tư vấn dinh dưỡng, thú y, thiết kế trại / Nutrition consulting, veterinary consulting, and farm design	Nhập tự do / Free text														
+	LV01	Chăn nuôi / Livestock	LO0037	Hoa / Flowers	LV01-DM01	Giống & sinh sản / Breeding & Reproduction	LV01-DM01-PL01	Con giống / Breeding & Young Stock	LV01-DM01-PL01-SP001	Heo giống bố mẹ, heo hậu bị / Breeding pigs and replacement gilts	Nhập tự do / Free text														
+	LV01	Chăn nuôi / Livestock	LO0038	Cây ăn trái / Fruit Crops	LV01-DM01	Giống & sinh sản / Breeding & Reproduction	LV01-DM01-PL02	Vật liệu & kỹ thuật sinh sản / Reproductive Materials & Techniques	LV01-DM01-PL02-SP001	Tinh đông lạnh, phôi, dụng cụ phối giống / Frozen semen, embryos, and insemination equipment	Nhập tự do / Free text														
+	LV01	Chăn nuôi / Livestock	LO0039	Cà phê / Coffee	LV01-DM01	Giống & sinh sản / Breeding & Reproduction	LV01-DM01-PL01	Con giống / Breeding & Young Stock	LV01-DM01-PL01-SP002	Gia cầm giống một ngày tuổi / Day-old poultry chicks	Nhập tự do / Free text														
+	LV01	Chăn nuôi / Livestock	LO0040	Hồ tiêu / Black Pepper	LV01-DM05	Thiết bị chăn nuôi / Livestock Equipment	LV01-DM05-PL02	Ấp nở & thu trứng / Incubation & Egg Collection	LV01-DM05-PL02-SP001	Máy ấp trứng, máy phân loại trứng / Egg incubators and egg grading machines	Nhập tự do / Free text														
+	LV01	Chăn nuôi / Livestock	LO0041	Cây công nghiệp / Industrial Crops	LV01-DM01	Giống & sinh sản / Breeding & Reproduction	LV01-DM01-PL01	Con giống / Breeding & Young Stock	LV01-DM01-PL01-SP003	Con giống sinh sản, con giống nuôi thịt / Breeding stock and livestock for meat production	Nhập tự do / Free text														
+	LV01	Chăn nuôi / Livestock	LO0042	Chuối / Bananas	LV01-DM02	Thức ăn & dinh dưỡng / Feed & Nutrition	LV01-DM02-PL06	Thức ăn thô xanh / Forage & Roughage	LV01-DM02-PL06-SP001	Cỏ, thức ăn ủ chua, phụ phẩm xơ / Grass, silage, and fibrous by-products	Nhập tự do / Free text														
+	LV01	Chăn nuôi / Livestock	LO0043	Khoai tây / Potatoes	LV01-DM05	Thiết bị chăn nuôi / Livestock Equipment	LV01-DM05-PL03	Khai thác sữa / Milking	LV01-DM05-PL03-SP001	Máy vắt sữa, hệ thống làm lạnh sữa tại trại / Milking machines and on-farm milk cooling systems	Nhập tự do / Free text														
+	LV01	Chăn nuôi / Livestock	LO0044	Cây trồng thủy canh / Hydroponic Crops	LV01-DM09	Sản xuất thương phẩm / Commercial Production	LV01-DM09-PL02	Nuôi ong / Beekeeping	LV01-DM09-PL02-SP001	Mật ong thô, sáp ong / Raw honey and beeswax	Nhập tự do / Free text														
+	LV01	Chăn nuôi / Livestock	LO0045	Keo / Acacia	LV01-DM09	Sản xuất thương phẩm / Commercial Production	LV01-DM09-PL03	Nuôi côn trùng / Insect Farming	LV01-DM09-PL03-SP001	Côn trùng sống, sinh khối côn trùng / Live insects and insect biomass	Nhập tự do / Free text														
+	LV02	Nuôi trồng thủy sản / Aquaculture	LO0046	Bạch đàn / Eucalyptus	LV02-DM01	Giống và sinh sản / Breeding & Reproduction	LV02-DM01-PL06	Di truyền đàn bố mẹ / Broodstock genetics	LV02-DM01-PL06-SP001	Di truyền đàn bố mẹ / Broodstock genetics	Nhập tự do / Free text														
+	LV02	Nuôi trồng thủy sản / Aquaculture	LO0047	Thông / Pine	LV02-DM01	Giống và sinh sản / Breeding & Reproduction	LV02-DM01-PL07	Tự động hóa trại ấp và trại giống / Hatchery automation	LV02-DM01-PL07-SP001	Tự động hóa trại ấp và trại giống / Hatchery automation	Nhập tự do / Free text														
+	LV02	Nuôi trồng thủy sản / Aquaculture	LO0048	Cây bản địa / Native Tree Species	LV02-DM02	Thức ăn và dinh dưỡng / Feed & Nutrition	LV02-DM02-PL05	Dinh dưỡng chức năng / Functional nutrition	LV02-DM02-PL05-SP001	Dinh dưỡng chức năng / Functional nutrition	Nhập tự do / Free text														
+	LV02	Nuôi trồng thủy sản / Aquaculture	LO0049	Tre / Bamboo	LV02-DM02	Thức ăn và dinh dưỡng / Feed & Nutrition	LV02-DM02-PL06	Thức ăn vi hạt cho ấu trùng / Larval microdiets	LV02-DM02-PL06-SP001	Thức ăn vi hạt cho ấu trùng / Larval microdiets	Nhập tự do / Free text														
+	LV02	Nuôi trồng thủy sản / Aquaculture	LO0050	Luồng / Luong Bamboo	LV02-DM03	Sức khỏe động vật thủy sản / Aquatic Animal Health	LV02-DM03-PL04	Giám sát mầm bệnh / Pathogen surveillance	LV02-DM03-PL04-SP001	Giám sát mầm bệnh / Pathogen surveillance	Nhập tự do / Free text														
+	LV02	Nuôi trồng thủy sản / Aquaculture	LO0051	Song mây / Rattan	LV02-DM03	Sức khỏe động vật thủy sản / Aquatic Animal Health	LV02-DM03-PL05	Dịch vụ tiêm vắc xin cho cá / Fish vaccination services	LV02-DM03-PL05-SP001	Dịch vụ tiêm vắc xin cho cá / Fish vaccination services	Nhập tự do / Free text														
+	LV02	Nuôi trồng thủy sản / Aquaculture	LO0052	Cây lấy gỗ / Timber Trees	LV02-DM04	Môi trường nuôi / Aquaculture Environment	LV02-DM04-PL01	Xử lý nước & đáy ao / Water & Pond Bottom Treatment	LV02-DM04-PL01-SP001	Vi sinh xử lý nước, chất cải tạo đáy ao / Microbial water treatment products and pond bottom conditioners	Nhập tự do / Free text														
+	LV02	Nuôi trồng thủy sản / Aquaculture	LO0053	Quế / Cinnamon	LV02-DM04	Môi trường nuôi / Aquaculture Environment	LV02-DM04-PL02	Điều chỉnh chỉ tiêu nước / Water Quality Adjustment	LV02-DM04-PL02-SP001	Khoáng, chất điều chỉnh pH và độ kiềm / Minerals and pH and alkalinity regulators	Nhập tự do / Free text														
+	LV02	Nuôi trồng thủy sản / Aquaculture	LO0054	Hồi / Star Anise	LV02-DM04	Môi trường nuôi thủy sản / Aquaculture Environment	LV02-DM04-PL03	Kiểm tra chất lượng nước / Water quality testing	LV02-DM04-PL03-SP001	Kiểm tra chất lượng nước / Water quality testing	Nhập tự do / Free text														
+	LV02	Nuôi trồng thủy sản / Aquaculture	LO0055	Chó / Dogs	LV02-DM04	Môi trường nuôi thủy sản / Aquaculture Environment	LV02-DM04-PL04	Quản lý bùn đáy ao / Pond sludge management	LV02-DM04-PL04-SP001	Quản lý bùn đáy ao / Pond sludge management	Nhập tự do / Free text														
+	LV02	Nuôi trồng thủy sản / Aquaculture	LO0056	Mèo / Cats	LV02-DM05	An toàn sinh học / Biosecurity	LV02-DM05-PL01	Lọc & khử trùng / Filtration & Disinfection	LV02-DM05-PL01-SP001	Bộ lọc, thiết bị UV, hệ thống ozone / Filters, UV equipment, and ozone systems	Nhập tự do / Free text														
+	LV02	Nuôi trồng thủy sản / Aquaculture	LO0057	Cá cảnh / Ornamental Fish	LV02-DM05	An toàn sinh học / Biosecurity	LV02-DM05-PL02	Vệ sinh trại ấp và trại giống / Hatchery hygiene	LV02-DM05-PL02-SP001	Vệ sinh trại ấp và trại giống / Hatchery hygiene	Nhập tự do / Free text														
+	LV02	Nuôi trồng thủy sản / Aquaculture	LO0058	Chim cảnh / Pet Birds	LV02-DM05	An toàn sinh học / Biosecurity	LV02-DM05-PL03	Ngăn chặn mầm bệnh xâm nhập / Pathogen exclusion	LV02-DM05-PL03-SP001	Ngăn chặn mầm bệnh xâm nhập / Pathogen exclusion	Nhập tự do / Free text														
+	LV02	Nuôi trồng thủy sản / Aquaculture	LO0059	Bò sát cảnh / Pet Reptiles	LV02-DM06	Thiết bị nuôi thủy sản / Aquaculture Equipment	LV02-DM06-PL03	Thiết bị thu hoạch / Harvesting equipment	LV02-DM06-PL03-SP001	Thiết bị thu hoạch / Harvesting equipment	Nhập tự do / Free text														
+	LV02	Nuôi trồng thủy sản / Aquaculture	LO0060	Thú nhỏ / Small Mammals	LV02-DM06	Thiết bị nuôi thủy sản / Aquaculture Equipment	LV02-DM06-PL04	Thiết bị phân loại / Grading equipment	LV02-DM06-PL04-SP001	Thiết bị phân loại / Grading equipment	Nhập tự do / Free text														
+	LV02	Nuôi trồng thủy sản / Aquaculture	LO0061	Cá ngừ / Tuna	LV02-DM07	Hạ tầng và hệ thống nuôi thủy sản / Aquaculture Infrastructure & Systems	LV02-DM07-PL04	Hệ thống bể nuôi dòng chảy / Raceway systems	LV02-DM07-PL04-SP001	Hệ thống bể nuôi dòng chảy / Raceway systems	Nhập tự do / Free text														
+	LV02	Nuôi trồng thủy sản / Aquaculture	LO0062	Mực / Squid	LV02-DM07	Hạ tầng và hệ thống nuôi thủy sản / Aquaculture Infrastructure & Systems	LV02-DM07-PL05	Hệ thống nuôi biển xa bờ / Offshore aquaculture systems	LV02-DM07-PL05-SP001	Hệ thống nuôi biển xa bờ / Offshore aquaculture systems	Nhập tự do / Free text														
+	LV02	Nuôi trồng thủy sản / Aquaculture	LO0063	Ghẹ / Swimming Crabs	LV02-DM08	Công nghệ số & tự động hóa / Digital Technology & Automation	LV02-DM08-PL01	Giám sát & quản lý / Monitoring & Management	LV02-DM08-PL01-SP001	Cảm biến chất lượng nước, phần mềm quản lý trại / Water quality sensors and farm management software	Nhập tự do / Free text														
+	LV02	Nuôi trồng thủy sản / Aquaculture	LO0064	Bạch tuộc / Octopus	LV02-DM08	Công nghệ số và tự động hóa / Digital Technology & Automation	LV02-DM08-PL02	Giám sát thủy sản bằng AI / AI aquatic monitoring	LV02-DM08-PL02-SP001	Giám sát thủy sản bằng AI / AI aquatic monitoring	Nhập tự do / Free text														
+	LV02	Nuôi trồng thủy sản / Aquaculture	LO0065	Cá mòi / Sardines	LV02-DM08	Công nghệ số và tự động hóa / Digital Technology & Automation	LV02-DM08-PL03	Viễn thám / Remote sensing	LV02-DM08-PL03-SP001	Viễn thám / Remote sensing	Nhập tự do / Free text														
+	LV02	Nuôi trồng thủy sản / Aquaculture	LO0066	Gia cầm / Poultry	LV02-DM10	Dịch vụ kỹ thuật / Technical Services	LV02-DM10-PL01	Thiết kế & tư vấn / Design & Consulting	LV02-DM10-PL01-SP001	Thiết kế trại giống, trại nuôi, quản lý môi trường / Hatchery design, aquaculture farm design, and environmental management	Nhập tự do / Free text														
+	LV02	Nuôi trồng thủy sản / Aquaculture	LO0067	Khác / Other	LV02-DM01	Giống & sinh sản / Breeding & Reproduction	LV02-DM01-PL01	Tôm giống / Shrimp Seed	LV02-DM01-PL01-SP001	Tôm bố mẹ, nauplius, postlarvae / Shrimp broodstock, nauplii, and postlarvae	Nhập tự do / Free text														
+	LV02	Nuôi trồng thủy sản / Aquaculture			LV02-DM01	Giống & sinh sản / Breeding & Reproduction	LV02-DM01-PL02	Cá giống / Fish Seed	LV02-DM01-PL02-SP001	Cá bố mẹ, trứng cá, cá bột, cá giống / Fish broodstock, eggs, fry, and fingerlings	Nhập tự do / Free text														
+	LV02	Nuôi trồng thủy sản / Aquaculture			LV02-DM01	Giống & sinh sản / Breeding & Reproduction	LV02-DM01-PL03	Giống giáp xác khác / Other Crustacean Seed	LV02-DM01-PL03-SP001	Cua giống, tôm hùm giống / Crab seed and spiny lobster seed	Nhập tự do / Free text														
+	LV02	Nuôi trồng thủy sản / Aquaculture			LV02-DM01	Giống & sinh sản / Breeding & Reproduction	LV02-DM01-PL04	Giống nhuyễn thể / Mollusc Seed	LV02-DM01-PL04-SP001	Ấu trùng, con giống nhuyễn thể / Mollusc larvae and seed	Nhập tự do / Free text														
+	LV02	Nuôi trồng thủy sản / Aquaculture			LV02-DM01	Giống & sinh sản / Breeding & Reproduction	LV02-DM01-PL05	Giống rong & tảo / Seaweed & Algal Seed	LV02-DM01-PL05-SP001	Giống rong, giống tảo nuôi cấy / Seaweed seed and cultured algal starter cultures	Nhập tự do / Free text														
+	LV02	Nuôi trồng thủy sản / Aquaculture			LV02-DM02	Thức ăn & dinh dưỡng / Feed & Nutrition	LV02-DM02-PL01	Thức ăn hoàn chỉnh / Complete Feed	LV02-DM02-PL01-SP001	Thức ăn theo loài và giai đoạn nuôi / Species- and culture-stage-specific feed	Nhập tự do / Free text														
+	LV02	Nuôi trồng thủy sản / Aquaculture			LV02-DM02	Thức ăn & dinh dưỡng / Feed & Nutrition	LV02-DM02-PL03	Nguyên liệu thức ăn / Feed Ingredients	LV02-DM02-PL03-SP001	Bột cá, dầu cá, đạm thực vật, đạm thay thế / Fishmeal, fish oil, plant proteins, and alternative proteins	Nhập tự do / Free text														
+	LV02	Nuôi trồng thủy sản / Aquaculture			LV02-DM02	Thức ăn & dinh dưỡng / Feed & Nutrition	LV02-DM02-PL04	Phụ gia & dinh dưỡng bổ sung / Additives & Nutritional Supplements	LV02-DM02-PL04-SP001	Probiotic đường ruột, enzyme, vitamin, khoáng / Gut probiotics, enzymes, vitamins, and minerals	Nhập tự do / Free text														
+	LV02	Nuôi trồng thủy sản / Aquaculture			LV02-DM03	Sức khỏe thủy sản / Aquatic Animal Health	LV02-DM03-PL02	Thuốc & sản phẩm chăm sóc sức khỏe / Medicines & Health Care Products	LV02-DM03-PL02-SP001	Thuốc thú y thủy sản theo đối tượng sử dụng / Aquatic veterinary medicines for specific target species	Nhập tự do / Free text														
+	LV02	Nuôi trồng thủy sản / Aquaculture			LV02-DM06	Thiết bị nuôi / Aquaculture Equipment	LV02-DM06-PL01	Sục khí & cấp oxy / Aeration & Oxygen Supply	LV02-DM06-PL01-SP001	Quạt nước, máy thổi khí, hệ thống oxy / Paddlewheel aerators, air blowers, and oxygen systems	Nhập tự do / Free text														
+	LV02	Nuôi trồng thủy sản / Aquaculture			LV02-DM06	Thiết bị nuôi / Aquaculture Equipment	LV02-DM06-PL02	Cho ăn & bơm nước / Feeding & Water Pumping	LV02-DM06-PL02-SP001	Máy cho ăn tự động, máy bơm / Automatic feeders and pumps	Nhập tự do / Free text														
+	LV02	Nuôi trồng thủy sản / Aquaculture			LV02-DM07	Hạ tầng & hệ thống nuôi / Aquaculture Infrastructure & Systems	LV02-DM07-PL01	Ao & bể nuôi / Ponds & Tanks	LV02-DM07-PL01-SP001	Bạt lót ao, bể nuôi, đường ống / Pond liners, culture tanks, and piping	Nhập tự do / Free text														
+	LV02	Nuôi trồng thủy sản / Aquaculture			LV02-DM07	Hạ tầng & hệ thống nuôi / Aquaculture Infrastructure & Systems	LV02-DM07-PL03	Hệ thống nuôi tích hợp / Integrated Aquaculture Systems	LV02-DM07-PL03-SP001	Hệ thống tuần hoàn RAS, hệ thống biofloc / Recirculating aquaculture systems (RAS) and biofloc systems	Nhập tự do / Free text														
+	LV02	Nuôi trồng thủy sản / Aquaculture			LV02-DM02	Thức ăn & dinh dưỡng / Feed & Nutrition	LV02-DM02-PL02	Thức ăn sống & thức ăn ấu trùng / Live Feed & Larval Feed	LV02-DM02-PL02-SP001	Artemia, luân trùng, vi tảo, thức ăn vi hạt / Artemia, rotifers, microalgae, and microdiets	Nhập tự do / Free text														
+	LV02	Nuôi trồng thủy sản / Aquaculture			LV02-DM03	Sức khỏe thủy sản / Aquatic Animal Health	LV02-DM03-PL03	Chẩn đoán & kiểm nghiệm / Diagnostics & Testing	LV02-DM03-PL03-SP001	Bộ xét nghiệm, dịch vụ kiểm nghiệm mầm bệnh / Diagnostic test kits and pathogen testing services	Nhập tự do / Free text														
+	LV02	Nuôi trồng thủy sản / Aquaculture			LV02-DM09	Sản xuất thương phẩm / Commercial Production	LV02-DM09-PL01	Nuôi thương phẩm / Grow-out Production	LV02-DM09-PL01-SP001	Thủy sản nuôi sống, sinh khối rong/tảo / Live farmed aquatic products and seaweed/algal biomass	Nhập tự do / Free text														
+	LV02	Nuôi trồng thủy sản / Aquaculture			LV02-DM03	Sức khỏe thủy sản / Aquatic Animal Health	LV02-DM03-PL01	Vắc xin / Vaccines	LV02-DM03-PL01-SP001	Vắc xin cho cá / Fish vaccines	Nhập tự do / Free text														
+	LV02	Nuôi trồng thủy sản / Aquaculture			LV02-DM07	Hạ tầng & hệ thống nuôi / Aquaculture Infrastructure & Systems	LV02-DM07-PL02	Lồng & bè / Cages & Rafts	LV02-DM07-PL02-SP001	Lồng HDPE, lưới lồng, hệ thống neo / HDPE cages, cage nets, and mooring systems	Nhập tự do / Free text														
+	LV03	Trồng trọt / Crop Production			LV03-DM02	Phân bón & dinh dưỡng / Fertilizers & Nutrition	LV03-DM02-PL01	Phân vô cơ / Inorganic Fertilizers	LV03-DM02-PL01-SP001	Phân đạm, lân, kali, NPK / Nitrogen, phosphate, potash, and NPK fertilizers	Nhập tự do / Free text														
+	LV03	Trồng trọt / Crop Production			LV03-DM02	Phân bón & dinh dưỡng / Fertilizers & Nutrition	LV03-DM02-PL02	Phân hữu cơ / Organic Fertilizers	LV03-DM02-PL02-SP001	Phân compost, phân hữu cơ chế biến / Compost and processed organic fertilizers	Nhập tự do / Free text														
+	LV03	Trồng trọt / Crop Production			LV03-DM02	Phân bón & dinh dưỡng / Fertilizers & Nutrition	LV03-DM02-PL03	Phân vi sinh / Microbial Fertilizers	LV03-DM02-PL03-SP001	Phân chứa vi sinh vật có ích / Fertilizers containing beneficial microorganisms	Nhập tự do / Free text														
+	LV03	Trồng trọt / Crop Production			LV03-DM02	Phân bón & dinh dưỡng / Fertilizers & Nutrition	LV03-DM02-PL04	Phân bón lá & vi lượng / Foliar Fertilizers & Micronutrients	LV03-DM02-PL04-SP001	Dinh dưỡng phun lá, trung vi lượng / Foliar nutrients, secondary nutrients, and micronutrients	Nhập tự do / Free text														
+	LV03	Trồng trọt / Crop Production			LV03-DM03	Bảo vệ thực vật / Crop Protection	LV03-DM03-PL01	Kiểm soát sâu hại / Insect Pest Control	LV03-DM03-PL01-SP001	Thuốc trừ sâu, bẫy côn trùng / Insecticides and insect traps	Nhập tự do / Free text														
+	LV03	Trồng trọt / Crop Production			LV03-DM03	Bảo vệ thực vật / Crop Protection	LV03-DM03-PL02	Kiểm soát bệnh / Disease Control	LV03-DM03-PL02-SP001	Thuốc phòng trừ nấm, vi khuẩn gây bệnh cây / Products for controlling fungal and bacterial plant diseases	Nhập tự do / Free text														
+	LV03	Trồng trọt / Crop Production			LV03-DM03	Bảo vệ thực vật / Crop Protection	LV03-DM03-PL03	Kiểm soát cỏ dại / Weed Control	LV03-DM03-PL03-SP001	Thuốc trừ cỏ, vật liệu phủ đất / Herbicides and mulching materials	Nhập tự do / Free text														
+	LV03	Trồng trọt / Crop Production			LV03-DM03	Bảo vệ thực vật / Crop Protection	LV03-DM03-PL04	Kiểm soát sinh học / Biological Control	LV03-DM03-PL04-SP001	Thiên địch, chế phẩm vi sinh, pheromone / Natural enemies, microbial products, and pheromones	Nhập tự do / Free text														
+	LV03	Trồng trọt / Crop Production			LV03-DM04	Đất & giá thể / Soil & Growing Media	LV03-DM04-PL01	Giá thể trồng / Growing Media	LV03-DM04-PL01-SP001	Xơ dừa, trấu, than bùn, giá thể phối trộn / Coconut coir, rice husks, peat, and growing media blends	Nhập tự do / Free text														
+	LV03	Trồng trọt / Crop Production			LV03-DM04	Đất & giá thể / Soil & Growing Media	LV03-DM04-PL02	Cải tạo đất / Soil Improvement	LV03-DM04-PL02-SP001	Vôi, thạch cao nông nghiệp, biochar / Lime, agricultural gypsum, and biochar	Nhập tự do / Free text														
+	LV03	Trồng trọt / Crop Production			LV03-DM05	Tưới & quản lý nước / Irrigation & Water Management	LV03-DM05-PL01	Hệ thống tưới / Irrigation Systems	LV03-DM05-PL01-SP001	Tưới nhỏ giọt, tưới phun, bộ lọc / Drip irrigation, sprinkler irrigation, and filters	Nhập tự do / Free text														
+	LV03	Trồng trọt / Crop Production			LV03-DM08	Máy móc & cơ giới hóa / Machinery & Mechanization	LV03-DM08-PL01	Làm đất & gieo trồng / Soil Preparation & Planting	LV03-DM08-PL01-SP001	Máy kéo, máy làm đất, máy gieo hạt / Tractors, tillage machines, and seeders	Nhập tự do / Free text														
+	LV03	Trồng trọt / Crop Production			LV03-DM08	Máy móc & cơ giới hóa / Machinery & Mechanization	LV03-DM08-PL02	Chăm sóc & thu hoạch / Crop Care & Harvesting	LV03-DM08-PL02-SP001	Máy phun, máy bay phun, máy thu hoạch / Sprayers, spraying aircraft, and harvesters	Nhập tự do / Free text														
+	LV03	Trồng trọt / Crop Production			LV03-DM09	Công nghệ số & tự động hóa / Digital Technology & Automation	LV03-DM09-PL01	Canh tác chính xác / Precision Farming	LV03-DM09-PL01-SP001	Cảm biến đất, trạm thời tiết, bản đồ đồng ruộng / Soil sensors, weather stations, and field maps	Nhập tự do / Free text														
+	LV03	Trồng trọt / Crop Production			LV03-DM11	Dịch vụ kỹ thuật / Technical Services	LV03-DM11-PL01	Tư vấn & kiểm nghiệm / Consulting & Testing	LV03-DM11-PL01-SP001	Phân tích đất, tư vấn canh tác, quản lý dịch hại / Soil analysis, cultivation consulting, and pest management	Nhập tự do / Free text														
+	LV03	Trồng trọt / Crop Production			LV03-DM01	Giống & nhân giống / Seeds & Propagation	LV03-DM01-PL01	Hạt giống / Seeds	LV03-DM01-PL01-SP001	Hạt giống thuần, hạt giống lai / Open-pollinated seeds and hybrid seeds	Nhập tự do / Free text														
+	LV03	Trồng trọt / Crop Production			LV03-DM10	Sản xuất thương phẩm / Commercial Production	LV03-DM10-PL01	Trồng trọt thương phẩm / Commercial Crop Production	LV03-DM10-PL01-SP001	Nông sản tươi, hoa cắt cành, nguyên liệu cây trồng / Fresh agricultural produce, cut flowers, and crop raw materials	Nhập tự do / Free text														
+	LV03	Trồng trọt / Crop Production			LV03-DM07	Hệ thống canh tác / Cultivation Systems	LV03-DM07-PL01	Canh tác không đất / Soilless Cultivation	LV03-DM07-PL01-SP001	Hệ thống thủy canh, khí canh / Hydroponic systems and aeroponic systems	Nhập tự do / Free text														
+	LV03	Trồng trọt / Crop Production			LV03-DM06	Hạ tầng canh tác / Crop Production Infrastructure	LV03-DM06-PL01	Nhà kính & nhà màng / Greenhouses & Plastic-covered Growing Structures	LV03-DM06-PL01-SP001	Nhà kính, nhà màng, lưới chắn côn trùng / Greenhouses, plastic-covered growing structures, and insect screens	Nhập tự do / Free text														
+	LV03	Trồng trọt / Crop Production			LV03-DM02	Phân bón & dinh dưỡng / Fertilizers & Nutrition	LV03-DM02-PL05	Dinh dưỡng hòa tan / Water-soluble Nutrients	LV03-DM02-PL05-SP001	Dung dịch thủy canh, phân dùng qua hệ thống tưới / Hydroponic nutrient solutions and fertigation fertilizers	Nhập tự do / Free text														
+	LV03	Trồng trọt / Crop Production			LV03-DM01	Giống & nhân giống / Seeds & Propagation	LV03-DM01-PL02	Cây giống / Planting Stock	LV03-DM01-PL02-SP001	Cây ghép, cây giâm cành, cây giống vườn ươm / Grafted plants, rooted cuttings, and nursery plants	Nhập tự do / Free text														
+	LV03	Trồng trọt / Crop Production			LV03-DM01	Giống & nhân giống / Seeds & Propagation	LV03-DM01-PL03	Nuôi cấy mô / Tissue Culture	LV03-DM01-PL03-SP001	Cây giống nuôi cấy mô / Tissue-cultured plantlets	Nhập tự do / Free text														
+	LV04	Lâm nghiệp / Forestry			LV04-DM02	Vật tư trồng rừng / Forestry Planting Supplies	LV04-DM02-PL01	Dinh dưỡng & cải tạo đất / Nutrition & Soil Improvement	LV04-DM02-PL01-SP001	Phân bón cây lâm nghiệp, vật tư cải tạo đất / Forest tree fertilizers and soil amendment materials	Nhập tự do / Free text														
+	LV04	Lâm nghiệp / Forestry			LV04-DM03	Bảo vệ rừng / Forest Protection	LV04-DM03-PL01	Phòng trừ sinh vật gây hại / Pest & Disease Control	LV04-DM03-PL01-SP001	Bẫy, chế phẩm, giải pháp kiểm soát sâu bệnh / Traps, treatment products, and pest and disease control solutions	Nhập tự do / Free text														
+	LV04	Lâm nghiệp / Forestry			LV04-DM03	Bảo vệ rừng / Forest Protection	LV04-DM03-PL02	Phòng cháy & chữa cháy / Fire Prevention & Firefighting	LV04-DM03-PL02-SP001	Thiết bị phát hiện cháy, máy bơm, dụng cụ chữa cháy / Fire detection equipment, pumps, and firefighting tools	Nhập tự do / Free text														
+	LV04	Lâm nghiệp / Forestry			LV04-DM04	Máy móc & thiết bị / Machinery & Equipment	LV04-DM04-PL01	Trồng & chăm sóc rừng / Forest Establishment & Maintenance	LV04-DM04-PL01-SP001	Máy khoan hố, máy phát thực bì / Earth augers and brush cutters	Nhập tự do / Free text														
+	LV04	Lâm nghiệp / Forestry			LV04-DM05	Công nghệ số / Digital Technology	LV04-DM05-PL01	Kiểm kê & giám sát rừng / Forest Inventory & Monitoring	LV04-DM05-PL01-SP001	GIS, viễn thám, phần mềm quản lý rừng / GIS, remote sensing, and forest management software	Nhập tự do / Free text														
+	LV04	Lâm nghiệp / Forestry			LV04-DM07	Dịch vụ lâm nghiệp / Forestry Services	LV04-DM07-PL01	Trồng & phục hồi rừng / Forest Establishment & Restoration	LV04-DM07-PL01-SP001	Thiết kế trồng rừng, phục hồi rừng / Afforestation design and forest restoration	Nhập tự do / Free text														
+	LV04	Lâm nghiệp / Forestry			LV04-DM07	Dịch vụ lâm nghiệp / Forestry Services	LV04-DM07-PL02	Quản lý & đánh giá / Management & Assessment	LV04-DM07-PL02-SP001	Kiểm kê rừng, tư vấn quản lý rừng bền vững / Forest inventory and sustainable forest management consulting	Nhập tự do / Free text														
+	LV04	Lâm nghiệp / Forestry			LV04-DM01	Giống & nhân giống / Seeds & Propagation	LV04-DM01-PL01	Hạt & cây giống / Seeds & Planting Stock	LV04-DM01-PL01-SP001	Hạt giống lâm nghiệp, cây giống vườn ươm / Forestry seeds and nursery seedlings	Nhập tự do / Free text														
+	LV04	Lâm nghiệp / Forestry			LV04-DM01	Giống & nhân giống / Seeds & Propagation	LV04-DM01-PL02	Giống lâm sản ngoài gỗ / Non-timber Forest Planting Materials	LV04-DM01-PL02-SP001	Cây giống, hom giống / Seedlings and propagation cuttings	Nhập tự do / Free text														
+	LV04	Lâm nghiệp / Forestry			LV04-DM06	Sản xuất lâm nghiệp / Forestry Production	LV04-DM06-PL02	Lâm sản ngoài gỗ / Non-timber Forest Products	LV04-DM06-PL02-SP001	Tre nguyên liệu, song mây, vỏ quế, quả hồi / Raw bamboo, rattan, cinnamon bark, and star anise fruits	Nhập tự do / Free text														
+	LV04	Lâm nghiệp / Forestry			LV04-DM04	Máy móc & thiết bị / Machinery & Equipment	LV04-DM04-PL02	Khai thác & vận xuất / Timber Harvesting & Extraction	LV04-DM04-PL02-SP001	Máy cưa, máy khai thác, thiết bị kéo gỗ / Saws, timber harvesters, and timber extraction equipment	Nhập tự do / Free text														
+	LV04	Lâm nghiệp / Forestry			LV04-DM06	Sản xuất lâm nghiệp / Forestry Production	LV04-DM06-PL01	Trồng & khai thác rừng / Forest Establishment & Harvesting	LV04-DM06-PL01-SP001	Gỗ tròn, gỗ nguyên liệu / Roundwood and raw timber	Nhập tự do / Free text														
+	LV05	Thú cưng & động vật cảnh / Pets & Ornamental Animals			LV05-DM03	Sức khỏe động vật / Animal Health	LV05-DM03-PL02	Chẩn đoán & khám chữa bệnh / Diagnostics & Veterinary Care	LV05-DM03-PL02-SP001	Xét nghiệm, khám thú y, chẩn đoán hình ảnh / Laboratory testing, veterinary examinations, and diagnostic imaging	Nhập tự do / Free text														
+	LV05	Thú cưng & động vật cảnh / Pets & Ornamental Animals			LV05-DM07	Dịch vụ chăm sóc / Pet Care Services	LV05-DM07-PL02	Huấn luyện / Training	LV05-DM07-PL02-SP001	Huấn luyện hành vi, huấn luyện cơ bản / Behavioral training and basic training	Nhập tự do / Free text														
+	LV05	Thú cưng & động vật cảnh / Pets & Ornamental Animals			LV05-DM01	Giống & cung ứng / Breeding & Supply	LV05-DM01-PL01	Vật nuôi giống / Breeding Animals	LV05-DM01-PL01-SP001	Chó giống, mèo giống / Breeding dogs and breeding cats	Nhập tự do / Free text														
+	LV05	Thú cưng & động vật cảnh / Pets & Ornamental Animals			LV05-DM02	Thức ăn & dinh dưỡng / Feed & Nutrition	LV05-DM02-PL01	Thức ăn hoàn chỉnh / Complete Feed	LV05-DM02-PL01-SP001	Thức ăn khô, thức ăn ướt / Dry food and wet food	Nhập tự do / Free text														
+	LV05	Thú cưng & động vật cảnh / Pets & Ornamental Animals			LV05-DM02	Thức ăn & dinh dưỡng / Feed & Nutrition	LV05-DM02-PL02	Thức ăn bổ sung & bánh thưởng / Supplementary Feed & Treats	LV05-DM02-PL02-SP001	Bánh thưởng, sản phẩm nhai, thực phẩm bổ sung / Treats, chews, and dietary supplements	Nhập tự do / Free text														
+	LV05	Thú cưng & động vật cảnh / Pets & Ornamental Animals			LV05-DM03	Sức khỏe động vật / Animal Health	LV05-DM03-PL01	Vắc xin & thuốc thú y / Vaccines & Veterinary Medicines	LV05-DM03-PL01-SP001	Vắc xin, thuốc điều trị, sản phẩm kiểm soát ký sinh trùng / Vaccines, therapeutic medicines, and parasite control products	Nhập tự do / Free text														
+	LV05	Thú cưng & động vật cảnh / Pets & Ornamental Animals			LV05-DM04	Vệ sinh & chăm sóc / Hygiene & Care	LV05-DM04-PL01	Chăm sóc cơ thể / Grooming & Body Care	LV05-DM04-PL01-SP001	Sữa tắm, dụng cụ chải lông, sản phẩm chăm sóc răng / Pet shampoos, grooming tools, and dental care products	Nhập tự do / Free text														
+	LV05	Thú cưng & động vật cảnh / Pets & Ornamental Animals			LV05-DM05	Phụ kiện & thiết bị / Accessories & Equipment	LV05-DM05-PL01	Sinh hoạt & vận chuyển / Daily Living & Transport	LV05-DM05-PL01-SP001	Dây dắt, ổ nằm, lồng vận chuyển, đồ chơi / Leashes, pet beds, transport carriers, and toys	Nhập tự do / Free text														
+	LV05	Thú cưng & động vật cảnh / Pets & Ornamental Animals			LV05-DM06	Công nghệ số & tự động hóa / Digital Technology & Automation	LV05-DM06-PL01	Theo dõi & chăm sóc tự động / Tracking & Automated Care	LV05-DM06-PL01-SP001	Thiết bị định vị, máy cho ăn, máy vệ sinh tự động / Tracking devices, automatic feeders, and automatic cleaning devices	Nhập tự do / Free text														
+	LV05	Thú cưng & động vật cảnh / Pets & Ornamental Animals			LV05-DM07	Dịch vụ chăm sóc / Pet Care Services	LV05-DM07-PL01	Làm đẹp & lưu trú / Grooming & Boarding	LV05-DM07-PL01-SP001	Chăm sóc lông, khách sạn thú cưng, trông giữ / Grooming, pet hotels, and pet sitting	Nhập tự do / Free text														
+	LV05	Thú cưng & động vật cảnh / Pets & Ornamental Animals			LV05-DM04	Vệ sinh & chăm sóc / Hygiene & Care	LV05-DM04-PL02	Vệ sinh nơi ở / Habitat Hygiene	LV05-DM04-PL02-SP001	Cát vệ sinh, tấm lót, chất khử mùi / Pet litter, absorbent pads, and deodorizers	Nhập tự do / Free text														
+	LV05	Thú cưng & động vật cảnh / Pets & Ornamental Animals			LV05-DM05	Phụ kiện & thiết bị / Accessories & Equipment	LV05-DM05-PL02	Bể cảnh & môi trường nước / Aquariums & Aquatic Environments	LV05-DM05-PL02-SP001	Bể cá, bộ lọc, đèn, thiết bị sưởi / Aquariums, filters, lights, and heaters	Nhập tự do / Free text														
+	LV05	Thú cưng & động vật cảnh / Pets & Ornamental Animals			LV05-DM01	Giống & cung ứng / Breeding & Supply	LV05-DM01-PL02	Động vật cảnh / Ornamental Animals	LV05-DM01-PL02-SP001	Cá cảnh, chim cảnh, bò sát cảnh, thú nhỏ / Ornamental fish, pet birds, pet reptiles, and small mammals	Nhập tự do / Free text														
+	LV05	Thú cưng & động vật cảnh / Pets & Ornamental Animals			LV05-DM02	Thức ăn & dinh dưỡng / Feed & Nutrition	LV05-DM02-PL03	Thức ăn chuyên biệt / Specialized Feed	LV05-DM02-PL03-SP001	Thức ăn cá cảnh, hạt cho chim, thức ăn theo loài / Ornamental fish feed, birdseed, and species-specific feed	Nhập tự do / Free text														
+	LV05	Thú cưng & động vật cảnh / Pets & Ornamental Animals			LV05-DM05	Phụ kiện & thiết bị / Accessories & Equipment	LV05-DM05-PL03	Chuồng & môi trường sống / Enclosures & Habitats	LV05-DM05-PL03-SP001	Lồng, bể nuôi, đèn sưởi, vật liệu lót / Cages, terrariums, heat lamps, and bedding materials	Nhập tự do / Free text														
+	LV06	Khai thác thủy sản / Capture Fisheries			LV06-DM01	Tàu & hệ thống trên tàu / Vessels & Onboard Systems	LV06-DM01-PL01	Đóng mới & sửa chữa / Vessel Construction & Repair	LV06-DM01-PL01-SP001	Tàu khai thác, dịch vụ sửa chữa tàu / Fishing vessels and vessel repair services	Nhập tự do / Free text														
+	LV06	Khai thác thủy sản / Capture Fisheries			LV06-DM01	Tàu & hệ thống trên tàu / Vessels & Onboard Systems	LV06-DM01-PL02	Động lực & điện / Propulsion & Electrical Systems	LV06-DM01-PL02-SP001	Động cơ tàu, máy phát điện, hệ thống điện / Marine engines, generators, and electrical systems	Nhập tự do / Free text														
+	LV06	Khai thác thủy sản / Capture Fisheries			LV06-DM03	Thiết bị hàng hải / Marine Equipment	LV06-DM03-PL01	Định vị & liên lạc / Navigation & Communication	LV06-DM03-PL01-SP001	GPS, radar, máy thông tin liên lạc / GPS, radar, and communication equipment	Nhập tự do / Free text														
+	LV06	Khai thác thủy sản / Capture Fisheries			LV06-DM03	Thiết bị hàng hải / Marine Equipment	LV06-DM03-PL03	Liên lạc vệ tinh / Satellite communication	LV06-DM03-PL03-SP001	Liên lạc vệ tinh / Satellite communication	Nhập tự do / Free text														
+	LV06	Khai thác thủy sản / Capture Fisheries			LV06-DM03	Thiết bị hàng hải / Marine Equipment	LV06-DM03-PL04	Dẫn đường điện tử / Electronic navigation	LV06-DM03-PL04-SP001	Dẫn đường điện tử / Electronic navigation	Nhập tự do / Free text														
+	LV06	Khai thác thủy sản / Capture Fisheries			LV06-DM04	Thiết bị khai thác / Fishing Equipment	LV06-DM04-PL01	Thu thả ngư cụ / Fishing Gear Deployment & Retrieval	LV06-DM04-PL01-SP001	Tời, máy kéo lưới, cần cẩu / Winches, net haulers, and cranes	Nhập tự do / Free text														
+	LV06	Khai thác thủy sản / Capture Fisheries			LV06-DM05	Bảo quản trên tàu / Onboard Preservation	LV06-DM05-PL01	Làm lạnh & giữ lạnh / Chilling & Cold Storage	LV06-DM05-PL01-SP001	Hầm bảo quản, máy làm đá, hệ thống nước biển lạnh / Fish holds, ice makers, and refrigerated seawater systems	Nhập tự do / Free text														
+	LV06	Khai thác thủy sản / Capture Fisheries			LV06-DM06	An toàn hàng hải / Maritime Safety	LV06-DM06-PL01	Cứu sinh & bảo hộ / Life-saving & Protective Equipment	LV06-DM06-PL01-SP001	Phao cứu sinh, thiết bị báo nạn, đồ bảo hộ / Lifebuoys, distress signaling equipment, and protective clothing	Nhập tự do / Free text														
+	LV06	Khai thác thủy sản / Capture Fisheries			LV06-DM07	Công nghệ số / Digital Technology	LV06-DM07-PL01	Giám sát & nhật ký khai thác / Monitoring & Fishing Logbooks	LV06-DM07-PL01-SP001	Thiết bị giám sát hành trình, nhật ký điện tử / Vessel monitoring systems and electronic logbooks	Nhập tự do / Free text														
+	LV06	Khai thác thủy sản / Capture Fisheries			LV06-DM07	Công nghệ số / Digital Technology	LV06-DM07-PL02	Hồ sơ khai thác điện tử / Electronic catch documentation	LV06-DM07-PL02-SP001	Hồ sơ khai thác điện tử / Electronic catch documentation	Nhập tự do / Free text														
+	LV06	Khai thác thủy sản / Capture Fisheries			LV06-DM07	Công nghệ số / Digital Technology	LV06-DM07-PL03	Phân tích dữ liệu thủy sản khai thác / Fisheries analytics	LV06-DM07-PL03-SP001	Phân tích dữ liệu thủy sản khai thác / Fisheries analytics	Nhập tự do / Free text														
+	LV06	Khai thác thủy sản / Capture Fisheries			LV06-DM09	Dịch vụ hậu cần / Logistics Services	LV06-DM09-PL01	Hỗ trợ đội tàu / Fishing Fleet Support	LV06-DM09-PL01-SP001	Cấp nhiên liệu, cấp đá, bảo dưỡng ngư cụ / Fuel supply, ice supply, and fishing gear maintenance	Nhập tự do / Free text														
+	LV06	Khai thác thủy sản / Capture Fisheries			LV06-DM02	Ngư cụ / Fishing Gear	LV06-DM02-PL04	Bẫy & lồng khai thác / Fishing Traps & Pots	LV06-DM02-PL04-SP001	Lồng bẫy, bẫy giáp xác / Fishing pots and crustacean traps	Nhập tự do / Free text														
+	LV06	Khai thác thủy sản / Capture Fisheries			LV06-DM02	Ngư cụ / Fishing Gear	LV06-DM02-PL01	Lưới khai thác / Fishing Nets	LV06-DM02-PL01-SP001	Lưới vây, lưới rê, lưới kéo / Purse seines, gillnets, and trawl nets	Nhập tự do / Free text														
+	LV06	Khai thác thủy sản / Capture Fisheries			LV06-DM03	Thiết bị hàng hải / Marine Equipment	LV06-DM03-PL02	Dò tìm nguồn lợi / Fishery Resource Detection	LV06-DM03-PL02-SP001	Máy dò cá, sonar / Fish finders and sonar	Nhập tự do / Free text														
+	LV06	Khai thác thủy sản / Capture Fisheries			LV06-DM08	Hoạt động khai thác / Fishing Operations	LV06-DM08-PL01	Khai thác thương mại / Commercial Fishing	LV06-DM08-PL01-SP001	Thủy sản khai thác tự nhiên / Wild-caught aquatic products	Nhập tự do / Free text														
+	LV06	Khai thác thủy sản / Capture Fisheries			LV06-DM02	Ngư cụ / Fishing Gear	LV06-DM02-PL02	Câu khai thác / Line Fishing	LV06-DM02-PL02-SP001	Lưỡi câu, dây câu, máy thu câu / Fishing hooks, lines, and line haulers	Nhập tự do / Free text														
+	LV06	Khai thác thủy sản / Capture Fisheries			LV06-DM02	Ngư cụ / Fishing Gear	LV06-DM02-PL03	Câu mực & thu hút ánh sáng / Squid Jigging & Light Attraction	LV06-DM02-PL03-SP001	Máy câu mực, đèn khai thác / Squid jigging machines and fishing lights	Nhập tự do / Free text														
+	LV07	Chế biến & kinh doanh thủy sản / Seafood Processing & Trade			LV07-DM01	Chế biến thủy sản / Seafood Processing	LV07-DM01-PL11	Nâng giá trị phụ phẩm thủy sản / Seafood by-product valorization	LV07-DM01-PL11-SP001	Nâng giá trị phụ phẩm thủy sản / Seafood by-product valorization	Nhập tự do / Free text														
+	LV07	Chế biến & kinh doanh thủy sản / Seafood Processing & Trade			LV07-DM01	Chế biến thủy sản / Seafood Processing	LV07-DM01-PL12	Thủy sản ăn liền / Ready-to-eat seafood	LV07-DM01-PL12-SP001	Thủy sản ăn liền / Ready-to-eat seafood	Nhập tự do / Free text														
+	LV07	Chế biến & kinh doanh thủy sản / Seafood Processing & Trade			LV07-DM02	Máy móc chế biến thủy sản / Seafood Processing Machinery	LV07-DM02-PL02	Phân loại quang học / Optical grading	LV07-DM02-PL02-SP001	Phân loại quang học / Optical grading	Nhập tự do / Free text														
+	LV07	Chế biến & kinh doanh thủy sản / Seafood Processing & Trade			LV07-DM02	Máy móc chế biến thủy sản / Seafood Processing Machinery	LV07-DM02-PL03	Phi lê tự động / Automated filleting	LV07-DM02-PL03-SP001	Phi lê tự động / Automated filleting	Nhập tự do / Free text														
+	LV07	Chế biến & kinh doanh thủy sản / Seafood Processing & Trade			LV07-DM03	Thiết bị chế biến / Processing Equipment	LV07-DM03-PL01	Sơ chế & phân loại / Primary Processing & Sorting	LV07-DM03-PL01-SP001	Máy phi lê, máy bóc vỏ, máy phân cỡ / Filleting machines, peeling machines, and size graders	Nhập tự do / Free text														
+	LV07	Chế biến & kinh doanh thủy sản / Seafood Processing & Trade			LV07-DM03	Thiết bị chế biến / Processing Equipment	LV07-DM03-PL02	Cấp đông & gia nhiệt / Freezing & Heating	LV07-DM03-PL02-SP001	Tủ đông, băng chuyền cấp đông, thiết bị hấp / Freezers, conveyor freezing systems, and steamers	Nhập tự do / Free text														
+	LV07	Chế biến & kinh doanh thủy sản / Seafood Processing & Trade			LV07-DM03	Đóng gói thủy sản / Seafood Packaging	LV07-DM03-PL03	Đóng gói khí quyển biến đổi / Modified atmosphere packaging	LV07-DM03-PL03-SP001	Đóng gói khí quyển biến đổi / Modified atmosphere packaging	Nhập tự do / Free text														
+	LV07	Chế biến & kinh doanh thủy sản / Seafood Processing & Trade			LV07-DM03	Đóng gói thủy sản / Seafood Packaging	LV07-DM03-PL04	Bao bì bền vững / Sustainable packaging	LV07-DM03-PL04-SP001	Bao bì bền vững / Sustainable packaging	Nhập tự do / Free text														
+	LV07	Chế biến & kinh doanh thủy sản / Seafood Processing & Trade			LV07-DM04	Bao bì & đóng gói / Packaging Materials & Equipment	LV07-DM04-PL01	Đóng gói thực phẩm / Food Packaging	LV07-DM04-PL01-SP001	Túi hút chân không, khay, máy đóng gói / Vacuum bags, trays, and packaging machines	Nhập tự do / Free text														
+	LV07	Chế biến & kinh doanh thủy sản / Seafood Processing & Trade			LV07-DM04	Thương mại thủy sản / Seafood Trading	LV07-DM04-PL02	Nền tảng tìm nguồn cung thủy sản / Seafood sourcing platforms	LV07-DM04-PL02-SP001	Nền tảng tìm nguồn cung thủy sản / Seafood sourcing platforms	Nhập tự do / Free text														
+	LV07	Chế biến & kinh doanh thủy sản / Seafood Processing & Trade			LV07-DM04	Thương mại thủy sản / Seafood Trading	LV07-DM04-PL03	Phân phối bán buôn / Wholesale distribution	LV07-DM04-PL03-SP001	Phân phối bán buôn / Wholesale distribution	Nhập tự do / Free text														
+	LV07	Chế biến & kinh doanh thủy sản / Seafood Processing & Trade			LV07-DM05	Bảo quản & logistics / Preservation & Logistics	LV07-DM05-PL01	Kho lạnh & vận chuyển / Cold Storage & Transport	LV07-DM05-PL01-SP001	Kho lạnh thủy sản, vận tải lạnh / Seafood cold storage and refrigerated transport	Nhập tự do / Free text														
+	LV07	Chế biến & kinh doanh thủy sản / Seafood Processing & Trade			LV07-DM05	Chất lượng và an toàn thủy sản / Seafood Quality & Safety	LV07-DM05-PL02	Kiểm nghiệm dư lượng / Residue testing	LV07-DM05-PL02-SP001	Kiểm nghiệm dư lượng / Residue testing	Nhập tự do / Free text														
+	LV07	Chế biến & kinh doanh thủy sản / Seafood Processing & Trade			LV07-DM05	Chất lượng và an toàn thủy sản / Seafood Quality & Safety	LV07-DM05-PL03	Truy xuất nguồn gốc sản phẩm / Product traceability	LV07-DM05-PL03-SP001	Truy xuất nguồn gốc sản phẩm / Product traceability	Nhập tự do / Free text														
+	LV07	Chế biến & kinh doanh thủy sản / Seafood Processing & Trade			LV07-DM06	Chất lượng & an toàn thực phẩm / Quality & Food Safety	LV07-DM06-PL01	Kiểm nghiệm & truy xuất / Testing & Traceability	LV07-DM06-PL01-SP001	Kiểm nghiệm vi sinh, dư lượng, hệ thống truy xuất / Microbiological testing, residue testing, and traceability systems	Nhập tự do / Free text														
+	LV07	Chế biến & kinh doanh thủy sản / Seafood Processing & Trade			LV07-DM06	Chuỗi lạnh và lưu trữ / Cold Chain & Storage	LV07-DM06-PL02	Cấp đông nhanh / Blast freezing	LV07-DM06-PL02-SP001	Cấp đông nhanh / Blast freezing	Nhập tự do / Free text														
+	LV07	Chế biến & kinh doanh thủy sản / Seafood Processing & Trade			LV07-DM06	Chuỗi lạnh và lưu trữ / Cold Chain & Storage	LV07-DM06-PL03	Giám sát nhiệt độ / Temperature monitoring	LV07-DM06-PL03-SP001	Giám sát nhiệt độ / Temperature monitoring	Nhập tự do / Free text														
+	LV07	Chế biến & kinh doanh thủy sản / Seafood Processing & Trade			LV07-DM01	Sơ chế & chế biến / Primary & Further Processing	LV07-DM01-PL02	Cá sơ chế / Primary-processed Fish	LV07-DM01-PL02-SP001	Cá phi lê, cá cắt khúc / Fish fillets and fish steaks	Nhập tự do / Free text														
+	LV07	Chế biến & kinh doanh thủy sản / Seafood Processing & Trade			LV07-DM01	Sơ chế & chế biến / Primary & Further Processing	LV07-DM01-PL10	Sản phẩm từ rong & tảo / Seaweed & Algal Products	LV07-DM01-PL10-SP001	Rong sấy, bột tảo, nguyên liệu chiết xuất / Dried seaweed, algal powder, and raw materials for extraction	Nhập tự do / Free text														
+	LV07	Chế biến & kinh doanh thủy sản / Seafood Processing & Trade			LV07-DM01	Sơ chế & chế biến / Primary & Further Processing	LV07-DM01-PL01	Tôm sơ chế / Primary-processed Shrimp	LV07-DM01-PL01-SP001	Tôm bóc vỏ, tôm bỏ đầu, tôm làm sạch / Peeled shrimp, headless shrimp, and cleaned shrimp	Nhập tự do / Free text														
+	LV07	Chế biến & kinh doanh thủy sản / Seafood Processing & Trade			LV07-DM01	Sơ chế & chế biến / Primary & Further Processing	LV07-DM01-PL08	Sản phẩm lên men / Fermented Products	LV07-DM01-PL08-SP001	Nước mắm, sản phẩm thủy sản lên men / Fish sauce and fermented seafood products	Nhập tự do / Free text														
+	LV07	Chế biến & kinh doanh thủy sản / Seafood Processing & Trade			LV07-DM01	Sơ chế & chế biến / Primary & Further Processing	LV07-DM01-PL09	Surimi & sản phẩm tạo hình / Surimi & Formed Products	LV07-DM01-PL09-SP001	Surimi, chả cá, sản phẩm từ surimi / Surimi, fish cakes, and surimi-based products	Nhập tự do / Free text														
+	LV07	Chế biến & kinh doanh thủy sản / Seafood Processing & Trade			LV07-DM07	Thương mại / Trading	LV07-DM07-PL01	Thu mua & phân phối / Procurement & Distribution	LV07-DM07-PL01-SP001	Thu mua nguyên liệu, bán buôn, xuất nhập khẩu / Raw material procurement, wholesale trade, and import/export	Nhập tự do / Free text														
+	LV07	Chế biến & kinh doanh thủy sản / Seafood Processing & Trade			LV07-DM02	Tận dụng phụ phẩm / By-product Utilization	LV07-DM02-PL01	Nguyên liệu & chiết xuất / Ingredients & Extracts	LV07-DM02-PL01-SP001	Bột cá, dầu cá, collagen, chitin/chitosan / Fishmeal, fish oil, collagen, and chitin/chitosan	Nhập tự do / Free text														
+	LV07	Chế biến & kinh doanh thủy sản / Seafood Processing & Trade			LV07-DM01	Sơ chế & chế biến / Primary & Further Processing	LV07-DM01-PL05	Sản phẩm nấu chín & tẩm bột / Cooked & Breaded Products	LV07-DM01-PL05-SP001	Tôm chín, cá tẩm bột, thủy sản chế biến sẵn / Cooked shrimp, breaded fish, and prepared seafood	Nhập tự do / Free text														
+	LV07	Chế biến & kinh doanh thủy sản / Seafood Processing & Trade			LV07-DM01	Sơ chế & chế biến / Primary & Further Processing	LV07-DM01-PL07	Sản phẩm khô & hun khói / Dried & Smoked Products	LV07-DM01-PL07-SP001	Cá khô, tôm khô, mực khô, cá hun khói / Dried fish, dried shrimp, dried squid, and smoked fish	Nhập tự do / Free text														
+	LV07	Chế biến & kinh doanh thủy sản / Seafood Processing & Trade			LV07-DM01	Sơ chế & chế biến / Primary & Further Processing	LV07-DM01-PL04	Sản phẩm đông lạnh / Frozen Products	LV07-DM01-PL04-SP001	Thủy sản đông rời IQF, đông khối / Individually quick-frozen (IQF) and block-frozen seafood	Nhập tự do / Free text														
+	LV07	Chế biến & kinh doanh thủy sản / Seafood Processing & Trade			LV07-DM01	Sơ chế & chế biến / Primary & Further Processing	LV07-DM01-PL06	Sản phẩm đóng hộp / Canned Products	LV07-DM01-PL06-SP001	Cá hộp, thủy sản đóng hộp / Canned fish and canned seafood	Nhập tự do / Free text														
+	LV07	Chế biến & kinh doanh thủy sản / Seafood Processing & Trade			LV07-DM01	Sơ chế & chế biến / Primary & Further Processing	LV07-DM01-PL03	Nhuyễn thể sơ chế / Primary-processed Molluscs	LV07-DM01-PL03-SP001	Mực làm sạch, thịt nghêu, thịt hàu / Cleaned squid, clam meat, and oyster meat	Nhập tự do / Free text														
+	LV08	Chế biến sản phẩm chăn nuôi / Animal Product Processing			LV08-DM01	Chế biến thịt / Meat Processing	LV08-DM01-PL04	Thịt ăn liền / Ready-to-eat meat	LV08-DM01-PL04-SP001	Thịt ăn liền / Ready-to-eat meat	Nhập tự do / Free text														
+	LV08	Chế biến sản phẩm chăn nuôi / Animal Product Processing			LV08-DM01	Chế biến thịt / Meat Processing	LV08-DM01-PL05	Chia khẩu phần thịt / Meat portioning	LV08-DM01-PL05-SP001	Chia khẩu phần thịt / Meat portioning	Nhập tự do / Free text														
+	LV08	Chế biến sản phẩm chăn nuôi / Animal Product Processing			LV08-DM02	Máy móc chế biến thịt / Meat Processing Machinery	LV08-DM02-PL04	Tách xương tự động / Automated deboning	LV08-DM02-PL04-SP001	Tách xương tự động / Automated deboning	Nhập tự do / Free text														
+	LV08	Chế biến sản phẩm chăn nuôi / Animal Product Processing			LV08-DM02	Máy móc chế biến thịt / Meat Processing Machinery	LV08-DM02-PL05	Cắt lát công nghiệp / Industrial slicing	LV08-DM02-PL05-SP001	Cắt lát công nghiệp / Industrial slicing	Nhập tự do / Free text														
+	LV08	Chế biến sản phẩm chăn nuôi / Animal Product Processing			LV08-DM03	Chế biến gia cầm và trứng / Poultry & Egg Processing	LV08-DM03-PL03	Phân loại trứng / Egg grading	LV08-DM03-PL03-SP001	Phân loại trứng / Egg grading	Nhập tự do / Free text														
+	LV08	Chế biến sản phẩm chăn nuôi / Animal Product Processing			LV08-DM03	Chế biến gia cầm và trứng / Poultry & Egg Processing	LV08-DM03-PL04	Chế biến trứng lỏng / Liquid egg processing	LV08-DM03-PL04-SP001	Chế biến trứng lỏng / Liquid egg processing	Nhập tự do / Free text														
+	LV08	Chế biến sản phẩm chăn nuôi / Animal Product Processing			LV08-DM04	Chế biến sữa / Dairy Processing	LV08-DM04-PL02	Chế biến phô mai / Cheese processing	LV08-DM04-PL02-SP001	Chế biến phô mai / Cheese processing	Nhập tự do / Free text														
+	LV08	Chế biến sản phẩm chăn nuôi / Animal Product Processing			LV08-DM04	Chế biến sữa / Dairy Processing	LV08-DM04-PL03	Thanh trùng sữa / Dairy pasteurization	LV08-DM04-PL03-SP001	Thanh trùng sữa / Dairy pasteurization	Nhập tự do / Free text														
+	LV08	Chế biến sản phẩm chăn nuôi / Animal Product Processing			LV08-DM05	Đóng gói và bảo quản / Packaging & Preservation	LV08-DM05-PL02	Định hình nhiệt / Thermoforming	LV08-DM05-PL02-SP001	Định hình nhiệt / Thermoforming	Nhập tự do / Free text														
+	LV08	Chế biến sản phẩm chăn nuôi / Animal Product Processing			LV08-DM05	Đóng gói và bảo quản / Packaging & Preservation	LV08-DM05-PL03	Đóng gói khí quyển biến đổi / Modified atmosphere packaging	LV08-DM05-PL03-SP001	Đóng gói khí quyển biến đổi / Modified atmosphere packaging	Nhập tự do / Free text														
+	LV08	Chế biến sản phẩm chăn nuôi / Animal Product Processing			LV08-DM06	An toàn và chất lượng thực phẩm / Food Safety & Quality	LV08-DM06-PL02	Kiểm tra X-quang / X-ray inspection	LV08-DM06-PL02-SP001	Kiểm tra X-quang / X-ray inspection	Nhập tự do / Free text														
+	LV08	Chế biến sản phẩm chăn nuôi / Animal Product Processing			LV08-DM06	An toàn và chất lượng thực phẩm / Food Safety & Quality	LV08-DM06-PL03	Kiểm nghiệm vi sinh / Microbiology testing	LV08-DM06-PL03-SP001	Kiểm nghiệm vi sinh / Microbiology testing	Nhập tự do / Free text														
+	LV08	Chế biến sản phẩm chăn nuôi / Animal Product Processing			LV08-DM07	Thiết bị chế biến / Processing Equipment	LV08-DM07-PL01	Giết mổ & pha lóc / Slaughter & Cutting	LV08-DM07-PL01-SP001	Dây chuyền giết mổ, máy cắt thịt, máy lọc xương / Slaughter lines, meat cutting machines, and deboning machines	Nhập tự do / Free text														
+	LV08	Chế biến sản phẩm chăn nuôi / Animal Product Processing			LV08-DM07	Thiết bị chế biến / Processing Equipment	LV08-DM07-PL02	Gia nhiệt & chế biến sâu / Heating & Further Processing	LV08-DM07-PL02-SP001	Máy xay, máy nhồi, thiết bị thanh trùng, máy sấy / Grinders, stuffers, pasteurizers, and dryers	Nhập tự do / Free text														
+	LV08	Chế biến sản phẩm chăn nuôi / Animal Product Processing			LV08-DM08	Bao bì & đóng gói / Packaging Materials & Equipment	LV08-DM08-PL01	Đóng gói thực phẩm / Food Packaging	LV08-DM08-PL01-SP001	Máy hút chân không, bao bì khí quyển biến đổi, hộp đựng / Vacuum packaging machines, modified atmosphere packaging, and containers	Nhập tự do / Free text														
+	LV08	Chế biến sản phẩm chăn nuôi / Animal Product Processing			LV08-DM09	Bảo quản & logistics / Preservation & Logistics	LV08-DM09-PL01	Kho lạnh & vận chuyển / Cold Storage & Transport	LV08-DM09-PL01-SP001	Kho lạnh thịt, vận chuyển lạnh sữa và trứng / Meat cold storage and refrigerated transport for milk and eggs	Nhập tự do / Free text														
+	LV08	Chế biến sản phẩm chăn nuôi / Animal Product Processing			LV08-DM10	Chất lượng & an toàn thực phẩm / Quality & Food Safety	LV08-DM10-PL01	Kiểm nghiệm & vệ sinh / Testing & Hygiene	LV08-DM10-PL01-SP001	Kiểm nghiệm thực phẩm, hệ thống vệ sinh tại chỗ (CIP) / Food testing and clean-in-place systems	Nhập tự do / Free text														
+	LV08	Chế biến sản phẩm chăn nuôi / Animal Product Processing			LV08-DM01	Thịt & sản phẩm thịt / Meat & Meat Products	LV08-DM01-PL02	Thịt mát & thịt đông lạnh / Chilled & Frozen Meat	LV08-DM01-PL02-SP001	Thịt làm mát, thịt cấp đông / Chilled meat and frozen meat	Nhập tự do / Free text														
+	LV08	Chế biến sản phẩm chăn nuôi / Animal Product Processing			LV08-DM01	Thịt & sản phẩm thịt / Meat & Meat Products	LV08-DM01-PL03	Thịt chế biến / Processed Meat	LV08-DM01-PL03-SP001	Xúc xích, giăm bông, thịt viên, thịt hộp / Sausages, ham, meatballs, and canned meat	Nhập tự do / Free text														
+	LV08	Chế biến sản phẩm chăn nuôi / Animal Product Processing			LV08-DM06	Tận dụng phụ phẩm / By-product Utilization	LV08-DM06-PL01	Chế biến phụ phẩm / By-product Processing	LV08-DM06-PL01-SP001	Mỡ động vật, bột thịt xương, bột lông vũ / Animal fats, meat and bone meal, and feather meal	Nhập tự do / Free text														
+	LV08	Chế biến sản phẩm chăn nuôi / Animal Product Processing			LV08-DM01	Thịt & sản phẩm thịt / Meat & Meat Products	LV08-DM01-PL01	Giết mổ & sơ chế / Slaughter & Primary Processing	LV08-DM01-PL01-SP001	Thân thịt, thịt pha lóc, thịt cắt phần / Carcasses, deboned meat, and portioned cuts	Nhập tự do / Free text														
+	LV08	Chế biến sản phẩm chăn nuôi / Animal Product Processing			LV08-DM11	Thương mại / Trading	LV08-DM11-PL01	Phân phối sản phẩm / Product Distribution	LV08-DM11-PL01-SP001	Bán buôn thịt, sữa, trứng; xuất nhập khẩu / Wholesale trade in meat, milk, and eggs; import/export	Nhập tự do / Free text														
+	LV08	Chế biến sản phẩm chăn nuôi / Animal Product Processing			LV08-DM03	Trứng & sản phẩm trứng / Eggs & Egg Products	LV08-DM03-PL02	Trứng chế biến / Processed Eggs	LV08-DM03-PL02-SP001	Trứng lỏng, bột trứng, trứng muối / Liquid eggs, egg powder, and salted eggs	Nhập tự do / Free text														
+	LV08	Chế biến sản phẩm chăn nuôi / Animal Product Processing			LV08-DM03	Trứng & sản phẩm trứng / Eggs & Egg Products	LV08-DM03-PL01	Trứng nguyên vỏ / Shell Eggs	LV08-DM03-PL01-SP001	Trứng làm sạch, phân loại, đóng gói / Cleaned, graded, and packaged eggs	Nhập tự do / Free text														
+	LV08	Chế biến sản phẩm chăn nuôi / Animal Product Processing			LV08-DM02	Sữa & sản phẩm sữa / Milk & Dairy Products	LV08-DM02-PL01	Sữa dạng lỏng / Liquid Milk	LV08-DM02-PL01-SP001	Sữa thanh trùng, sữa tiệt trùng / Pasteurized milk and sterilized milk	Nhập tự do / Free text														
+	LV08	Chế biến sản phẩm chăn nuôi / Animal Product Processing			LV08-DM02	Sữa & sản phẩm sữa / Milk & Dairy Products	LV08-DM02-PL02	Sản phẩm lên men / Fermented Products	LV08-DM02-PL02-SP001	Sữa chua, đồ uống sữa lên men / Yogurt and fermented milk beverages	Nhập tự do / Free text														
+	LV08	Chế biến sản phẩm chăn nuôi / Animal Product Processing			LV08-DM02	Sữa & sản phẩm sữa / Milk & Dairy Products	LV08-DM02-PL03	Sản phẩm cô đặc & chế biến / Concentrated & Processed Products	LV08-DM02-PL03-SP001	Sữa bột, sữa đặc, bơ, phô mai / Milk powder, condensed milk, butter, and cheese	Nhập tự do / Free text														
+	LV08	Chế biến sản phẩm chăn nuôi / Animal Product Processing			LV08-DM04	Sản phẩm từ ong / Bee Products	LV08-DM04-PL01	Sơ chế & chế biến / Primary & Further Processing	LV08-DM04-PL01-SP001	Mật ong đóng gói, sáp ong tinh chế, keo ong / Packaged honey, refined beeswax, and propolis	Nhập tự do / Free text														
+	LV08	Chế biến sản phẩm chăn nuôi / Animal Product Processing			LV08-DM05	Sản phẩm côn trùng / Insect Products	LV08-DM05-PL01	Sấy & chiết tách / Drying & Extraction	LV08-DM05-PL01-SP001	Bột côn trùng, dầu côn trùng / Insect meal and insect oil	Nhập tự do / Free text														
+	LV09	An toàn thực phẩm & kiểm nghiệm / Food Safety, Testing & Certification			LV09-DM01	Kiểm nghiệm phòng thí nghiệm / Laboratory Testing	LV09-DM01-PL01	Vi sinh học / Microbiology	LV09-DM01-PL01-SP001	Vi sinh học / Microbiology	Nhập tự do / Free text														
+	LV09	An toàn thực phẩm & kiểm nghiệm / Food Safety, Testing & Certification			LV09-DM01	Kiểm nghiệm phòng thí nghiệm / Laboratory Testing	LV09-DM01-PL02	Xét nghiệm PCR / PCR testing	LV09-DM01-PL02-SP001	Xét nghiệm PCR / PCR testing	Nhập tự do / Free text														
+	LV09	An toàn thực phẩm & kiểm nghiệm / Food Safety, Testing & Certification			LV09-DM01	Kiểm nghiệm phòng thí nghiệm / Laboratory Testing	LV09-DM01-PL03	Kiểm nghiệm dư lượng / Residue testing	LV09-DM01-PL03-SP001	Kiểm nghiệm dư lượng / Residue testing	Nhập tự do / Free text														
+	LV09	An toàn thực phẩm & kiểm nghiệm / Food Safety, Testing & Certification			LV09-DM01	Kiểm nghiệm phòng thí nghiệm / Laboratory Testing	LV09-DM01-PL04	Phân tích hóa học / Chemical analysis	LV09-DM01-PL04-SP001	Phân tích hóa học / Chemical analysis	Nhập tự do / Free text														
+	LV09	An toàn thực phẩm & kiểm nghiệm / Food Safety, Testing & Certification			LV09-DM01	Kiểm nghiệm phòng thí nghiệm / Laboratory Testing	LV09-DM01-PL05	Phân tích dinh dưỡng / Nutritional analysis	LV09-DM01-PL05-SP001	Phân tích dinh dưỡng / Nutritional analysis	Nhập tự do / Free text														
+	LV09	An toàn thực phẩm & kiểm nghiệm / Food Safety, Testing & Certification			LV09-DM02	Kiểm tra và phát hiện / Inspection & Detection	LV09-DM02-PL01	Kiểm tra X-quang / X-ray inspection	LV09-DM02-PL01-SP001	Kiểm tra X-quang / X-ray inspection	Nhập tự do / Free text														
+	LV09	An toàn thực phẩm & kiểm nghiệm / Food Safety, Testing & Certification			LV09-DM02	Kiểm tra và phát hiện / Inspection & Detection	LV09-DM02-PL02	Phát hiện kim loại / Metal detection	LV09-DM02-PL02-SP001	Phát hiện kim loại / Metal detection	Nhập tự do / Free text														
+	LV09	An toàn thực phẩm & kiểm nghiệm / Food Safety, Testing & Certification			LV09-DM02	Kiểm tra và phát hiện / Inspection & Detection	LV09-DM02-PL03	Kiểm tra quang học / Optical inspection	LV09-DM02-PL03-SP001	Kiểm tra quang học / Optical inspection	Nhập tự do / Free text														
+	LV09	An toàn thực phẩm & kiểm nghiệm / Food Safety, Testing & Certification			LV09-DM02	Kiểm tra và phát hiện / Inspection & Detection	LV09-DM02-PL04	Phát hiện dị vật / Foreign body detection	LV09-DM02-PL04-SP001	Phát hiện dị vật / Foreign body detection	Nhập tự do / Free text														
+	LV09	An toàn thực phẩm & kiểm nghiệm / Food Safety, Testing & Certification			LV09-DM03	Hệ thống an toàn thực phẩm / Food Safety Systems	LV09-DM03-PL01	HACCP / HACCP	LV09-DM03-PL01-SP001	HACCP / HACCP	Nhập tự do / Free text														
+	LV09	An toàn thực phẩm & kiểm nghiệm / Food Safety, Testing & Certification			LV09-DM03	Hệ thống an toàn thực phẩm / Food Safety Systems	LV09-DM03-PL02	GMP / GMP	LV09-DM03-PL02-SP001	GMP / GMP	Nhập tự do / Free text														
+	LV09	An toàn thực phẩm & kiểm nghiệm / Food Safety, Testing & Certification			LV09-DM03	Hệ thống an toàn thực phẩm / Food Safety Systems	LV09-DM03-PL03	Vệ sinh và khử khuẩn / Sanitation	LV09-DM03-PL03-SP001	Vệ sinh và khử khuẩn / Sanitation	Nhập tự do / Free text														
+	LV09	An toàn thực phẩm & kiểm nghiệm / Food Safety, Testing & Certification			LV09-DM03	Hệ thống an toàn thực phẩm / Food Safety Systems	LV09-DM03-PL04	Kiểm soát chất gây dị ứng / Allergen control	LV09-DM03-PL04-SP001	Kiểm soát chất gây dị ứng / Allergen control	Nhập tự do / Free text														
+	LV09	An toàn thực phẩm & kiểm nghiệm / Food Safety, Testing & Certification			LV09-DM03	Hệ thống an toàn thực phẩm / Food Safety Systems	LV09-DM03-PL05	Giám sát vệ sinh / Hygiene monitoring	LV09-DM03-PL05-SP001	Giám sát vệ sinh / Hygiene monitoring	Nhập tự do / Free text														
+	LV09	An toàn thực phẩm & kiểm nghiệm / Food Safety, Testing & Certification			LV09-DM04	Chứng nhận và tuân thủ / Certification & Compliance	LV09-DM04-PL01	Chứng nhận ISO / ISO certification	LV09-DM04-PL01-SP001	Chứng nhận ISO / ISO certification	Nhập tự do / Free text														
+	LV09	An toàn thực phẩm & kiểm nghiệm / Food Safety, Testing & Certification			LV09-DM04	Chứng nhận và tuân thủ / Certification & Compliance	LV09-DM04-PL02	Chứng nhận an toàn thực phẩm / Food safety certification	LV09-DM04-PL02-SP001	Chứng nhận an toàn thực phẩm / Food safety certification	Nhập tự do / Free text														
+	LV09	An toàn thực phẩm & kiểm nghiệm / Food Safety, Testing & Certification			LV09-DM04	Chứng nhận và tuân thủ / Certification & Compliance	LV09-DM04-PL03	Tuân thủ xuất khẩu / Export compliance	LV09-DM04-PL03-SP001	Tuân thủ xuất khẩu / Export compliance	Nhập tự do / Free text														
+	LV09	An toàn thực phẩm & kiểm nghiệm / Food Safety, Testing & Certification			LV09-DM04	Chứng nhận và tuân thủ / Certification & Compliance	LV09-DM04-PL04	Tư vấn pháp quy / Regulatory consulting	LV09-DM04-PL04-SP001	Tư vấn pháp quy / Regulatory consulting	Nhập tự do / Free text														
+	LV09	An toàn thực phẩm & kiểm nghiệm / Food Safety, Testing & Certification			LV09-DM05	Truy xuất nguồn gốc và minh bạch / Traceability & Transparency	LV09-DM05-PL01	Truy xuất nguồn gốc sản phẩm / Product traceability	LV09-DM05-PL01-SP001	Truy xuất nguồn gốc sản phẩm / Product traceability	Nhập tự do / Free text														
+	LV09	An toàn thực phẩm & kiểm nghiệm / Food Safety, Testing & Certification			LV09-DM05	Truy xuất nguồn gốc và minh bạch / Traceability & Transparency	LV09-DM05-PL02	Theo dõi lô hàng / Batch tracking	LV09-DM05-PL02-SP001	Theo dõi lô hàng / Batch tracking	Nhập tự do / Free text														
+	LV09	An toàn thực phẩm & kiểm nghiệm / Food Safety, Testing & Certification			LV09-DM05	Truy xuất nguồn gốc và minh bạch / Traceability & Transparency	LV09-DM05-PL03	Xác minh chuỗi cung ứng / Supply chain verification	LV09-DM05-PL03-SP001	Xác minh chuỗi cung ứng / Supply chain verification	Nhập tự do / Free text														
+	LV09	An toàn thực phẩm & kiểm nghiệm / Food Safety, Testing & Certification			LV09-DM06	Kiểm tra xuất khẩu và kiểm dịch / Export Inspection & Quarantine	LV09-DM06-PL01	Kiểm tra thú y / Veterinary inspection	LV09-DM06-PL01-SP001	Kiểm tra thú y / Veterinary inspection	Nhập tự do / Free text														
+	LV09	An toàn thực phẩm & kiểm nghiệm / Food Safety, Testing & Certification			LV09-DM06	Kiểm tra xuất khẩu và kiểm dịch / Export Inspection & Quarantine	LV09-DM06-PL02	Kiểm dịch thực vật / Phytosanitary inspection	LV09-DM06-PL02-SP001	Kiểm dịch thực vật / Phytosanitary inspection	Nhập tự do / Free text														
+	LV09	An toàn thực phẩm & kiểm nghiệm / Food Safety, Testing & Certification			LV09-DM06	Kiểm tra xuất khẩu và kiểm dịch / Export Inspection & Quarantine	LV09-DM06-PL03	Kiểm dịch / Quarantine	LV09-DM06-PL03-SP001	Kiểm dịch / Quarantine	Nhập tự do / Free text														
+	LV09	An toàn thực phẩm & kiểm nghiệm / Food Safety, Testing & Certification			LV09-DM06	Kiểm tra xuất khẩu và kiểm dịch / Export Inspection & Quarantine	LV09-DM06-PL04	Kiểm nghiệm xuất khẩu / Export testing	LV09-DM06-PL04-SP001	Kiểm nghiệm xuất khẩu / Export testing	Nhập tự do / Free text														
+	LV10	Chuỗi lạnh & logistics / Cold Chain, Logistics & Supply Chain			LV10-DM01	Thiết bị chuỗi lạnh / Cold Chain Equipment	LV10-DM01-PL01	Làm lạnh công nghiệp / Industrial refrigeration	LV10-DM01-PL01-SP001	Làm lạnh công nghiệp / Industrial refrigeration	Nhập tự do / Free text														
+	LV10	Chuỗi lạnh & logistics / Cold Chain, Logistics & Supply Chain			LV10-DM01	Thiết bị chuỗi lạnh / Cold Chain Equipment	LV10-DM01-PL02	Thiết bị cấp đông / Freezers	LV10-DM01-PL02-SP001	Thiết bị cấp đông / Freezers	Nhập tự do / Free text														
+	LV10	Chuỗi lạnh & logistics / Cold Chain, Logistics & Supply Chain			LV10-DM01	Thiết bị chuỗi lạnh / Cold Chain Equipment	LV10-DM01-PL03	Máy làm lạnh / Chillers	LV10-DM01-PL03-SP001	Máy làm lạnh / Chillers	Nhập tự do / Free text														
+	LV10	Chuỗi lạnh & logistics / Cold Chain, Logistics & Supply Chain			LV10-DM01	Thiết bị chuỗi lạnh / Cold Chain Equipment	LV10-DM01-PL04	Kho bảo quản cách nhiệt / Insulated storage	LV10-DM01-PL04-SP001	Kho bảo quản cách nhiệt / Insulated storage	Nhập tự do / Free text														
+	LV10	Chuỗi lạnh & logistics / Cold Chain, Logistics & Supply Chain			LV10-DM02	Hạ tầng kho lạnh / Cold Storage Infrastructure	LV10-DM02-PL01	Kho lạnh / Cold rooms	LV10-DM02-PL01-SP001	Kho lạnh / Cold rooms	Nhập tự do / Free text														
+	LV10	Chuỗi lạnh & logistics / Cold Chain, Logistics & Supply Chain			LV10-DM02	Hạ tầng kho lạnh / Cold Storage Infrastructure	LV10-DM02-PL02	Nhà kho lạnh / Cold warehouses	LV10-DM02-PL02-SP001	Nhà kho lạnh / Cold warehouses	Nhập tự do / Free text														
+	LV10	Chuỗi lạnh & logistics / Cold Chain, Logistics & Supply Chain			LV10-DM02	Hạ tầng kho lạnh / Cold Storage Infrastructure	LV10-DM02-PL03	Trung tâm phân phối / Distribution centers	LV10-DM02-PL03-SP001	Trung tâm phân phối / Distribution centers	Nhập tự do / Free text														
+	LV10	Chuỗi lạnh & logistics / Cold Chain, Logistics & Supply Chain			LV10-DM03	Vận tải và giao nhận / Transportation & Freight	LV10-DM03-PL01	Vận tải lạnh / Reefer transport	LV10-DM03-PL01-SP001	Vận tải lạnh / Reefer transport	Nhập tự do / Free text														
+	LV10	Chuỗi lạnh & logistics / Cold Chain, Logistics & Supply Chain			LV10-DM03	Vận tải và giao nhận / Transportation & Freight	LV10-DM03-PL02	Giao nhận vận tải / Freight forwarding	LV10-DM03-PL02-SP001	Giao nhận vận tải / Freight forwarding	Nhập tự do / Free text														
+	LV10	Chuỗi lạnh & logistics / Cold Chain, Logistics & Supply Chain			LV10-DM03	Vận tải và giao nhận / Transportation & Freight	LV10-DM03-PL03	Vận tải biển / Sea freight	LV10-DM03-PL03-SP001	Vận tải biển / Sea freight	Nhập tự do / Free text														
+	LV10	Chuỗi lạnh & logistics / Cold Chain, Logistics & Supply Chain			LV10-DM03	Vận tải và giao nhận / Transportation & Freight	LV10-DM03-PL04	Vận tải hàng không / Air freight	LV10-DM03-PL04-SP001	Vận tải hàng không / Air freight	Nhập tự do / Free text														
+	LV10	Chuỗi lạnh & logistics / Cold Chain, Logistics & Supply Chain			LV10-DM04	Kho bãi và hoàn tất đơn hàng / Warehousing & Fulfillment	LV10-DM04-PL01	Quản lý tồn kho / Inventory management	LV10-DM04-PL01-SP001	Quản lý tồn kho / Inventory management	Nhập tự do / Free text														
+	LV10	Chuỗi lạnh & logistics / Cold Chain, Logistics & Supply Chain			LV10-DM04	Kho bãi và hoàn tất đơn hàng / Warehousing & Fulfillment	LV10-DM04-PL02	Hoàn tất đơn hàng / Fulfillment	LV10-DM04-PL02-SP001	Hoàn tất đơn hàng / Fulfillment	Nhập tự do / Free text														
+	LV10	Chuỗi lạnh & logistics / Cold Chain, Logistics & Supply Chain			LV10-DM04	Kho bãi và hoàn tất đơn hàng / Warehousing & Fulfillment	LV10-DM04-PL03	Phân phối / Distribution	LV10-DM04-PL03-SP001	Phân phối / Distribution	Nhập tự do / Free text														
+	LV10	Chuỗi lạnh & logistics / Cold Chain, Logistics & Supply Chain			LV10-DM04	Kho bãi và hoàn tất đơn hàng / Warehousing & Fulfillment	LV10-DM04-PL04	Xử lý pallet / Pallet handling	LV10-DM04-PL04-SP001	Xử lý pallet / Pallet handling	Nhập tự do / Free text														
+	LV10	Chuỗi lạnh & logistics / Cold Chain, Logistics & Supply Chain			LV10-DM05	Giám sát và theo dõi / Monitoring & Tracking	LV10-DM05-PL01	Thiết bị ghi nhiệt độ / Temperature loggers	LV10-DM05-PL01-SP001	Thiết bị ghi nhiệt độ / Temperature loggers	Nhập tự do / Free text														
+	LV10	Chuỗi lạnh & logistics / Cold Chain, Logistics & Supply Chain			LV10-DM05	Giám sát và theo dõi / Monitoring & Tracking	LV10-DM05-PL02	Theo dõi GPS / GPS tracking	LV10-DM05-PL02-SP001	Theo dõi GPS / GPS tracking	Nhập tự do / Free text														
+	LV10	Chuỗi lạnh & logistics / Cold Chain, Logistics & Supply Chain			LV10-DM05	Giám sát và theo dõi / Monitoring & Tracking	LV10-DM05-PL03	IoT chuỗi lạnh / Cold chain IoT	LV10-DM05-PL03-SP001	IoT chuỗi lạnh / Cold chain IoT	Nhập tự do / Free text														
+	LV10	Chuỗi lạnh & logistics / Cold Chain, Logistics & Supply Chain			LV10-DM05	Giám sát và theo dõi / Monitoring & Tracking	LV10-DM05-PL04	Cảnh báo nhiệt độ / Temperature alerts	LV10-DM05-PL04-SP001	Cảnh báo nhiệt độ / Temperature alerts	Nhập tự do / Free text														
+	LV10	Chuỗi lạnh & logistics / Cold Chain, Logistics & Supply Chain			LV10-DM06	Dịch vụ thương mại và hải quan / Trade & Customs Services	LV10-DM06-PL01	Đại lý thủ tục hải quan / Customs brokerage	LV10-DM06-PL01-SP001	Đại lý thủ tục hải quan / Customs brokerage	Nhập tự do / Free text														
+	LV10	Chuỗi lạnh & logistics / Cold Chain, Logistics & Supply Chain			LV10-DM06	Dịch vụ thương mại và hải quan / Trade & Customs Services	LV10-DM06-PL02	Chứng từ xuất nhập khẩu / Import export documentation	LV10-DM06-PL02-SP001	Chứng từ xuất nhập khẩu / Import export documentation	Nhập tự do / Free text														
+	LV10	Chuỗi lạnh & logistics / Cold Chain, Logistics & Supply Chain			LV10-DM06	Dịch vụ thương mại và hải quan / Trade & Customs Services	LV10-DM06-PL03	Tuân thủ thương mại / Trade compliance	LV10-DM06-PL03-SP001	Tuân thủ thương mại / Trade compliance	Nhập tự do / Free text														
+	LV11	Công nghệ số, AI & dữ liệu / Digital Technology, AI & Data Services			LV11-DM01	Nền tảng phần mềm / Software Platforms	LV11-DM01-PL01	Hoạch định nguồn lực doanh nghiệp / ERP	LV11-DM01-PL01-SP001	Hoạch định nguồn lực doanh nghiệp / ERP	Nhập tự do / Free text														
+	LV11	Công nghệ số, AI & dữ liệu / Digital Technology, AI & Data Services			LV11-DM01	Nền tảng phần mềm / Software Platforms	LV11-DM01-PL02	Quản lý quan hệ khách hàng / CRM	LV11-DM01-PL02-SP001	Quản lý quan hệ khách hàng / CRM	Nhập tự do / Free text														
+	LV11	Công nghệ số, AI & dữ liệu / Digital Technology, AI & Data Services			LV11-DM01	Nền tảng phần mềm / Software Platforms	LV11-DM01-PL03	Phần mềm quản lý trang trại / Farm management software	LV11-DM01-PL03-SP001	Phần mềm quản lý trang trại / Farm management software	Nhập tự do / Free text														
+	LV11	Công nghệ số, AI & dữ liệu / Digital Technology, AI & Data Services			LV11-DM01	Nền tảng phần mềm / Software Platforms	LV11-DM01-PL04	Phần mềm quản lý tồn kho / Inventory software	LV11-DM01-PL04-SP001	Phần mềm quản lý tồn kho / Inventory software	Nhập tự do / Free text														
+	LV11	Công nghệ số, AI & dữ liệu / Digital Technology, AI & Data Services			LV11-DM01	Nền tảng phần mềm / Software Platforms	LV11-DM01-PL05	Phần mềm dưới dạng dịch vụ / SaaS	LV11-DM01-PL05-SP001	Phần mềm dưới dạng dịch vụ / SaaS	Nhập tự do / Free text														
+	LV11	Công nghệ số, AI & dữ liệu / Digital Technology, AI & Data Services			LV11-DM02	AI và phân tích dữ liệu / AI & Analytics	LV11-DM02-PL01	Thị giác máy tính / Computer vision	LV11-DM02-PL01-SP001	Thị giác máy tính / Computer vision	Nhập tự do / Free text														
+	LV11	Công nghệ số, AI & dữ liệu / Digital Technology, AI & Data Services			LV11-DM02	AI và phân tích dữ liệu / AI & Analytics	LV11-DM02-PL02	Phân tích dự báo / Predictive analytics	LV11-DM02-PL02-SP001	Phân tích dự báo / Predictive analytics	Nhập tự do / Free text														
+	LV11	Công nghệ số, AI & dữ liệu / Digital Technology, AI & Data Services			LV11-DM02	AI và phân tích dữ liệu / AI & Analytics	LV11-DM02-PL03	Hỗ trợ ra quyết định / Decision support	LV11-DM02-PL03-SP001	Hỗ trợ ra quyết định / Decision support	Nhập tự do / Free text														
+	LV11	Công nghệ số, AI & dữ liệu / Digital Technology, AI & Data Services			LV11-DM02	AI và phân tích dữ liệu / AI & Analytics	LV11-DM02-PL04	Học máy / Machine learning	LV11-DM02-PL04-SP001	Học máy / Machine learning	Nhập tự do / Free text														
+	LV11	Công nghệ số, AI & dữ liệu / Digital Technology, AI & Data Services			LV11-DM03	IoT và giám sát thông minh / IoT & Smart Monitoring	LV11-DM03-PL01	Cảm biến / Sensors	LV11-DM03-PL01-SP001	Cảm biến / Sensors	Nhập tự do / Free text														
+	LV11	Công nghệ số, AI & dữ liệu / Digital Technology, AI & Data Services			LV11-DM03	IoT và giám sát thông minh / IoT & Smart Monitoring	LV11-DM03-PL02	Bộ cổng kết nối / Gateways	LV11-DM03-PL02-SP001	Bộ cổng kết nối / Gateways	Nhập tự do / Free text														
+	LV11	Công nghệ số, AI & dữ liệu / Digital Technology, AI & Data Services			LV11-DM03	IoT và giám sát thông minh / IoT & Smart Monitoring	LV11-DM03-PL03	Giám sát từ xa / Remote monitoring	LV11-DM03-PL03-SP001	Giám sát từ xa / Remote monitoring	Nhập tự do / Free text														
+	LV11	Công nghệ số, AI & dữ liệu / Digital Technology, AI & Data Services			LV11-DM03	IoT và giám sát thông minh / IoT & Smart Monitoring	LV11-DM03-PL04	Thiết bị điện toán biên / Edge devices	LV11-DM03-PL04-SP001	Thiết bị điện toán biên / Edge devices	Nhập tự do / Free text														
+	LV11	Công nghệ số, AI & dữ liệu / Digital Technology, AI & Data Services			LV11-DM04	Tự động hóa và robot / Automation & Robotics	LV11-DM04-PL01	Robot công nghiệp / Industrial robots	LV11-DM04-PL01-SP001	Robot công nghiệp / Industrial robots	Nhập tự do / Free text														
+	LV11	Công nghệ số, AI & dữ liệu / Digital Technology, AI & Data Services			LV11-DM04	Tự động hóa và robot / Automation & Robotics	LV11-DM04-PL02	Robot trang trại / Farm robots	LV11-DM04-PL02-SP001	Robot trang trại / Farm robots	Nhập tự do / Free text														
+	LV11	Công nghệ số, AI & dữ liệu / Digital Technology, AI & Data Services			LV11-DM04	Tự động hóa và robot / Automation & Robotics	LV11-DM04-PL03	Bộ điều khiển logic lập trình / PLC	LV11-DM04-PL03-SP001	Bộ điều khiển logic lập trình / PLC	Nhập tự do / Free text														
+	LV11	Công nghệ số, AI & dữ liệu / Digital Technology, AI & Data Services			LV11-DM04	Tự động hóa và robot / Automation & Robotics	LV11-DM04-PL04	Hệ thống giám sát điều khiển và thu thập dữ liệu / SCADA	LV11-DM04-PL04-SP001	Hệ thống giám sát điều khiển và thu thập dữ liệu / SCADA	Nhập tự do / Free text														
+	LV11	Công nghệ số, AI & dữ liệu / Digital Technology, AI & Data Services			LV11-DM04	Tự động hóa và robot / Automation & Robotics	LV11-DM04-PL05	Tự động hóa quy trình / Process automation	LV11-DM04-PL05-SP001	Tự động hóa quy trình / Process automation	Nhập tự do / Free text														
+	LV11	Công nghệ số, AI & dữ liệu / Digital Technology, AI & Data Services			LV11-DM05	Dữ liệu và dịch vụ CNTT / Data & IT Services	LV11-DM05-PL01	Kỹ thuật dữ liệu / Data engineering	LV11-DM05-PL01-SP001	Kỹ thuật dữ liệu / Data engineering	Nhập tự do / Free text														
+	LV11	Công nghệ số, AI & dữ liệu / Digital Technology, AI & Data Services			LV11-DM05	Dữ liệu và dịch vụ CNTT / Data & IT Services	LV11-DM05-PL02	Dịch vụ đám mây / Cloud services	LV11-DM05-PL02-SP001	Dịch vụ đám mây / Cloud services	Nhập tự do / Free text														
+	LV11	Công nghệ số, AI & dữ liệu / Digital Technology, AI & Data Services			LV11-DM05	Dữ liệu và dịch vụ CNTT / Data & IT Services	LV11-DM05-PL03	Tích hợp API / API integration	LV11-DM05-PL03-SP001	Tích hợp API / API integration	Nhập tự do / Free text														
+	LV11	Công nghệ số, AI & dữ liệu / Digital Technology, AI & Data Services			LV11-DM05	Dữ liệu và dịch vụ CNTT / Data & IT Services	LV11-DM05-PL04	An ninh mạng / Cybersecurity	LV11-DM05-PL04-SP001	An ninh mạng / Cybersecurity	Nhập tự do / Free text														
+	LV11	Công nghệ số, AI & dữ liệu / Digital Technology, AI & Data Services			LV11-DM05	Dữ liệu và dịch vụ CNTT / Data & IT Services	LV11-DM05-PL05	Dữ liệu lớn / Big data	LV11-DM05-PL05-SP001	Dữ liệu lớn / Big data	Nhập tự do / Free text														
+	LV11	Công nghệ số, AI & dữ liệu / Digital Technology, AI & Data Services			LV11-DM06	Công nghệ truy xuất nguồn gốc / Traceability Technology	LV11-DM06-PL01	Truy xuất nguồn gốc QR / QR traceability	LV11-DM06-PL01-SP001	Truy xuất nguồn gốc QR / QR traceability	Nhập tự do / Free text														
+	LV11	Công nghệ số, AI & dữ liệu / Digital Technology, AI & Data Services			LV11-DM06	Công nghệ truy xuất nguồn gốc / Traceability Technology	LV11-DM06-PL02	Nhận dạng RFID / RFID	LV11-DM06-PL02-SP001	Nhận dạng RFID / RFID	Nhập tự do / Free text														
+	LV11	Công nghệ số, AI & dữ liệu / Digital Technology, AI & Data Services			LV11-DM06	Công nghệ truy xuất nguồn gốc / Traceability Technology	LV11-DM06-PL03	Giải pháp blockchain / Blockchain solutions	LV11-DM06-PL03-SP001	Giải pháp blockchain / Blockchain solutions	Nhập tự do / Free text														
+	LV11	Công nghệ số, AI & dữ liệu / Digital Technology, AI & Data Services			LV11-DM06	Công nghệ truy xuất nguồn gốc / Traceability Technology	LV11-DM06-PL04	Hộ chiếu sản phẩm số / Digital product passports	LV11-DM06-PL04-SP001	Hộ chiếu sản phẩm số / Digital product passports	Nhập tự do / Free text														
+	LV12	Môi trường & công nghệ nước / Environmental & Water Technologies			LV12-DM01	Phân tích nước / Water Analysis	LV12-DM01-PL01	Cảm biến nước / Water sensors	LV12-DM01-PL01-SP001	Cảm biến nước / Water sensors	Nhập tự do / Free text														
+	LV12	Môi trường & công nghệ nước / Environmental & Water Technologies			LV12-DM01	Phân tích nước / Water Analysis	LV12-DM01-PL02	Phân tích nước trong phòng thí nghiệm / Laboratory water analysis	LV12-DM01-PL02-SP001	Phân tích nước trong phòng thí nghiệm / Laboratory water analysis	Nhập tự do / Free text														
+	LV12	Môi trường & công nghệ nước / Environmental & Water Technologies			LV12-DM01	Phân tích nước / Water Analysis	LV12-DM01-PL03	Giám sát nước trực tuyến / Online water monitoring	LV12-DM01-PL03-SP001	Giám sát nước trực tuyến / Online water monitoring	Nhập tự do / Free text														
+	LV12	Môi trường & công nghệ nước / Environmental & Water Technologies			LV12-DM02	Xử lý nước / Water Treatment	LV12-DM02-PL01	Lọc / Filtration	LV12-DM02-PL01-SP001	Lọc / Filtration	Nhập tự do / Free text														
+	LV12	Môi trường & công nghệ nước / Environmental & Water Technologies			LV12-DM02	Xử lý nước / Water Treatment	LV12-DM02-PL02	Thẩm thấu ngược / Reverse osmosis	LV12-DM02-PL02-SP001	Thẩm thấu ngược / Reverse osmosis	Nhập tự do / Free text														
+	LV12	Môi trường & công nghệ nước / Environmental & Water Technologies			LV12-DM02	Xử lý nước / Water Treatment	LV12-DM02-PL03	Khử trùng UV / UV disinfection	LV12-DM02-PL03-SP001	Khử trùng UV / UV disinfection	Nhập tự do / Free text														
+	LV12	Môi trường & công nghệ nước / Environmental & Water Technologies			LV12-DM02	Xử lý nước / Water Treatment	LV12-DM02-PL04	Xử lý ozone / Ozone treatment	LV12-DM02-PL04-SP001	Xử lý ozone / Ozone treatment	Nhập tự do / Free text														
+	LV12	Môi trường & công nghệ nước / Environmental & Water Technologies			LV12-DM02	Xử lý nước / Water Treatment	LV12-DM02-PL05	Định lượng hóa chất / Chemical dosing	LV12-DM02-PL05-SP001	Định lượng hóa chất / Chemical dosing	Nhập tự do / Free text														
+	LV12	Môi trường & công nghệ nước / Environmental & Water Technologies			LV12-DM03	Xử lý nước thải / Wastewater Treatment	LV12-DM03-PL01	Xử lý sinh học / Biological treatment	LV12-DM03-PL01-SP001	Xử lý sinh học / Biological treatment	Nhập tự do / Free text														
+	LV12	Môi trường & công nghệ nước / Environmental & Water Technologies			LV12-DM03	Xử lý nước thải / Wastewater Treatment	LV12-DM03-PL02	Xử lý bùn thải / Sludge treatment	LV12-DM03-PL02-SP001	Xử lý bùn thải / Sludge treatment	Nhập tự do / Free text														
+	LV12	Môi trường & công nghệ nước / Environmental & Water Technologies			LV12-DM03	Xử lý nước thải / Wastewater Treatment	LV12-DM03-PL03	Hệ thống màng lọc / Membrane systems	LV12-DM03-PL03-SP001	Hệ thống màng lọc / Membrane systems	Nhập tự do / Free text														
+	LV12	Môi trường & công nghệ nước / Environmental & Water Technologies			LV12-DM04	Quản lý chất thải / Waste Management	LV12-DM04-PL01	Chất thải rắn / Solid waste	LV12-DM04-PL01-SP001	Chất thải rắn / Solid waste	Nhập tự do / Free text														
+	LV12	Môi trường & công nghệ nước / Environmental & Water Technologies			LV12-DM04	Quản lý chất thải / Waste Management	LV12-DM04-PL02	Chất thải hữu cơ / Organic waste	LV12-DM04-PL02-SP001	Chất thải hữu cơ / Organic waste	Nhập tự do / Free text														
+	LV12	Môi trường & công nghệ nước / Environmental & Water Technologies			LV12-DM04	Quản lý chất thải / Waste Management	LV12-DM04-PL03	Tái chế / Recycling	LV12-DM04-PL03-SP001	Tái chế / Recycling	Nhập tự do / Free text														
+	LV12	Môi trường & công nghệ nước / Environmental & Water Technologies			LV12-DM04	Quản lý chất thải / Waste Management	LV12-DM04-PL04	Xử lý mùi / Odor treatment	LV12-DM04-PL04-SP001	Xử lý mùi / Odor treatment	Nhập tự do / Free text														
+	LV12	Môi trường & công nghệ nước / Environmental & Water Technologies			LV12-DM05	Năng lượng tái tạo / Renewable Energy	LV12-DM05-PL01	Khí sinh học / Biogas	LV12-DM05-PL01-SP001	Khí sinh học / Biogas	Nhập tự do / Free text														
+	LV12	Môi trường & công nghệ nước / Environmental & Water Technologies			LV12-DM05	Năng lượng tái tạo / Renewable Energy	LV12-DM05-PL02	Sinh khối / Biomass	LV12-DM05-PL02-SP001	Sinh khối / Biomass	Nhập tự do / Free text														
+	LV12	Môi trường & công nghệ nước / Environmental & Water Technologies			LV12-DM05	Năng lượng tái tạo / Renewable Energy	LV12-DM05-PL03	Năng lượng mặt trời / Solar	LV12-DM05-PL03-SP001	Năng lượng mặt trời / Solar	Nhập tự do / Free text														
+	LV12	Môi trường & công nghệ nước / Environmental & Water Technologies			LV12-DM05	Năng lượng tái tạo / Renewable Energy	LV12-DM05-PL04	Thu hồi năng lượng / Energy recovery	LV12-DM05-PL04-SP001	Thu hồi năng lượng / Energy recovery	Nhập tự do / Free text														
+	LV12	Môi trường & công nghệ nước / Environmental & Water Technologies			LV12-DM06	Dịch vụ môi trường / Environmental Services	LV12-DM06-PL01	Tư vấn môi trường / Environmental consulting	LV12-DM06-PL01-SP001	Tư vấn môi trường / Environmental consulting	Nhập tự do / Free text														
+	LV12	Môi trường & công nghệ nước / Environmental & Water Technologies			LV12-DM06	Dịch vụ môi trường / Environmental Services	LV12-DM06-PL02	Giám sát môi trường / Environmental monitoring	LV12-DM06-PL02-SP001	Giám sát môi trường / Environmental monitoring	Nhập tự do / Free text														
+	LV12	Môi trường & công nghệ nước / Environmental & Water Technologies			LV12-DM06	Dịch vụ môi trường / Environmental Services	LV12-DM06-PL03	Tuân thủ quy định / Compliance	LV12-DM06-PL03-SP001	Tuân thủ quy định / Compliance	Nhập tự do / Free text														
+	LV12	Môi trường & công nghệ nước / Environmental & Water Technologies			LV12-DM06	Dịch vụ môi trường / Environmental Services	LV12-DM06-PL04	Đánh giá tính bền vững / Sustainability assessment	LV12-DM06-PL04-SP001	Đánh giá tính bền vững / Sustainability assessment	Nhập tự do / Free text														
+	LV13	Máy móc công nghiệp & bao bì / Industrial Machinery & Packaging			LV13-DM01	Máy móc chế biến / Processing Machinery	LV13-DM01-PL01	Phối trộn / Mixing	LV13-DM01-PL01-SP001	Phối trộn / Mixing	Nhập tự do / Free text														
+	LV13	Máy móc công nghiệp & bao bì / Industrial Machinery & Packaging			LV13-DM01	Máy móc chế biến / Processing Machinery	LV13-DM01-PL02	Cắt / Cutting	LV13-DM01-PL02-SP001	Cắt / Cutting	Nhập tự do / Free text														
+	LV13	Máy móc công nghiệp & bao bì / Industrial Machinery & Packaging			LV13-DM01	Máy móc chế biến / Processing Machinery	LV13-DM01-PL03	Sấy khô / Drying	LV13-DM01-PL03-SP001	Sấy khô / Drying	Nhập tự do / Free text														
+	LV13	Máy móc công nghiệp & bao bì / Industrial Machinery & Packaging			LV13-DM01	Máy móc chế biến / Processing Machinery	LV13-DM01-PL04	Nghiền / Grinding	LV13-DM01-PL04-SP001	Nghiền / Grinding	Nhập tự do / Free text														
+	LV13	Máy móc công nghiệp & bao bì / Industrial Machinery & Packaging			LV13-DM01	Máy móc chế biến / Processing Machinery	LV13-DM01-PL05	Chế biến nhiệt / Thermal processing	LV13-DM01-PL05-SP001	Chế biến nhiệt / Thermal processing	Nhập tự do / Free text														
+	LV13	Máy móc công nghiệp & bao bì / Industrial Machinery & Packaging			LV13-DM01	Máy móc chế biến / Processing Machinery	LV13-DM01-PL06	Ép viên thức ăn / Feed pelleting	LV13-DM01-PL06-SP001	Ép viên thức ăn / Feed pelleting	Nhập tự do / Free text														
+	LV13	Máy móc công nghiệp & bao bì / Industrial Machinery & Packaging			LV13-DM01	Máy móc chế biến / Processing Machinery	LV13-DM01-PL07	Đùn ép thức ăn / Feed extrusion	LV13-DM01-PL07-SP001	Đùn ép thức ăn / Feed extrusion	Nhập tự do / Free text														
+	LV13	Máy móc công nghiệp & bao bì / Industrial Machinery & Packaging			LV13-DM02	Máy móc đóng gói / Packaging Machinery	LV13-DM02-PL01	Chiết rót / Filling	LV13-DM02-PL01-SP001	Chiết rót / Filling	Nhập tự do / Free text														
+	LV13	Máy móc công nghiệp & bao bì / Industrial Machinery & Packaging			LV13-DM02	Máy móc đóng gói / Packaging Machinery	LV13-DM02-PL02	Hàn kín bao bì / Sealing	LV13-DM02-PL02-SP001	Hàn kín bao bì / Sealing	Nhập tự do / Free text														
+	LV13	Máy móc công nghiệp & bao bì / Industrial Machinery & Packaging			LV13-DM02	Máy móc đóng gói / Packaging Machinery	LV13-DM02-PL03	Dán nhãn / Labeling	LV13-DM02-PL03-SP001	Dán nhãn / Labeling	Nhập tự do / Free text														
+	LV13	Máy móc công nghiệp & bao bì / Industrial Machinery & Packaging			LV13-DM02	Máy móc đóng gói / Packaging Machinery	LV13-DM02-PL04	Bao gói / Wrapping	LV13-DM02-PL04-SP001	Bao gói / Wrapping	Nhập tự do / Free text														
+	LV13	Máy móc công nghiệp & bao bì / Industrial Machinery & Packaging			LV13-DM02	Máy móc đóng gói / Packaging Machinery	LV13-DM02-PL05	Đóng hộp carton / Cartoning	LV13-DM02-PL05-SP001	Đóng hộp carton / Cartoning	Nhập tự do / Free text														
+	LV13	Máy móc công nghiệp & bao bì / Industrial Machinery & Packaging			LV13-DM03	Vật liệu bao bì / Packaging Materials	LV13-DM03-PL01	Màng bao bì / Films	LV13-DM03-PL01-SP001	Màng bao bì / Films	Nhập tự do / Free text														
+	LV13	Máy móc công nghiệp & bao bì / Industrial Machinery & Packaging			LV13-DM03	Vật liệu bao bì / Packaging Materials	LV13-DM03-PL02	Túi bao bì / Bags	LV13-DM03-PL02-SP001	Túi bao bì / Bags	Nhập tự do / Free text														
+	LV13	Máy móc công nghiệp & bao bì / Industrial Machinery & Packaging			LV13-DM03	Vật liệu bao bì / Packaging Materials	LV13-DM03-PL03	Khay / Trays	LV13-DM03-PL03-SP001	Khay / Trays	Nhập tự do / Free text														
+	LV13	Máy móc công nghiệp & bao bì / Industrial Machinery & Packaging			LV13-DM03	Vật liệu bao bì / Packaging Materials	LV13-DM03-PL04	Thùng carton / Cartons	LV13-DM03-PL04-SP001	Thùng carton / Cartons	Nhập tự do / Free text														
+	LV13	Máy móc công nghiệp & bao bì / Industrial Machinery & Packaging			LV13-DM03	Vật liệu bao bì / Packaging Materials	LV13-DM03-PL05	Bao bì bền vững / Sustainable packaging	LV13-DM03-PL05-SP001	Bao bì bền vững / Sustainable packaging	Nhập tự do / Free text														
+	LV13	Máy móc công nghiệp & bao bì / Industrial Machinery & Packaging			LV13-DM04	Linh kiện công nghiệp / Industrial Components	LV13-DM04-PL01	Động cơ / Motors	LV13-DM04-PL01-SP001	Động cơ / Motors	Nhập tự do / Free text														
+	LV13	Máy móc công nghiệp & bao bì / Industrial Machinery & Packaging			LV13-DM04	Linh kiện công nghiệp / Industrial Components	LV13-DM04-PL02	Máy bơm / Pumps	LV13-DM04-PL02-SP001	Máy bơm / Pumps	Nhập tự do / Free text														
+	LV13	Máy móc công nghiệp & bao bì / Industrial Machinery & Packaging			LV13-DM04	Linh kiện công nghiệp / Industrial Components	LV13-DM04-PL03	Van / Valves	LV13-DM04-PL03-SP001	Van / Valves	Nhập tự do / Free text														
+	LV13	Máy móc công nghiệp & bao bì / Industrial Machinery & Packaging			LV13-DM04	Linh kiện công nghiệp / Industrial Components	LV13-DM04-PL04	Băng tải / Conveyors	LV13-DM04-PL04-SP001	Băng tải / Conveyors	Nhập tự do / Free text														
+	LV13	Máy móc công nghiệp & bao bì / Industrial Machinery & Packaging			LV13-DM04	Linh kiện công nghiệp / Industrial Components	LV13-DM04-PL05	Bộ truyền động / Drives	LV13-DM04-PL05-SP001	Bộ truyền động / Drives	Nhập tự do / Free text														
+	LV13	Máy móc công nghiệp & bao bì / Industrial Machinery & Packaging			LV13-DM05	Tự động hóa công nghiệp / Industrial Automation	LV13-DM05-PL01	Bộ điều khiển logic lập trình / PLC	LV13-DM05-PL01-SP001	Bộ điều khiển logic lập trình / PLC	Nhập tự do / Free text														
+	LV13	Máy móc công nghiệp & bao bì / Industrial Machinery & Packaging			LV13-DM05	Tự động hóa công nghiệp / Industrial Automation	LV13-DM05-PL02	Điều khiển công nghiệp / Industrial control	LV13-DM05-PL02-SP001	Điều khiển công nghiệp / Industrial control	Nhập tự do / Free text														
+	LV13	Máy móc công nghiệp & bao bì / Industrial Machinery & Packaging			LV13-DM05	Tự động hóa công nghiệp / Industrial Automation	LV13-DM05-PL03	Thị giác máy / Machine vision	LV13-DM05-PL03-SP001	Thị giác máy / Machine vision	Nhập tự do / Free text														
+	LV13	Máy móc công nghiệp & bao bì / Industrial Machinery & Packaging			LV13-DM05	Tự động hóa công nghiệp / Industrial Automation	LV13-DM05-PL04	Công nghệ robot / Robotics	LV13-DM05-PL04-SP001	Công nghệ robot / Robotics	Nhập tự do / Free text														
+	LV13	Máy móc công nghiệp & bao bì / Industrial Machinery & Packaging			LV13-DM06	Bảo trì và kỹ thuật / Maintenance & Engineering	LV13-DM06-PL01	Phụ tùng thay thế / Spare parts	LV13-DM06-PL01-SP001	Phụ tùng thay thế / Spare parts	Nhập tự do / Free text														
+	LV13	Máy móc công nghiệp & bao bì / Industrial Machinery & Packaging			LV13-DM06	Bảo trì và kỹ thuật / Maintenance & Engineering	LV13-DM06-PL02	Lắp đặt / Installation	LV13-DM06-PL02-SP001	Lắp đặt / Installation	Nhập tự do / Free text														
+	LV13	Máy móc công nghiệp & bao bì / Industrial Machinery & Packaging			LV13-DM06	Bảo trì và kỹ thuật / Maintenance & Engineering	LV13-DM06-PL03	Sửa chữa / Repair	LV13-DM06-PL03-SP001	Sửa chữa / Repair	Nhập tự do / Free text														
+	LV13	Máy móc công nghiệp & bao bì / Industrial Machinery & Packaging			LV13-DM06	Bảo trì và kỹ thuật / Maintenance & Engineering	LV13-DM06-PL04	Kỹ thuật nhà máy / Plant engineering	LV13-DM06-PL04-SP001	Kỹ thuật nhà máy / Plant engineering	Nhập tự do / Free text														
+	LV14	Tổ chức ngành, truyền thông & giáo dục / Industry Organizations, Media & Education			LV14-DM01	Hiệp hội ngành nghề / Industry Associations	LV14-DM01-PL01	Hiệp hội thương mại / Trade associations	LV14-DM01-PL01-SP001	Hiệp hội thương mại / Trade associations	Nhập tự do / Free text														
+	LV14	Tổ chức ngành, truyền thông & giáo dục / Industry Organizations, Media & Education			LV14-DM01	Hiệp hội ngành nghề / Industry Associations	LV14-DM01-PL02	Hiệp hội nhà sản xuất / Producer associations	LV14-DM01-PL02-SP001	Hiệp hội nhà sản xuất / Producer associations	Nhập tự do / Free text														
+	LV14	Tổ chức ngành, truyền thông & giáo dục / Industry Organizations, Media & Education			LV14-DM01	Hiệp hội ngành nghề / Industry Associations	LV14-DM01-PL03	Tổ chức nghề nghiệp / Professional bodies	LV14-DM01-PL03-SP001	Tổ chức nghề nghiệp / Professional bodies	Nhập tự do / Free text														
+	LV14	Tổ chức ngành, truyền thông & giáo dục / Industry Organizations, Media & Education			LV14-DM02	Truyền thông và xuất bản / Media & Publications	LV14-DM02-PL01	Tạp chí chuyên ngành / Trade magazines	LV14-DM02-PL01-SP001	Tạp chí chuyên ngành / Trade magazines	Nhập tự do / Free text														
+	LV14	Tổ chức ngành, truyền thông & giáo dục / Industry Organizations, Media & Education			LV14-DM02	Truyền thông và xuất bản / Media & Publications	LV14-DM02-PL02	Truyền thông số / Digital media	LV14-DM02-PL02-SP001	Truyền thông số / Digital media	Nhập tự do / Free text														
+	LV14	Tổ chức ngành, truyền thông & giáo dục / Industry Organizations, Media & Education			LV14-DM02	Truyền thông và xuất bản / Media & Publications	LV14-DM02-PL03	Tin tức thị trường / Market news	LV14-DM02-PL03-SP001	Tin tức thị trường / Market news	Nhập tự do / Free text														
+	LV14	Tổ chức ngành, truyền thông & giáo dục / Industry Organizations, Media & Education			LV14-DM02	Truyền thông và xuất bản / Media & Publications	LV14-DM02-PL04	Danh bạ ngành nghề / Industry directories	LV14-DM02-PL04-SP001	Danh bạ ngành nghề / Industry directories	Nhập tự do / Free text														
+	LV14	Tổ chức ngành, truyền thông & giáo dục / Industry Organizations, Media & Education			LV14-DM03	Giáo dục và nghiên cứu / Education & Research	LV14-DM03-PL01	Trường đại học / Universities	LV14-DM03-PL01-SP001	Trường đại học / Universities	Nhập tự do / Free text														
+	LV14	Tổ chức ngành, truyền thông & giáo dục / Industry Organizations, Media & Education			LV14-DM03	Giáo dục và nghiên cứu / Education & Research	LV14-DM03-PL02	Viện nghiên cứu / Research institutes	LV14-DM03-PL02-SP001	Viện nghiên cứu / Research institutes	Nhập tự do / Free text														
+	LV14	Tổ chức ngành, truyền thông & giáo dục / Industry Organizations, Media & Education			LV14-DM03	Giáo dục và nghiên cứu / Education & Research	LV14-DM03-PL03	Trung tâm đào tạo / Training centers	LV14-DM03-PL03-SP001	Trung tâm đào tạo / Training centers	Nhập tự do / Free text														
+	LV14	Tổ chức ngành, truyền thông & giáo dục / Industry Organizations, Media & Education			LV14-DM04	Sự kiện và triển lãm / Events & Exhibitions	LV14-DM04-PL01	Triển lãm thương mại / Trade shows	LV14-DM04-PL01-SP001	Triển lãm thương mại / Trade shows	Nhập tự do / Free text														
+	LV14	Tổ chức ngành, truyền thông & giáo dục / Industry Organizations, Media & Education			LV14-DM04	Sự kiện và triển lãm / Events & Exhibitions	LV14-DM04-PL02	Hội nghị / Conferences	LV14-DM04-PL02-SP001	Hội nghị / Conferences	Nhập tự do / Free text														
+	LV14	Tổ chức ngành, truyền thông & giáo dục / Industry Organizations, Media & Education			LV14-DM04	Sự kiện và triển lãm / Events & Exhibitions	LV14-DM04-PL03	Kết nối giao thương / Business matchmaking	LV14-DM04-PL03-SP001	Kết nối giao thương / Business matchmaking	Nhập tự do / Free text														
+	LV14	Tổ chức ngành, truyền thông & giáo dục / Industry Organizations, Media & Education			LV14-DM05	Cơ quan nhà nước và xúc tiến thương mại / Government & Trade Promotion	LV14-DM05-PL01	Cơ quan xúc tiến thương mại / Trade agencies	LV14-DM05-PL01-SP001	Cơ quan xúc tiến thương mại / Trade agencies	Nhập tự do / Free text														
+	LV14	Tổ chức ngành, truyền thông & giáo dục / Industry Organizations, Media & Education			LV14-DM05	Cơ quan nhà nước và xúc tiến thương mại / Government & Trade Promotion	LV14-DM05-PL02	Xúc tiến xuất khẩu / Export promotion	LV14-DM05-PL02-SP001	Xúc tiến xuất khẩu / Export promotion	Nhập tự do / Free text														
+	LV14	Tổ chức ngành, truyền thông & giáo dục / Industry Organizations, Media & Education			LV14-DM05	Cơ quan nhà nước và xúc tiến thương mại / Government & Trade Promotion	LV14-DM05-PL03	Cơ quan công lập / Public institutions	LV14-DM05-PL03-SP001	Cơ quan công lập / Public institutions	Nhập tự do / Free text														
+	LV14	Tổ chức ngành, truyền thông & giáo dục / Industry Organizations, Media & Education			LV14-DM06	Tư vấn và dịch vụ chuyên môn / Consulting & Professional Services	LV14-DM06-PL01	Nghiên cứu thị trường / Market research	LV14-DM06-PL01-SP001	Nghiên cứu thị trường / Market research	Nhập tự do / Free text														
+	LV14	Tổ chức ngành, truyền thông & giáo dục / Industry Organizations, Media & Education			LV14-DM06	Tư vấn và dịch vụ chuyên môn / Consulting & Professional Services	LV14-DM06-PL02	Tư vấn kinh doanh / Business consulting	LV14-DM06-PL02-SP001	Tư vấn kinh doanh / Business consulting	Nhập tự do / Free text														
+	LV14	Tổ chức ngành, truyền thông & giáo dục / Industry Organizations, Media & Education			LV14-DM06	Tư vấn và dịch vụ chuyên môn / Consulting & Professional Services	LV14-DM06-PL03	Dịch vụ pháp lý và quy định / Legal & regulatory services	LV14-DM06-PL03-SP001	Dịch vụ pháp lý và quy định / Legal & regulatory services	Nhập tự do / Free text														
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									
+																									

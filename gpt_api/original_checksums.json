@@ -1,0 +1,22 @@
+﻿[
+    {
+        "Path":  "C:\\python\\chuanhoatax\\app.py",
+        "Hash":  "8D067CE088F0E2834E5D63D6EBFD50999EF0EB069AAB306082FA0CEC165B977D"
+    },
+    {
+        "Path":  "C:\\python\\chuanhoatax\\normalizer.py",
+        "Hash":  "DB378CD1DA13B27FEB6E51BEA237633A43468A549F9F93C8AA987FE71D7793FC"
+    },
+    {
+        "Path":  "C:\\python\\chuanhoatax\\raw_import.py",
+        "Hash":  "E064C9FA9E3DC6AC1A713C25921D7669072FCFBA17DC3EED74D5551A47B20373"
+    },
+    {
+        "Path":  "C:\\python\\chuanhoatax\\start.bat",
+        "Hash":  "F275784F1BFB121020639BDBCD9DD815C028E8E249EAF19C5664E73F3557F165"
+    },
+    {
+        "Path":  "C:\\python\\chuanhoatax\\web_enrichment.py",
+        "Hash":  "FD8EC94900860393E80D237AA2F6FA8033C5F256F35CBAC8D337C973A7103A31"
+    }
+]
