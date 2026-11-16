@@ -12,7 +12,7 @@ BASE = Path(__file__).resolve().parent
 
 def main():
     root = tk.Tk()
-    root.title('Chuẩn hóa danh bạ theo taxonomy')
+    root.title('THUANDZ')
     logo_path = BASE / 'logo.png'
     if logo_path.exists():
         root.logo_original = tk.PhotoImage(file=str(logo_path))

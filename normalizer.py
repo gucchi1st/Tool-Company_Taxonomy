@@ -103,7 +103,7 @@ def relevance(row):
             f'Thủy sản: {"có liên quan" if aqua else "chưa đủ bằng chứng"} ({level}). '
             'Ngành đăng ký không chứng minh sản phẩm đang bán.')
 
-def normalize(text, taxonomy, evidence=None):
+def normalize(text, taxonomy, evidence=None, strict_taxonomy=False):
     rows, issues, changes = [], [], []
     raw_rows = table(text)
     raw_rows, import_log = map_rows(raw_rows, HEADERS, folded)
@@ -120,6 +120,9 @@ def normalize(text, taxonomy, evidence=None):
         from content_rules import match_taxonomy
         previous_codes = row[4:14]
         taxonomy_matches = match_taxonomy(row, taxonomy, folded)
+        if strict_taxonomy:
+            from taxonomy_cleanup import cleanup_taxonomy
+            cleanup_taxonomy(row,taxonomy,folded)
         if row[4:14] != previous_codes:
             changes.append({'line':line, 'tax_id':row[27], 'reason':'Đối chiếu taxonomy từ ngành/sản phẩm',
                             'old':previous_codes, 'new':row[4:14], 'matches':taxonomy_matches})
@@ -340,7 +343,8 @@ def run(raw='data/raw.tsv', taxonomy='data/taxonomy.tsv', output='outputs', evid
     total_companies = 0
     def save_progress(partial, collected, entries, stopped=False):
         nonlocal last_saved
-        saved_rows, saved_report = normalize(csv_text(partial, delimiter='\t'), tax, ev + collected)
+        saved_rows, saved_report = normalize(csv_text(partial, delimiter='\t'), tax, ev + collected,
+            strict_taxonomy=search_mode=='chatgpt_pack5')
         saved_report.update({'web_research': json.loads(json.dumps(entries, ensure_ascii=False)), 'search_mode': search_mode,
             'original_import_log': original_log, 'total_companies': total_companies,
             'processed_companies': len(partial), 'output_rows': len(saved_rows),

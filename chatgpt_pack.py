@@ -2,6 +2,7 @@
 import json
 import csv
 import io
+import unicodedata
 import re
 import time
 from datetime import datetime, timezone, timedelta
@@ -62,8 +63,34 @@ def pack_prompt(pack, tax, headers, offset=0, raw_pack=None):
         '\n\nTìm thêm thông tin, dựa vào taxonomy chuẩn hóa theo cột\n' +
         tsv([headers]) +
         '\nNOTE đề cập liên quan hay không đến chăn nuôi, mỗi mail 1 dòng.'
+        '\nƯu tiên tìm email liên hệ của từng công ty từ website chính thức và các nguồn công khai; không tự đoán email. Không tìm được thì để trống và ghi NOTE.'
+        f'\nBẮT BUỘC trả đủ {len(pack)} công ty đã gửi trong pack này, không bỏ sót hoặc thêm công ty khác. '
+        'Công ty chưa tìm được thông tin vẫn phải có dòng kết quả với tên và MST gốc, ghi rõ trong NOTE. '
+        'Một công ty có nhiều email thì tách nhiều dòng; số công ty phải đủ, số dòng có thể nhiều hơn.'
+        ' Các dòng RAW trùng tên vẫn phải trả riêng từng dòng, dùng STT theo thứ tự 1 đến số dòng trong pack; các dòng tách email giữ cùng STT.'
         '\nChỉ in kết quả TSV trực tiếp trong câu trả lời, có dòng tên cột; không tạo hoặc gửi file.'
     )
+
+
+def company_key(value):
+    return ''.join(c for c in unicodedata.normalize('NFC',value).casefold() if c.isalnum())
+
+
+def group_pack_rows(rows, pack):
+    groups={i:[] for i in range(len(pack))}
+    ids={r[0] for r in rows}
+    original_ids={r[0] for r in pack}
+    local=bool(ids-original_ids) and ids <= {str(i+1) for i in range(len(pack))}
+    unmatched=[]
+    for row in rows:
+        matches=[i for i,r in enumerate(pack) if company_key(r[1])==company_key(row[1])]
+        if len(matches)>1:
+            matches=[i for i in matches if row[0]==(str(i+1) if local else pack[i][0])]
+        if len(matches)!=1:
+            unmatched.append(row)
+        else:
+            groups[matches[0]].append(row)
+    return groups,unmatched
 
 
 def complete_tsv_from_page(text, pack):
@@ -85,18 +112,13 @@ def complete_tsv_from_page(text, pack):
         if len(cells)!=32:
             break
         rows.append(cells)
-    wanted={row[27] for row in pack}
-    found={row[27] for row in rows}
-    count=len(wanted & found)
-    if not rows or found!=wanted: return None,count
-    for original in pack:
-        same=[r for r in pack if r[27]==original[27]]
-        if len(same)>1 and not any(r[27]==original[27] and r[0]==original[0] for r in rows):
-            return None,count
+    groups,unmatched=group_pack_rows(rows,pack)
+    count=sum(bool(group) for group in groups.values())
+    if not rows or unmatched or count!=len(pack): return None,count
     return '\n'.join(['\t'.join(HEADERS),*['\t'.join(r) for r in rows]]),count
 
 
-def parse_pack(text, pack, tax, headers, offset=0):
+def parse_pack(text, pack, tax, headers, offset=0, repair_taxonomy=False):
     text = text.strip(' \r\n')
     if 'PACK_RESULT_BEGIN' in text:
         match = re.search(r'PACK_RESULT_BEGIN\s*([\s\S]*?)\s*PACK_RESULT_END', text)
@@ -120,14 +142,11 @@ def parse_pack(text, pack, tax, headers, offset=0):
                 cells[0] = headers
         if not cells or cells[0] != headers:
             raise ValueError('Bảng kết quả chưa đúng 32 cột yêu cầu')
-        grouped = {i:[] for i in range(len(pack))}
-        for row in cells[1:]:
-            if len(row) != 32:
-                raise ValueError('Dòng kết quả không đủ 32 cột')
-            matches = [i for i, original in enumerate(pack) if row[27] == original[27] and (row[0] == original[0] or sum(r[27] == row[27] for r in pack) == 1)]
-            if len(matches) != 1:
-                raise ValueError('Không khớp duy nhất MST trong pack')
-            grouped[matches[0]].append(row)
+        if any(len(row)!=32 for row in cells[1:]):
+            raise ValueError('Dòng kết quả không đủ 32 cột')
+        grouped,unmatched=group_pack_rows(cells[1:],pack)
+        if unmatched:
+            raise ValueError('Không khớp duy nhất tên và STT công ty trong pack')
         companies = []
         for i, original in enumerate(pack):
             group = grouped[i]
@@ -138,6 +157,9 @@ def parse_pack(text, pack, tax, headers, offset=0):
                 if any(other[j] != merged[j] for j in range(32) if j != 19):
                     raise ValueError('Các dòng cùng công ty có thông tin khác nhau ngoài email')
             merged[19] = '; '.join(dict.fromkeys(row[19] for row in group if row[19]))
+            if merged[27] != original[27]:
+                merged[25] += f' MST ChatGPT trả về: {merged[27] or "trống"}; giữ MST raw: {original[27]}.'
+                merged[27] = original[27]
             companies.append({'input_id':offset+i,'tax_id':original[27],'values':merged})
         data = {'headers':headers,'companies':companies}
     if not isinstance(data,dict) or data.get('headers') != headers:
@@ -161,6 +183,10 @@ def parse_pack(text, pack, tax, headers, offset=0):
         if row[27]!=original[27]:
             raise ValueError(f'{original[27]}: MST tại cột 28 không đúng raw')
         row = [value.strip() if value.strip() not in {'.','-'} else '' for value in row]
+        if repair_taxonomy:
+            from taxonomy_cleanup import cleanup_taxonomy
+            from normalizer import folded
+            cleanup_taxonomy(row,tax,folded)
         for ci,mapping in zip([4,6,8,10,12],tax.maps):
             code = row[ci]
             if code and code not in mapping:
@@ -277,7 +303,27 @@ def send_chatgpt_prompt(page, prompt, cancelled=lambda:False):
 
 
 class ChatGPTBrowser(GoogleBrowser):
+    answer_timeout=180
+
     def ask_pack(self, prompt):
+        retries=0
+        while True:
+            if self.cancelled(): raise InterruptedError('Đã dừng ChatGPT')
+            self._submit_pack(prompt)
+            try:
+                return self.wait_answer()
+            except TimeoutError:
+                if self.cancelled(): raise InterruptedError('Đã dừng ChatGPT')
+                retries+=1
+                self.progress(f'Sau 3 phút chưa lấy đủ pack. Mở trang ChatGPT mới và gửi lại đúng pack hiện tại (lần thử lại {retries}).')
+                old_page=self.page
+                self.page=self.context.new_page()
+                self.page.set_default_timeout(4000)
+                # Chỉ đóng tab tra cứu do tool tạo, không đóng tab cá nhân.
+                if not old_page.is_closed():
+                    old_page.close()
+
+    def _submit_pack(self, prompt):
         page=self.page
         self.progress('Mở cuộc trò chuyện ChatGPT mới và gửi pack 5 công ty hoặc ít hơn')
         page.goto('https://chatgpt.com/',wait_until='domcontentloaded',timeout=45000)
@@ -296,7 +342,6 @@ class ChatGPTBrowser(GoogleBrowser):
             raise RuntimeError('Chưa tìm được ô nhập ChatGPT')
         send_chatgpt_prompt(page,prompt,self.cancelled)
         self.progress('Đã dán prompt và nhấn Enter, đang chờ ChatGPT trả lời.')
-        return self.wait_answer()
 
     def wait_answer(self):
         last,stable='',0
@@ -304,8 +349,8 @@ class ChatGPTBrowser(GoogleBrowser):
         copied_answer=None
         next_log=time.monotonic()+15
         self.progress('Đang chờ và đọc câu trả lời ChatGPT…')
-        for attempt in range(2):
-            deadline=time.monotonic()+240
+        for attempt in range(1):
+            deadline=time.monotonic()+self.answer_timeout
             while time.monotonic()<deadline:
                 if self.cancelled(): raise InterruptedError('Đã dừng chờ ChatGPT; pack trước đã được lưu')
                 if self.page.is_closed(): raise RuntimeError('Tab ChatGPT đã đóng')
@@ -327,8 +372,7 @@ class ChatGPTBrowser(GoogleBrowser):
                         try:
                             found=candidate.evaluate(PACK_SCRIPT)
                             if not found: continue
-                            content=found['text'].casefold()
-                            if not all((row[27] and row[27] in content) or (row[1] and row[1].casefold() in content) for row in self.expected_rows):
+                            if not complete_tsv_from_page(found['text'],self.expected_rows)[0]:
                                 continue
                             answer=found
                             answer['chat_url']=candidate.url
@@ -349,7 +393,7 @@ class ChatGPTBrowser(GoogleBrowser):
                             self.profile.parent.mkdir(parents=True,exist_ok=True)
                             (self.profile.parent/'last_page_copy.txt').write_text(page_text,encoding='utf-8')
                             tsv,count=complete_tsv_from_page(page_text,expected)
-                            self.progress(f'Ctrl+A/Ctrl+C: đã nhận {count}/{len({r[27] for r in expected})} MST trong bảng kết quả; chỉ chuẩn hóa khi đủ pack.')
+                            self.progress(f'Ctrl+A/Ctrl+C: đã nhận {count}/{len(expected)} dòng công ty theo tên và STT; chỉ chuẩn hóa khi đủ pack.')
                             copied_answer={'text':tsv,'answer':tsv,'links':[],'finished':False} if tsv else None
                         except InterruptedError:
                             raise
@@ -382,9 +426,7 @@ class ChatGPTBrowser(GoogleBrowser):
                             pass
                     next_log=time.monotonic()+15
                 self.page.wait_for_timeout(800)
-            self.wait_user('Chưa đọc được câu trả lời hoàn chỉnh. Kiểm tra đúng tab ChatGPT, đăng nhập hoặc giới hạn tài khoản. '
-                           'trong ChatGPT. Khi có câu trả lời đúng mẫu, bấm Tiếp tục; có thể Dừng để giữ pack đã lưu.')
-        raise RuntimeError('Không lấy được câu trả lời hoàn chỉnh từ ChatGPT')
+        raise TimeoutError('Sau 3 phút chưa lấy đủ kết quả ChatGPT của pack hiện tại')
 
 def enrich_chatgpt(rows, headers, fold, cache, taxonomy, progress=None, cancelled=None,
                    manual_wait=None, channel='chrome', connection='existing', endpoint='chrome',
@@ -410,7 +452,7 @@ def enrich_chatgpt(rows, headers, fold, cache, taxonomy, progress=None, cancelle
             for attempt in range(2):
                 (folder/f'pack_{pack_no:05d}_response.json').write_text(json.dumps(answer,ensure_ascii=False,indent=2),encoding='utf-8')
                 try:
-                    parsed=parse_pack(answer['text'],pack,taxonomy,headers,offset)
+                    parsed=parse_pack(answer['text'],pack,taxonomy,headers,offset,repair_taxonomy=True)
                     break
                 except (ValueError,TypeError,KeyError) as exc:
                     progress('Code đang trích xuất thông tin từ câu trả lời tự do và chuẩn hóa lại theo taxonomy.')

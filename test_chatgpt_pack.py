@@ -3,11 +3,41 @@ import csv
 import tempfile
 import unittest
 from pathlib import Path
-from chatgpt_pack import parse_pack, enrich_chatgpt, extract_research, pack_prompt, complete_tsv_from_page
+from unittest.mock import Mock, call
+from chatgpt_pack import parse_pack, enrich_chatgpt, extract_research, pack_prompt, complete_tsv_from_page, ChatGPTBrowser
 from normalizer import HEADERS, Taxonomy, read_input, folded
 
 
 class PackTests(unittest.TestCase):
+    def test_timeout_opens_new_page_and_resubmits_same_pack(self):
+        browser=ChatGPTBrowser.__new__(ChatGPTBrowser)
+        browser.cancelled=lambda:False
+        browser.progress=Mock()
+        browser._submit_pack=Mock()
+        result={'text':'complete result'}
+        browser.wait_answer=Mock(side_effect=[TimeoutError(),TimeoutError(),result])
+        old,second,third=Mock(),Mock(),Mock()
+        old.is_closed.return_value=second.is_closed.return_value=False
+        browser.page=old
+        browser.context=Mock()
+        browser.context.new_page.side_effect=[second,third]
+        self.assertEqual(browser.ask_pack('same five raw rows and taxonomy'),result)
+        self.assertEqual(browser._submit_pack.call_args_list,[call('same five raw rows and taxonomy')]*3)
+        self.assertEqual(browser.context.new_page.call_count,2)
+        old.close.assert_called_once()
+        second.close.assert_called_once()
+        third.close.assert_not_called()
+        self.assertEqual(browser.answer_timeout,180)
+
+    def test_timeout_retry_stops_when_cancelled(self):
+        browser=ChatGPTBrowser.__new__(ChatGPTBrowser)
+        browser.cancelled=Mock(side_effect=[False,True])
+        browser._submit_pack=Mock()
+        browser.wait_answer=Mock(side_effect=TimeoutError())
+        browser.context=Mock()
+        with self.assertRaises(InterruptedError): browser.ask_pack('same pack')
+        browser.context.new_page.assert_not_called()
+
     def setUp(self):
         self.tax = Taxonomy(read_input('data/taxonomy.tsv'))
         self.rows = []
@@ -82,6 +112,80 @@ class PackTests(unittest.TestCase):
         sample=Path('tests/fixtures/chatgpt_sample.tsv').read_text(encoding='utf-8')
         pack=list(csv.reader(sample.splitlines(),delimiter='\t'))[1:]
         self.assertEqual(complete_tsv_from_page(sample+'\n'+sample.splitlines()[0]+'\n',pack),(None,0))
+
+    def test_pack_counts_names_even_when_tax_ids_missing(self):
+        rows=[list(r) for r in self.rows[:5]]
+        for row in rows:
+            row[1]=row[1].lower()
+            row[27]=''
+        text='\n'.join('\t'.join(r) for r in [HEADERS,*rows])
+        complete,count=complete_tsv_from_page(text,self.rows[:5])
+        self.assertEqual(count,5)
+        self.assertIsNotNone(complete)
+        parsed=parse_pack(complete,self.rows[:5],self.tax,HEADERS)
+        self.assertEqual([r[27] for r in parsed],[r[27] for r in self.rows[:5]])
+        rows[4]=list(rows[0])
+        text='\n'.join('\t'.join(r) for r in [HEADERS,*rows])
+        self.assertEqual(complete_tsv_from_page(text,self.rows[:5]),(None,4))
+
+    def test_company_name_punctuation_and_branch_distinction(self):
+        original=list(self.rows[0])
+        original[1]='CHI NHÁNH CÔNG TY TNHH PETPLUS – CƠ SỞ 2 LÊ ĐẠI HÀNH'
+        result=list(original)
+        result[1]='Chi nhánh Công ty TNHH Petplus - Cơ sở 2 Lê Đại Hành'
+        result[27]=''
+        text='\n'.join('\t'.join(r) for r in [HEADERS,result])
+        self.assertIsNotNone(complete_tsv_from_page(text,[original])[0])
+        result[1]='CHI NHÁNH CÔNG TY TNHH PETPLUS – CƠ SỞ 3 LÊ ĐẠI HÀNH'
+        text='\n'.join('\t'.join(r) for r in [HEADERS,result])
+        self.assertEqual(complete_tsv_from_page(text,[original]),(None,0))
+
+    def test_duplicate_companies_count_as_two_input_slots(self):
+        pack=[list(r) for r in self.rows[:5]]
+        pack[1][1]=pack[0][1]
+        pack[1][27]=pack[0][27]
+        rows=[list(r) for r in pack]
+        rows[0][19]='first@example.com'
+        extra=list(rows[0]); extra[19]='second@example.com'
+        text='\n'.join('\t'.join(r) for r in [HEADERS,*rows,extra])
+        complete,count=complete_tsv_from_page(text,pack)
+        self.assertEqual(count,5)
+        parsed=parse_pack(complete,pack,self.tax,HEADERS)
+        self.assertEqual(len(parsed),5)
+        self.assertEqual(parsed[0][19],'first@example.com; second@example.com')
+        self.assertEqual(parsed[1][19],'')
+        missing='\n'.join('\t'.join(r) for r in [HEADERS,rows[0],*rows[2:],extra])
+        self.assertEqual(complete_tsv_from_page(missing,pack),(None,4))
+
+    def test_duplicate_names_with_local_pack_numbering(self):
+        pack=[list(r) for r in self.rows[:5]]
+        pack[1][1]=pack[0][1]
+        for i,row in enumerate(pack): row[0]=str(31+i)
+        rows=[list(r) for r in pack]
+        for i,row in enumerate(rows): row[0]=str(i+1)
+        text='\n'.join('\t'.join(r) for r in [HEADERS,*rows])
+        complete,count=complete_tsv_from_page(text,pack)
+        self.assertEqual(count,5)
+        parsed=parse_pack(complete,pack,self.tax,HEADERS)
+        self.assertEqual([r[0] for r in parsed],['31','32','33','34','35'])
+
+    def test_ai_taxonomy_repaired_against_selected_dictionary(self):
+        row=list(self.rows[0])
+        product=next(code for code in self.tax.maps[4] if len(self.tax.parents[code])==1)
+        row[12],row[13]=product,'AI invented product label'
+        row[4],row[5]='INVALID','Unknown industry'
+        row[6],row[7]='UNKNOWN','Unknown species'
+        row[3]='Hoạt động AI tự viết: mô tả sản phẩm'
+        text='\n'.join('\t'.join(r) for r in [HEADERS,row])
+        result=parse_pack(text,self.rows[:1],self.tax,HEADERS,repair_taxonomy=True)[0]
+        for ci,mapping in zip([4,6,8,10,12],self.tax.maps):
+            self.assertTrue(not result[ci] or result[ci] in mapping)
+            self.assertTrue(not result[ci] or result[ci+1] in mapping[result[ci]])
+        for child,parent in [(12,10),(10,8),(8,4)]:
+            self.assertTrue(not result[child] or result[parent] in self.tax.parents[result[child]])
+        self.assertEqual(result[6:8],['',''])
+        self.assertTrue(all(a in self.tax.activities for a in result[3].split('; ') if a))
+        self.assertIn('mô tả sản phẩm',result[14])
 
     def test_free_response_extracts_contacts_without_mixing_companies(self):
         text = ('COMPANY 0\nMã số thuế: 0312345670\nEmail: first@example.com\n'
