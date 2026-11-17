@@ -27,7 +27,7 @@ class PackTests(unittest.TestCase):
         old.close.assert_called_once()
         second.close.assert_called_once()
         third.close.assert_not_called()
-        self.assertEqual(browser.answer_timeout,180)
+        self.assertEqual(browser.answer_timeout,240)
 
     def test_timeout_retry_stops_when_cancelled(self):
         browser=ChatGPTBrowser.__new__(ChatGPTBrowser)
@@ -209,7 +209,11 @@ class PackTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 parse_pack(json.dumps(data),self.rows[:1],self.tax,HEADERS)
 
-    def test_packs_five_and_one_checkpoint_each_company(self):
+    def test_packs_ten_and_one_checkpoint_each_company(self):
+        for i in range(6,11):
+            row=list(self.rows[0])
+            row[0],row[1],row[27]=str(i+1),'COMPANY '+str(i),str(312345670+i).zfill(10)
+            self.rows.append(row)
         owner = self
         sizes, saved = [], []
         class FakeBrowser:
@@ -226,10 +230,10 @@ class PackTests(unittest.TestCase):
             rows, _, audit = enrich_chatgpt(self.rows,HEADERS,folded,directory,self.tax,
                 browser_factory=FakeBrowser,checkpoint=lambda rows,ev,audit:saved.append(len(rows)))
             self.assertTrue((Path(directory)/'pack_00002_response.json').exists())
-        self.assertEqual(sizes,[5,1])
-        self.assertEqual(saved,[1,2,3,4,5,6])
-        self.assertEqual(len(rows),6)
-        self.assertEqual(len(audit),6)
+        self.assertEqual(sizes,[10,1])
+        self.assertEqual(saved,list(range(1,12)))
+        self.assertEqual(len(rows),11)
+        self.assertEqual(len(audit),11)
 
 
 if __name__ == '__main__':

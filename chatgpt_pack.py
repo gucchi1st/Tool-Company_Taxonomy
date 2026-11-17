@@ -1,4 +1,4 @@
-"""Tra cứu ChatGPT trên trình duyệt, tối đa 5 công ty mỗi pack."""
+"""Tra cứu ChatGPT trên trình duyệt, tối đa 10 công ty mỗi pack."""
 import json
 import csv
 import io
@@ -10,6 +10,9 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 from google_overview import GoogleBrowser, external_links, parse_overview
+
+PACK_SIZE=10
+ANSWER_TIMEOUT_SECONDS=240
 
 PACK_SCRIPT = r'''() => {
   const excluded = el => !!el.closest('[data-message-author-role="user"], [data-turn="user"], form, [contenteditable="true"]');
@@ -303,7 +306,7 @@ def send_chatgpt_prompt(page, prompt, cancelled=lambda:False):
 
 
 class ChatGPTBrowser(GoogleBrowser):
-    answer_timeout=180
+    answer_timeout=ANSWER_TIMEOUT_SECONDS
 
     def ask_pack(self, prompt):
         retries=0
@@ -315,7 +318,7 @@ class ChatGPTBrowser(GoogleBrowser):
             except TimeoutError:
                 if self.cancelled(): raise InterruptedError('Đã dừng ChatGPT')
                 retries+=1
-                self.progress(f'Sau 3 phút chưa lấy đủ pack. Mở trang ChatGPT mới và gửi lại đúng pack hiện tại (lần thử lại {retries}).')
+                self.progress(f'Sau 4 phút chưa lấy đủ pack. Mở trang ChatGPT mới và gửi lại đúng pack hiện tại (lần thử lại {retries}).')
                 old_page=self.page
                 self.page=self.context.new_page()
                 self.page.set_default_timeout(4000)
@@ -325,7 +328,7 @@ class ChatGPTBrowser(GoogleBrowser):
 
     def _submit_pack(self, prompt):
         page=self.page
-        self.progress('Mở cuộc trò chuyện ChatGPT mới và gửi pack 5 công ty hoặc ít hơn')
+        self.progress(f'Mở cuộc trò chuyện ChatGPT mới và gửi pack {PACK_SIZE} công ty hoặc ít hơn')
         page.goto('https://chatgpt.com/',wait_until='domcontentloaded',timeout=45000)
         def composer():
             return chatgpt_composer(page)
@@ -426,7 +429,7 @@ class ChatGPTBrowser(GoogleBrowser):
                             pass
                     next_log=time.monotonic()+15
                 self.page.wait_for_timeout(800)
-        raise TimeoutError('Sau 3 phút chưa lấy đủ kết quả ChatGPT của pack hiện tại')
+        raise TimeoutError('Sau 4 phút chưa lấy đủ kết quả ChatGPT của pack hiện tại')
 
 def enrich_chatgpt(rows, headers, fold, cache, taxonomy, progress=None, cancelled=None,
                    manual_wait=None, channel='chrome', connection='existing', endpoint='chrome',
@@ -439,12 +442,12 @@ def enrich_chatgpt(rows, headers, fold, cache, taxonomy, progress=None, cancelle
     checked=datetime.now(timezone(timedelta(hours=7))).strftime('%d/%m/%Y')
     with browser_factory(folder/'chrome_profile',progress,cancelled,manual_wait,channel,
                          connection=connection,endpoint=endpoint) as browser:
-        for offset in range(0,len(rows),5):
+        for offset in range(0,len(rows),PACK_SIZE):
             if cancelled(): raise InterruptedError('Đã dừng ChatGPT')
-            pack=rows[offset:offset+5]
-            pack_no=offset//5+1
+            pack=rows[offset:offset+PACK_SIZE]
+            pack_no=offset//PACK_SIZE+1
             prompt=pack_prompt(pack,taxonomy,headers,offset,
-                raw_pack=raw_rows[offset:offset+5] if raw_rows is not None else None)
+                raw_pack=raw_rows[offset:offset+PACK_SIZE] if raw_rows is not None else None)
             (folder/f'pack_{pack_no:05d}_prompt.txt').write_text(prompt,encoding='utf-8')
             progress(f'ChatGPT pack {pack_no}: {len(pack)} công ty, dòng {offset+1}–{offset+len(pack)}')
             browser.expected_rows=pack

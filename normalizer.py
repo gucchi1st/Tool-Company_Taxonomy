@@ -344,7 +344,7 @@ def run(raw='data/raw.tsv', taxonomy='data/taxonomy.tsv', output='outputs', evid
     def save_progress(partial, collected, entries, stopped=False):
         nonlocal last_saved
         saved_rows, saved_report = normalize(csv_text(partial, delimiter='\t'), tax, ev + collected,
-            strict_taxonomy=search_mode=='chatgpt_pack5')
+            strict_taxonomy=search_mode in {'chatgpt_pack10','chatgpt_pack5'})
         saved_report.update({'web_research': json.loads(json.dumps(entries, ensure_ascii=False)), 'search_mode': search_mode,
             'original_import_log': original_log, 'total_companies': total_companies,
             'processed_companies': len(partial), 'output_rows': len(saved_rows),
@@ -370,7 +370,7 @@ def run(raw='data/raw.tsv', taxonomy='data/taxonomy.tsv', output='outputs', evid
                     Path(output) / 'google_overview', tax, progress, cancelled, manual_wait, browser_channel,
                     connection=browser_connection, endpoint=cdp_endpoint,
                     response_mode='ai_mode' if search_mode == 'google_ai_mode' else 'overview', checkpoint=save_progress)
-            elif search_mode == 'chatgpt_pack5':
+            elif search_mode in {'chatgpt_pack10','chatgpt_pack5'}:
                 from chatgpt_pack import enrich_chatgpt
                 mapped, web_ev, research = enrich_chatgpt(mapped, HEADERS, folded,
                     Path(output) / 'chatgpt_packs', tax, progress, cancelled, manual_wait, browser_channel,
@@ -406,7 +406,7 @@ def main():
     parser.add_argument('--output', default='outputs')
     parser.add_argument('--evidence', help='JSON thông tin bổ sung kèm nguồn và trích đoạn')
     parser.add_argument('--web', action='store_true', help='Tìm web theo MST trước khi chuẩn hóa')
-    parser.add_argument('--search-mode', choices=['google_ai_mode','google_overview','website','chatgpt_pack5'], default='google_ai_mode')
+    parser.add_argument('--search-mode', choices=['google_ai_mode','google_overview','website','chatgpt_pack10','chatgpt_pack5'], default='google_ai_mode')
     parser.add_argument('--browser', choices=['chrome','msedge','chromium'], default='chrome')
     parser.add_argument('--browser-connection', choices=['existing','separate'], default='existing')
     parser.add_argument('--cdp-endpoint', default='chrome')

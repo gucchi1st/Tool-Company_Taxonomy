@@ -46,7 +46,7 @@ def main():
     mode_frame.pack(fill='x', pady=4)
     ttk.Label(mode_frame, text='Cách tra cứu / Trình duyệt', width=43).pack(side='left')
     mode = tk.StringVar(value='google_ai_mode')
-    ttk.Combobox(mode_frame, textvariable=mode, values=['google_ai_mode','google_overview','website','chatgpt_pack5'], state='readonly', width=22).pack(side='left')
+    ttk.Combobox(mode_frame, textvariable=mode, values=['google_ai_mode','google_overview','website','chatgpt_pack10'], state='readonly', width=22).pack(side='left')
     channel = tk.StringVar(value='chrome')
     ttk.Combobox(mode_frame, textvariable=channel, values=['chrome','msedge','chromium'], state='readonly', width=15).pack(side='left', padx=8)
     connection_frame = ttk.Frame(panel)
@@ -133,7 +133,7 @@ def main():
         live_log.delete('1.0', 'end')
         if options['web']:
             tabs.select(live_log)
-            live_log.insert('end', 'Chế độ: ' + options['search_mode'] + '. ChatGPT pack5 dùng tài khoản ChatGPT trong Chrome, mỗi lượt tối đa 5 công ty.\n')
+            live_log.insert('end', 'Chế độ: ' + options['search_mode'] + '. ChatGPT pack10 dùng tài khoản ChatGPT trong Chrome, mỗi lượt tối đa 10 công ty, chờ tối đa 4 phút trước khi thử lại.\n')
         start_button.configure(state='disabled')
         status.set('Đang xử lý…')
         def worker():
