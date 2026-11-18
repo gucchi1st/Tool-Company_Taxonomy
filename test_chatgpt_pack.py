@@ -4,30 +4,99 @@ import tempfile
 import unittest
 from pathlib import Path
 from unittest.mock import Mock, call
-from chatgpt_pack import parse_pack, enrich_chatgpt, extract_research, pack_prompt, complete_tsv_from_page, ChatGPTBrowser
+from chatgpt_pack import parse_pack, enrich_chatgpt, extract_research, pack_prompt, complete_tsv_from_page, ChatGPTBrowser, PackIncompleteError
 from normalizer import HEADERS, Taxonomy, read_input, folded
 
 
 class PackTests(unittest.TestCase):
+    def test_split_tsv_blocks_with_and_without_repeated_header(self):
+        pack=[list(r) for r in self.rows]
+        for i in range(6,10):
+            row=list(pack[0]);row[0],row[1],row[27]=str(i+1),'COMPANY '+str(i),str(312345670+i)
+            pack.append(row)
+        first='\n'.join('\t'.join(r) for r in [HEADERS,*pack[:5]])
+        for repeated in [False,True]:
+            rows=[list(r) for r in pack[5:]]
+            rows[0][19]='one@example.com'
+            extra=list(rows[0]);extra[19]='two@example.com'
+            second='\n'.join('\t'.join(r) for r in ([HEADERS] if repeated else [])+[rows[0],extra,*rows[1:]])
+            text='```tsv\n'+first+'\n```\nPhần tiếp theo:\n```tsv\n'+second+'\n```'
+            combined,count=complete_tsv_from_page(text,pack)
+            self.assertEqual(count,10)
+            self.assertIsNotNone(combined)
+            parsed=parse_pack(text,pack,self.tax,HEADERS)
+            self.assertEqual(len(parsed),10)
+            self.assertEqual(parsed[5][19],'one@example.com; two@example.com')
+
+    def test_cannot_merge_split_blocks_across_responses(self):
+        first='\n'.join('\t'.join(r) for r in [HEADERS,*self.rows])
+        partial='\n'.join('\t'.join(r) for r in [HEADERS,*self.rows[:3]])
+        wrap=lambda s:'TSV_RESPONSE_BEGIN\nTSV_BLOCK_BEGIN\n'+s+'\nTSV_BLOCK_END\nTSV_RESPONSE_END'
+        self.assertEqual(complete_tsv_from_page(wrap(first)+'\n'+wrap(partial),self.rows),(None,3))
+
     def test_timeout_opens_new_page_and_resubmits_same_pack(self):
         browser=ChatGPTBrowser.__new__(ChatGPTBrowser)
         browser.cancelled=lambda:False
         browser.progress=Mock()
         browser._submit_pack=Mock()
         result={'text':'complete result'}
-        browser.wait_answer=Mock(side_effect=[TimeoutError(),TimeoutError(),result])
+        browser.wait_answer=Mock(side_effect=[TimeoutError(),result])
         old,second,third=Mock(),Mock(),Mock()
         old.is_closed.return_value=second.is_closed.return_value=False
         browser.page=old
         browser.context=Mock()
         browser.context.new_page.side_effect=[second,third]
         self.assertEqual(browser.ask_pack('same five raw rows and taxonomy'),result)
-        self.assertEqual(browser._submit_pack.call_args_list,[call('same five raw rows and taxonomy')]*3)
-        self.assertEqual(browser.context.new_page.call_count,2)
+        self.assertEqual(browser._submit_pack.call_args_list,[call('same five raw rows and taxonomy')]*2)
+        self.assertEqual(browser.context.new_page.call_count,1)
         old.close.assert_called_once()
-        second.close.assert_called_once()
+        second.close.assert_not_called()
         third.close.assert_not_called()
-        self.assertEqual(browser.answer_timeout,240)
+        self.assertEqual(browser.answer_timeout,150)
+
+    def test_second_incomplete_attempt_does_not_open_third_tab(self):
+        browser=ChatGPTBrowser.__new__(ChatGPTBrowser)
+        browser.cancelled=lambda:False
+        browser.progress=Mock()
+        browser._submit_pack=Mock()
+        browser.wait_answer=Mock(side_effect=TimeoutError())
+        browser.page=Mock()
+        browser.page.is_closed.return_value=False
+        browser.context=Mock()
+        with self.assertRaises(PackIncompleteError) as raised:
+            browser.ask_pack('same pack')
+        self.assertEqual(raised.exception.attempts,2)
+        self.assertEqual(browser._submit_pack.call_count,2)
+        self.assertEqual(browser.context.new_page.call_count,1)
+
+    def test_skip_marks_raw_then_continues_next_pack(self):
+        owner=self
+        rows=[list(r) for r in self.rows]
+        for i in range(6,11):
+            row=list(rows[0]);row[0],row[1],row[27]=str(i+1),'COMPANY '+str(i),str(312345670+i)
+            rows.append(row)
+        calls,saved=[],[]
+        class FakeBrowser:
+            def __init__(self,*args,**kwargs): pass
+            def __enter__(self): return self
+            def __exit__(self,*args): pass
+            def ask_pack(self,prompt):
+                calls.append(len(self.expected_rows))
+                if len(calls)==1: raise PackIncompleteError({'matched':8,'total':10},'partial response')
+                return {'text':json.dumps(owner.payload(self.expected_rows,10)),
+                        'chat_url':'https://chatgpt.com/c/test','sources':[]}
+        with tempfile.TemporaryDirectory() as directory:
+            result,_,audit=enrich_chatgpt(rows,HEADERS,folded,directory,self.tax,
+                browser_factory=FakeBrowser,checkpoint=lambda rows,ev,audit:saved.append(len(rows)))
+            skipped=json.loads((Path(directory)/'pack_00001_skipped.json').read_text(encoding='utf-8'))
+            self.assertEqual(skipped['coverage']['matched'],8)
+            self.assertEqual(skipped['partial_text'],'partial response')
+        self.assertEqual(calls,[10,1])
+        self.assertEqual(saved,list(range(1,12)))
+        self.assertEqual(len(result),11)
+        self.assertTrue(all('BỎ QUA TRA CỨU' in r[25] for r in result[:10]))
+        self.assertTrue(all(a['status']=='skipped' for a in audit[:10]))
+        self.assertNotIn('BỎ QUA TRA CỨU',result[10][25])
 
     def test_timeout_retry_stops_when_cancelled(self):
         browser=ChatGPTBrowser.__new__(ChatGPTBrowser)
@@ -168,6 +237,32 @@ class PackTests(unittest.TestCase):
         self.assertEqual(count,5)
         parsed=parse_pack(complete,pack,self.tax,HEADERS)
         self.assertEqual([r[0] for r in parsed],['31','32','33','34','35'])
+
+    def test_ten_slots_with_legal_name_variants_and_many_rows_for_last_company(self):
+        pack=[]
+        for i in range(10):
+            row=list(self.rows[0])
+            row[0],row[1],row[27]=str(21+i),'COMPANY '+str(i),str(312345670+i)
+            pack.append(row)
+        pack[3][1]='CÔNG TY TRÁCH NHIỆM HỮU HẠN KỸ THUẬT TỰ ĐỘNG MỸ THÀNH'
+        pack[6][1]='CÔNG TY CỔ PHẦN CÔNG NGHỆ TƯỚI KHANG THỊNH'
+        rows=[list(r) for r in pack]
+        for i,row in enumerate(rows): row[0]=str(i+1)
+        rows[3][1]='Công ty TNHH Kỹ thuật Tự động Mỹ Thành'
+        rows[6][1]='Cty CP Công nghệ Tưới Khang Thịnh'
+        rows.extend([list(rows[-1]) for _ in range(15)])
+        text='\n'.join('\t'.join(r) for r in [HEADERS,*rows])
+        detail={}
+        complete,count=complete_tsv_from_page(text,pack,detail)
+        self.assertEqual(count,10)
+        self.assertIsNotNone(complete)
+        self.assertEqual(detail['result_rows'],25)
+        self.assertEqual(detail['missing'],[])
+        rows=[r for r in rows if r[0]!='8']
+        text='\n'.join('\t'.join(r) for r in [HEADERS,*rows])
+        detail={}
+        self.assertEqual(complete_tsv_from_page(text,pack,detail),(None,9))
+        self.assertEqual(detail['missing'][0]['stt'],8)
 
     def test_ai_taxonomy_repaired_against_selected_dictionary(self):
         row=list(self.rows[0])

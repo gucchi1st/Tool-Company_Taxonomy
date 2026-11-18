@@ -12,7 +12,16 @@ from urllib.parse import urlparse
 from google_overview import GoogleBrowser, external_links, parse_overview
 
 PACK_SIZE=10
-ANSWER_TIMEOUT_SECONDS=240
+ANSWER_TIMEOUT_SECONDS=150
+MAX_PACK_ATTEMPTS=2
+
+
+class PackIncompleteError(RuntimeError):
+    def __init__(self, coverage, partial_text='', attempts=MAX_PACK_ATTEMPTS):
+        self.coverage=coverage
+        self.partial_text=partial_text
+        self.attempts=attempts
+        super().__init__(f'Không đủ pack sau {attempts} lần mở tab: {coverage.get("matched",0)}/{coverage.get("total",PACK_SIZE)} công ty')
 
 PACK_SCRIPT = r'''() => {
   const excluded = el => !!el.closest('[data-message-author-role="user"], [data-turn="user"], form, [contenteditable="true"]');
@@ -39,8 +48,13 @@ PACK_SCRIPT = r'''() => {
   const el = nodes.length ? nodes[nodes.length-1] : tsv;
   const turn = el.closest('article, [data-testid^="conversation-turn-"], .agent-turn') || el;
   const finished = !!turn.querySelector('[data-testid="copy-turn-action-button"], [data-testid="good-response-turn-action-button"], [data-testid="bad-response-turn-action-button"], button[aria-label="Copy"], button[aria-label="Sao chép"], button[aria-label="Good response"], button[aria-label="Bad response"]');
-  const code = tsv || [...el.querySelectorAll('pre code, pre')].find(c=>c.textContent.includes('\t') && c.textContent.includes('STT'));
-  const text = code ? (code.textContent.includes('\t') ? code.textContent : code.innerText) : el.innerText;
+  const selector='pre, .cm-content, [data-language="tsv"], [class*="language-tsv"], [role="code"]';
+  const scope=nodes.length ? el : (tsv.closest('article, [data-testid^="conversation-turn-"], .agent-turn') || tsv.closest('pre')?.parentElement || tsv.parentElement);
+  const blocks=[...scope.querySelectorAll(selector)].filter(c=>!excluded(c) && !c.parentElement?.closest(selector))
+    .map(c=>{const raw=(c.querySelector('code') || c).textContent || '';return raw.includes('\t') ? raw : c.innerText;})
+    .filter(value=>value.includes('\t'));
+  const text = blocks.some(value=>/STT\s*[-–]?\s*No/i.test(value)) ?
+    'TSV_RESPONSE_BEGIN\n'+blocks.map(value=>'TSV_BLOCK_BEGIN\n'+value+'\nTSV_BLOCK_END').join('\n')+'\nTSV_RESPONSE_END' : el.innerText;
   if (!text.trim()) return null;
   const streaming = !!document.querySelector('[data-testid="stop-button"],button[aria-label="Stop streaming"],button[aria-label="Dừng tạo"]');
   const match = text.match(/PACK_RESULT_BEGIN\s*([\s\S]*?)\s*PACK_RESULT_END/);
@@ -63,6 +77,8 @@ def pack_prompt(pack, tax, headers, offset=0, raw_pack=None):
     return (
         'RAW\n' + tsv(raw_pack if raw_pack is not None else pack) +
         '\n\nTAXONOMY\n' + tax.source_text +
+        '\n\nĐỐI CHIẾU STT TRONG PACK (giữ đúng STT khi trả kết quả)\n' +
+        tsv([[str(i+1),row[1]] for i,row in enumerate(pack)]) +
         '\n\nTìm thêm thông tin, dựa vào taxonomy chuẩn hóa theo cột\n' +
         tsv([headers]) +
         '\nNOTE đề cập liên quan hay không đến chăn nuôi, mỗi mail 1 dòng.'
@@ -76,7 +92,13 @@ def pack_prompt(pack, tax, headers, offset=0, raw_pack=None):
 
 
 def company_key(value):
-    return ''.join(c for c in unicodedata.normalize('NFC',value).casefold() if c.isalnum())
+    value=unicodedata.normalize('NFD',value).casefold().replace('đ','d')
+    value=''.join(c for c in value if c.isalnum() and not unicodedata.combining(c))
+    for long,short in [('congtytrachnhiemhuuhan','congtytnhh'),
+                       ('congtycophan','congtycp'),('motthanhvien','mtv')]:
+        value=value.replace(long,short)
+    if value.startswith('cty'): value='congty'+value[3:]
+    return value
 
 
 def group_pack_rows(rows, pack):
@@ -86,9 +108,13 @@ def group_pack_rows(rows, pack):
     local=bool(ids-original_ids) and ids <= {str(i+1) for i in range(len(pack))}
     unmatched=[]
     for row in rows:
-        matches=[i for i,r in enumerate(pack) if company_key(r[1])==company_key(row[1])]
-        if len(matches)>1:
-            matches=[i for i in matches if row[0]==(str(i+1) if local else pack[i][0])]
+        # STT xác định bản ghi; tên chuẩn hóa dùng để xác nhận đúng công ty.
+        candidates=[i for i,r in enumerate(pack) if row[0]==(str(i+1) if local else r[0])]
+        matches=[i for i in candidates if company_key(pack[i][1])==company_key(row[1])]
+        if not matches:
+            matches=[i for i,r in enumerate(pack) if company_key(r[1])==company_key(row[1])]
+            if len(matches)>1:
+                matches=[i for i in matches if i in candidates]
         if len(matches)!=1:
             unmatched.append(row)
         else:
@@ -96,33 +122,62 @@ def group_pack_rows(rows, pack):
     return groups,unmatched
 
 
-def complete_tsv_from_page(text, pack):
+def complete_tsv_from_page(text, pack, diagnostic=None):
     """Lấy bảng kết quả cuối cùng; không nhận raw/taxonomy trong prompt."""
     from normalizer import HEADERS
     canonical=lambda s:re.sub(r'\s+',' ',s.strip().replace('**','')).casefold()
     expected=list(map(canonical,HEADERS))
+    # Chỉ ghép block trong câu trả lời mới nhất, không ghép hai lần trả lời.
+    if 'TSV_RESPONSE_BEGIN' in text:
+        text=text.rsplit('TSV_RESPONSE_BEGIN',1)[1].split('TSV_RESPONSE_END',1)[0]
+    blocks=re.findall(r'TSV_BLOCK_BEGIN\r?\n([\s\S]*?)\r?\nTSV_BLOCK_END',text)
+    if not blocks:
+        blocks=re.findall(r'```(?:tsv|text)?[^\S\r\n]*\r?\n([\s\S]*?)\r?\n```',text)
     lines=text.splitlines()
     starts=[i for i,line in enumerate(lines) if list(map(canonical,line.split('\t')))==expected]
-    if not starts: return None,0
-    # Header cuối là kết quả mới nhất. Không lấy bảng cũ khi bảng mới đang trả dở.
-    start=starts[-1]
+    if not starts:
+        if diagnostic is not None:
+            diagnostic.update({'reason':'Chưa thấy header TSV đủ 32 cột','matched':0,'total':len(pack)})
+        return None,0
+    # Plain text giữ hành vi header cuối. Block đã có ranh giới câu trả lời
+    # thì ghép tất cả block, kể cả block sau không nhắc lại header.
+    if blocks:
+        lines='\n'.join(blocks).splitlines()
+        start=next(i for i,line in enumerate(lines) if list(map(canonical,line.split('\t')))==expected)
+    else:
+        start=starts[-1]
     rows=[]
+    malformed=False
     for line in lines[start+1:]:
         if not line.strip():
-            if rows: break
+            if rows and not blocks: break
+            continue
+        if blocks and list(map(canonical,line.split('\t')))==expected:
             continue
         cells=next(csv.reader([line],delimiter='\t'))
         if len(cells)!=32:
+            if diagnostic is not None and cells[0].strip().isdigit():
+                diagnostic['reason']=f'Dòng STT {cells[0]} có {len(cells)} cột, cần 32'
+            malformed=bool(cells[0].strip().isdigit())
             break
         rows.append(cells)
     groups,unmatched=group_pack_rows(rows,pack)
     count=sum(bool(group) for group in groups.values())
-    if not rows or unmatched or count!=len(pack): return None,count
+    if diagnostic is not None:
+        diagnostic.update({'matched':count,'total':len(pack),'result_rows':len(rows),
+            'missing':[{'stt':i+1,'name':pack[i][1]} for i,g in groups.items() if not g],
+            'unmatched':[{'stt':r[0],'name':r[1]} for r in unmatched]})
+    if not rows or malformed or unmatched or count!=len(pack): return None,count
     return '\n'.join(['\t'.join(HEADERS),*['\t'.join(r) for r in rows]]),count
 
 
 def parse_pack(text, pack, tax, headers, offset=0, repair_taxonomy=False):
     text = text.strip(' \r\n')
+    if 'TSV_BLOCK_BEGIN' in text or len(re.findall(r'```(?:tsv|text)?[^\S\r\n]*\r?\n',text))>1:
+        combined,count=complete_tsv_from_page(text,pack)
+        if combined is None:
+            raise ValueError(f'Các khối TSV chưa đủ pack: {count}/{len(pack)}')
+        text=combined
     if 'PACK_RESULT_BEGIN' in text:
         match = re.search(r'PACK_RESULT_BEGIN\s*([\s\S]*?)\s*PACK_RESULT_END', text)
         if not match:
@@ -312,13 +367,17 @@ class ChatGPTBrowser(GoogleBrowser):
         retries=0
         while True:
             if self.cancelled(): raise InterruptedError('Đã dừng ChatGPT')
+            self.last_capture_text=''
+            self.last_coverage={'matched':0,'total':len(getattr(self,'expected_rows',[])) or PACK_SIZE}
             self._submit_pack(prompt)
             try:
                 return self.wait_answer()
             except TimeoutError:
                 if self.cancelled(): raise InterruptedError('Đã dừng ChatGPT')
                 retries+=1
-                self.progress(f'Sau 4 phút chưa lấy đủ pack. Mở trang ChatGPT mới và gửi lại đúng pack hiện tại (lần thử lại {retries}).')
+                if retries>=MAX_PACK_ATTEMPTS:
+                    raise PackIncompleteError(self.last_coverage,self.last_capture_text,retries)
+                self.progress(f'Sau 2 phút 30 giây chưa lấy đủ pack. Mở trang ChatGPT mới và gửi lại đúng pack hiện tại (lần thử lại {retries}).')
                 old_page=self.page
                 self.page=self.context.new_page()
                 self.page.set_default_timeout(4000)
@@ -348,8 +407,8 @@ class ChatGPTBrowser(GoogleBrowser):
 
     def wait_answer(self):
         last,stable='',0
-        next_copy=0
-        copied_answer=None
+        next_read=0
+        background_answer=None
         next_log=time.monotonic()+15
         self.progress('Đang chờ và đọc câu trả lời ChatGPT…')
         for attempt in range(1):
@@ -384,28 +443,42 @@ class ChatGPTBrowser(GoogleBrowser):
                             continue
                 expected=getattr(self,'expected_rows',None)
                 if expected:
-                    candidate_text,count=complete_tsv_from_page(answer['text'],expected) if answer else (None,0)
+                    if answer:
+                        self.last_capture_text=answer['text']
+                        coverage={}
+                        candidate_text,count=complete_tsv_from_page(answer['text'],expected,coverage)
+                        self.last_coverage=coverage
+                    else:
+                        candidate_text,count=None,0
                     if candidate_text:
                         answer['text']=candidate_text
                     else:
                         answer=None
-                    if not answer and time.monotonic()>=next_copy:
-                        from clipboard_capture import copy_page_text
+                    if not answer and time.monotonic()>=next_read:
+                        from background_capture import read_page_text
                         try:
-                            page_text=copy_page_text(self.page,self.cancelled)
+                            page_text=read_page_text(self.page,self.cancelled)
+                            self.last_capture_text=page_text
                             self.profile.parent.mkdir(parents=True,exist_ok=True)
-                            (self.profile.parent/'last_page_copy.txt').write_text(page_text,encoding='utf-8')
-                            tsv,count=complete_tsv_from_page(page_text,expected)
-                            self.progress(f'Ctrl+A/Ctrl+C: đã nhận {count}/{len(expected)} dòng công ty theo tên và STT; chỉ chuẩn hóa khi đủ pack.')
-                            copied_answer={'text':tsv,'answer':tsv,'links':[],'finished':False} if tsv else None
+                            (self.profile.parent/'last_page_read.txt').write_text(page_text,encoding='utf-8')
+                            diagnostic={}
+                            tsv,count=complete_tsv_from_page(page_text,expected,diagnostic)
+                            self.last_coverage=diagnostic
+                            self.progress(f'Đọc nền: đã nhận {count}/{len(expected)} dòng công ty theo tên và STT; chỉ chuẩn hóa khi đủ pack.')
+                            if diagnostic.get('missing'):
+                                self.progress('Chưa khớp: '+'; '.join(f'{item["stt"]}. {item["name"]}' for item in diagnostic['missing']))
+                            if diagnostic.get('reason'):
+                                self.progress(diagnostic['reason'])
+                            (self.profile.parent/'pack_coverage.json').write_text(json.dumps(diagnostic,ensure_ascii=False,indent=2),encoding='utf-8')
+                            background_answer={'text':tsv,'answer':tsv,'links':[],'finished':False} if tsv else None
                         except InterruptedError:
                             raise
                         except Exception as exc:
-                            copied_answer=None
-                            self.progress(f'Chưa copy được trang ChatGPT: {exc}')
-                        next_copy=time.monotonic()+5
-                    if not answer and copied_answer:
-                        answer=dict(copied_answer)
+                            background_answer=None
+                            self.progress(f'Chưa đọc được trang ChatGPT: {exc}')
+                        next_read=time.monotonic()+5
+                    if not answer and background_answer:
+                        answer=dict(background_answer)
                         answer['streaming']=self.page.evaluate('''()=>[...document.querySelectorAll('[data-testid="stop-button"],button[aria-label="Stop streaming"],button[aria-label="Dừng tạo"]')].some(el=>el.getClientRects().length)''')
                 if answer:
                     if answer['text']==last: stable+=1
@@ -429,7 +502,7 @@ class ChatGPTBrowser(GoogleBrowser):
                             pass
                     next_log=time.monotonic()+15
                 self.page.wait_for_timeout(800)
-        raise TimeoutError('Sau 4 phút chưa lấy đủ kết quả ChatGPT của pack hiện tại')
+        raise TimeoutError('Sau 2 phút 30 giây chưa lấy đủ kết quả ChatGPT của pack hiện tại')
 
 def enrich_chatgpt(rows, headers, fold, cache, taxonomy, progress=None, cancelled=None,
                    manual_wait=None, channel='chrome', connection='existing', endpoint='chrome',
@@ -451,7 +524,26 @@ def enrich_chatgpt(rows, headers, fold, cache, taxonomy, progress=None, cancelle
             (folder/f'pack_{pack_no:05d}_prompt.txt').write_text(prompt,encoding='utf-8')
             progress(f'ChatGPT pack {pack_no}: {len(pack)} công ty, dòng {offset+1}–{offset+len(pack)}')
             browser.expected_rows=pack
-            answer=browser.ask_pack(prompt)
+            try:
+                answer=browser.ask_pack(prompt)
+            except PackIncompleteError as exc:
+                reason=f'BỎ QUA TRA CỨU: pack {pack_no}; {exc}. Giữ dữ liệu raw, cần tra cứu lại.'
+                (folder/f'pack_{pack_no:05d}_skipped.json').write_text(json.dumps({
+                    'status':'skipped','pack':pack_no,'attempts':exc.attempts,
+                    'coverage':exc.coverage,'reason':reason,
+                    'companies':[{'stt':r[0],'name':r[1],'tax_id':r[27]} for r in pack],
+                    'partial_text':exc.partial_text},ensure_ascii=False,indent=2),encoding='utf-8')
+                for original in pack:
+                    if cancelled(): raise InterruptedError('Đã dừng; các dòng đã lưu vẫn được giữ')
+                    row=list(original)
+                    row[25]=' '.join(filter(None,[row[25],reason]))
+                    completed.append(row)
+                    audit.append({'tax_id':row[27],'pack':pack_no,'status':'skipped',
+                        'attempts':exc.attempts,'fields_found':0,'fields_added':[],
+                        'pages':[],'errors':[reason],'sources':[],'changes':[]})
+                    if checkpoint: checkpoint(completed,evidence,audit)
+                progress(reason+' Chuyển sang pack kế tiếp.')
+                continue
             for attempt in range(2):
                 (folder/f'pack_{pack_no:05d}_response.json').write_text(json.dumps(answer,ensure_ascii=False,indent=2),encoding='utf-8')
                 try:

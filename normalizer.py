@@ -353,6 +353,7 @@ def run(raw='data/raw.tsv', taxonomy='data/taxonomy.tsv', output='outputs', evid
             'web_fields_added': sum(len(entry.get('fields_added', [])) for entry in entries),
             'web_companies_matched': sum(any(p['matched_identity'] for p in entry['pages']) for entry in entries),
             'web_companies_failed': sum(not any(p['matched_identity'] for p in entry['pages']) for entry in entries)})
+        saved_report['web_companies_skipped']=sum(entry.get('status')=='skipped' for entry in entries)
         export(saved_rows, saved_report, output)
         atomic_text(Path(output) / 'web_research.json', json.dumps(entries, ensure_ascii=False, indent=2))
         atomic_text(Path(output) / 'web_evidence.json', json.dumps(collected, ensure_ascii=False, indent=2))

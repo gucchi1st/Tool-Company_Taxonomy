@@ -133,7 +133,7 @@ def main():
         live_log.delete('1.0', 'end')
         if options['web']:
             tabs.select(live_log)
-            live_log.insert('end', 'Chế độ: ' + options['search_mode'] + '. ChatGPT pack10 dùng tài khoản ChatGPT trong Chrome, mỗi lượt tối đa 10 công ty, chờ tối đa 4 phút trước khi thử lại.\n')
+            live_log.insert('end', 'Chế độ: ' + options['search_mode'] + '. ChatGPT pack10 dùng tài khoản ChatGPT trong Chrome, mỗi lượt tối đa 10 công ty, chờ tối đa 2 phút 30 giây trước khi thử lại.\n')
         start_button.configure(state='disabled')
         status.set('Đang xử lý…')
         def worker():

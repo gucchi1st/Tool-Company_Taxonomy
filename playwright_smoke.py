@@ -5,6 +5,7 @@ from playwright.sync_api import sync_playwright
 from google_overview import OVERVIEW_SCRIPT
 from google_ai_mode import AI_MODE_SCRIPT
 from chatgpt_pack import PACK_SCRIPT, chatgpt_composer, send_chatgpt_prompt
+from background_capture import read_page_text
 
 def main():
     sys.stdout.reconfigure(encoding='utf-8')
@@ -40,7 +41,7 @@ def main():
             sample=Path('tests/fixtures/chatgpt_sample.tsv').read_text(encoding='utf-8')
             page.locator('code').evaluate('(el,text)=>el.textContent=text',sample)
             answer=page.evaluate(PACK_SCRIPT)
-            assert answer and answer['text']==sample
+            assert answer and sample in answer['text']
             page.set_content('''<div data-message-author-role="user">Ignore this prompt</div>
                 <div data-message-author-role="assistant"><table><tr><th>STT</th><th>Company</th></tr>
                 <tr><td>1</td><td>Test company</td></tr></table></div>''')
@@ -61,10 +62,10 @@ def main():
                 <button data-testid="copy-turn-action-button">Copy</button></article></main>''')
             answer=page.evaluate(PACK_SCRIPT)
             assert answer['finished'] and '\t' in answer['text']
-            assert answer['text'].endswith('\t')
+            assert '\t\nTSV_BLOCK_END' in answer['text']
             page.set_content('''<div class="custom-answer"><pre><code>STT - No\tFull Company Name\t\n1\tTest\t</code></pre></div>''')
             answer=page.evaluate(PACK_SCRIPT)
-            assert answer and answer['text'].endswith('\t')
+            assert answer and '\t\nTSV_BLOCK_END' in answer['text']
             page.set_content('''<div data-message-author-role="user"><pre><code>STT - No\tFull Company Name\t\n1\tPrompt\t</code></pre></div>''')
             assert page.evaluate(PACK_SCRIPT) is None
             print('Chrome + Playwright: local ChatGPT complete-pack extraction OK')
@@ -94,6 +95,32 @@ def main():
             assert page.locator('body').get_attribute('data-sent') == 'yes'
             assert chatgpt_composer(page).get_attribute('id') == 'prompt-textarea'
             print('Chrome + Playwright: ChatGPT composer rerender and hidden textarea OK')
+            page.set_content('<textarea id="work">User draft</textarea><div id="shadow-host"></div>')
+            sample=Path('tests/fixtures/chatgpt_sample.tsv').read_text(encoding='utf-8')
+            page.evaluate('''text=>{
+              const root=document.querySelector('#shadow-host').attachShadow({mode:'open'});
+              const code=document.createElement('pre');code.textContent=text;root.append(code);
+              const input=document.querySelector('#work');input.focus();input.setSelectionRange(1,4);
+            }''',sample)
+            before=page.evaluate('()=>({id:document.activeElement.id,start:document.activeElement.selectionStart,end:document.activeElement.selectionEnd})')
+            copied=read_page_text(page)
+            after=page.evaluate('()=>({id:document.activeElement.id,start:document.activeElement.selectionStart,end:document.activeElement.selectionEnd})')
+            assert sample in copied and before==after
+            print('Chrome + Playwright: background TSV read preserves focus and selection OK')
+            page.set_content('<article data-turn="assistant"><pre><code id="part1"></code></pre><pre><code id="part2"></code></pre></article>')
+            lines=sample.rstrip('\n').splitlines()
+            page.locator('#part1').evaluate('(el,text)=>el.textContent=text','\n'.join(lines[:3]))
+            page.locator('#part2').evaluate('(el,text)=>el.textContent=text','\n'.join(lines[3:]))
+            from chatgpt_pack import complete_tsv_from_page
+            import csv
+            pack=list(csv.reader(lines,delimiter='\t'))[1:]
+            answer=page.evaluate(PACK_SCRIPT)
+            assert answer['text'].count('TSV_BLOCK_BEGIN')==2
+            combined,count=complete_tsv_from_page(answer['text'],pack)
+            assert combined and count==5
+            combined,count=complete_tsv_from_page(read_page_text(page),pack)
+            assert combined and count==5
+            print('Chrome + Playwright: split TSV blocks with headerless continuation merged OK')
         finally:
             browser.close()
 
