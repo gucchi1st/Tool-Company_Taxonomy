@@ -26,6 +26,8 @@ def main():
     actions.pack(fill='x', pady=(0, 12))
     start_button = ttk.Button(actions, text='Tra cứu web và chuẩn hóa', command=lambda: process())
     start_button.pack(side='left')
+    repair_button = ttk.Button(actions, text='Sửa dữ liệu lệch cột', command=lambda: process_repair())
+    repair_button.pack(side='left', padx=8)
     stop = threading.Event()
     resume_event = threading.Event()
     ttk.Button(actions, text='Dừng tra cứu', command=stop.set).pack(side='left', padx=8)
@@ -114,6 +116,29 @@ def main():
     live_log = tk.Text(tabs, wrap='word', font=('Consolas', 10))
     tabs.add(live_log, text='Nhật ký tra cứu web')
     messages = queue.Queue()
+    def process_repair():
+        source=filedialog.askopenfilename(title='Chọn file raw cần sửa cột',
+            filetypes=[('Dữ liệu bảng','*.csv *.tsv *.txt *.xlsx'),('Tất cả','*.*')])
+        if not source: return
+        destination=filedialog.askdirectory(title='Chọn thư mục lưu kết quả sửa cột')
+        if not destination: return
+        tax_path=paths['taxonomy'].get()
+        out=Path(destination)/(Path(source).stem+'_repaired')
+        stop.clear()
+        start_button.configure(state='disabled')
+        repair_button.configure(state='disabled')
+        live_log.delete('1.0','end')
+        tabs.select(live_log)
+        status.set('Đang sửa dữ liệu lệch cột…')
+        def worker():
+            try:
+                from column_repair import repair_file
+                result=repair_file(source,tax_path,out,
+                    progress=lambda text:messages.put(('progress',text)),cancelled=stop.is_set)
+                messages.put(('done',result))
+            except Exception as exc:
+                messages.put(('error',str(exc)))
+        threading.Thread(target=worker,daemon=True).start()
     def process():
         options = {k: v.get() or None for k, v in paths.items()}
         options['web'] = use_web.get()
@@ -135,6 +160,7 @@ def main():
             tabs.select(live_log)
             live_log.insert('end', 'Chế độ: ' + options['search_mode'] + '. ChatGPT pack10 dùng tài khoản ChatGPT trong Chrome, mỗi lượt tối đa 10 công ty, chờ tối đa 2 phút 30 giây trước khi thử lại.\n')
         start_button.configure(state='disabled')
+        repair_button.configure(state='disabled')
         status.set('Đang xử lý…')
         def worker():
             try:
@@ -161,6 +187,7 @@ def main():
                     messagebox.showinfo('Kết nối Chrome', value)
                 elif kind == 'error':
                     start_button.configure(state='normal')
+                    repair_button.configure(state='normal')
                     status.set(value)
                     messagebox.showerror('Không thể xử lý', value)
                 else:
@@ -177,6 +204,7 @@ def main():
                     prefix = 'Đã dừng và lưu' if report.get('stopped') else 'Đã lưu'
                     status.set(f'{prefix} {processed} công ty → {len(rows)} dòng email, {len(report["issues"])} mục cần rà soát.' + web_status)
                     start_button.configure(state='normal')
+                    repair_button.configure(state='normal')
                     if 'web_research' in report and report['web_companies_matched'] == 0:
                         errors = list(dict.fromkeys(error for entry in report['web_research'] for error in entry['errors']))
                         messagebox.showwarning('Chưa lấy được thông tin web',

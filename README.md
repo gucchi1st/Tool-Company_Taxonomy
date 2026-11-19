@@ -128,3 +128,13 @@ Mỗi lượt gửi tối đa 10 công ty cùng taxonomy vào một cuộc trò 
 
 Tool kiểm tra MST, số cột, mã và quan hệ taxonomy trước khi đưa kết quả qua bộ chuẩn hóa hiện có. Một công ty có nhiều email được tách thành nhiều dòng. Sau khi nhận đủ một pack hợp lệ, tool lưu lần lượt từng công ty vào CSV/TSV; dừng giữa lúc ChatGPT đang trả lời sẽ giữ các công ty đã lưu trước đó, chưa lưu pack chưa hoàn chỉnh. Prompt và câu trả lời được lưu trong `chatgpt_packs/` bên trong thư mục đầu ra để đối chiếu. Nếu JSON không hợp lệ, sửa câu trả lời trên tab ChatGPT theo thông báo rồi bấm **Tiếp tục sau thao tác Chrome** trong app.
 
+# Chức năng riêng: sửa dữ liệu lệch cột
+
+Mở `start.bat`, chọn **Sửa dữ liệu lệch cột**, chọn file raw và thư mục lưu. Chức năng đọc CSV, TSV, TXT (kể cả bảng Markdown dán từ ChatGPT) và XLSX, không tra cứu web. Kết quả nằm trong thư mục con `<tên_file>_repaired`, gồm `companies.csv`, `companies.tsv` đủ 32 cột và `repair_audit.json`.
+
+Bộ sửa cột dựa vào thứ tự dữ liệu và các dấu hiệu như mã taxonomy, email, điện thoại, website, quốc gia, địa chỉ, chức danh và ngày. Xử lý được trường hợp thiếu cột, thừa nhiều cột trống hoặc SOURCE/NOTE/DATE bị dịch vị trí. Tên và chức danh của từng dòng liên hệ được giữ riêng; một ô có nhiều email được tách dòng khi xuất. Công ty nước ngoài không bắt buộc có MST. File raw được giữ nguyên.
+
+Các trường suy luận chưa chắc chắn và giá trị chưa xác định được cột đều được ghi trong audit để rà soát; dữ liệu gốc của từng dòng luôn được giữ trong audit. Chức năng này không thể tự xác minh tính chính xác của nội dung hoặc phục hồi chắc chắn một bảng đã đảo thứ tự cột tùy ý. Với bảng có header chuẩn, nên giữ nguyên header trong file nguồn.
+
+Cũng có thể chạy độc lập bằng dòng lệnh: `python column_repair.py "duong_dan_raw.tsv" --taxonomy data/taxonomy.tsv --output outputs/column_repaired`.
+

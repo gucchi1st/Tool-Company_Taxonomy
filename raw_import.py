@@ -29,7 +29,7 @@ def date_text(value):
 def company_name(value):
     return bool(re.match(r'(?i)^(công ty|chi nhánh|doanh nghiệp|hợp tác xã|cong ty|chi nhanh)', value.strip()))
 
-def map_rows(raw_rows, headers, fold):
+def map_rows(raw_rows, headers, fold, allow_missing_tax=False):
     """Hỗ trợ schema đích, header raw, và schema 16 trường từ bản xuất thuế."""
     aliases = {fold(h): i for i, h in enumerate(headers)}
     for i, names in {
@@ -85,7 +85,7 @@ def map_rows(raw_rows, headers, fold):
                     row[target] = raw[source]
             if not row[0]:
                 row[0] = str(line)
-            if not row[1] or not row[27]:
+            if not row[1] or (not row[27] and not allow_missing_tax):
                 raise ValueError(f'Dòng {line}: thiếu tên công ty hoặc MST sau ánh xạ header.')
         else:
             raw = raw[:32] if len(raw) > 32 and not any(c.strip() for c in raw[32:]) else raw

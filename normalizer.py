@@ -103,10 +103,10 @@ def relevance(row):
             f'Thủy sản: {"có liên quan" if aqua else "chưa đủ bằng chứng"} ({level}). '
             'Ngành đăng ký không chứng minh sản phẩm đang bán.')
 
-def normalize(text, taxonomy, evidence=None, strict_taxonomy=False):
+def normalize(text, taxonomy, evidence=None, strict_taxonomy=False, allow_missing_tax=False):
     rows, issues, changes = [], [], []
     raw_rows = table(text)
-    raw_rows, import_log = map_rows(raw_rows, HEADERS, folded)
+    raw_rows, import_log = map_rows(raw_rows, HEADERS, folded, allow_missing_tax=allow_missing_tax)
     seen = set()
     for line, raw in enumerate(raw_rows, 1):
         if len(raw) > 32 and not any(c.strip() for c in raw[32:]):
